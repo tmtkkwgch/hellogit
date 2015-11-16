@@ -1,0 +1,219 @@
+/* ソート ナビゲーション */
+.sort_navi a{color:#0000ff;font-size:80%;}
+.sort_navi strong{font-weight:bold;font-size:80%;}
+.sort_navi span{
+  float:left;
+  font-size:100%;
+  font-weight:bold;
+}
+
+.sort_navi_text a{color:#0000ff;font-size:80%;}
+.sort_navi_text strong{font-weight:bold;font-size:80%;}
+
+/* 汎用クラス */
+.small{font-size:90%;}
+/* タグ リスト */
+.taglist{
+  margin-bottom: 10px;
+  padding:5px;
+  background-color:#eeeeee;
+  border:1px solid #666666;
+}
+
+.taglist ul{
+  margin:0;
+  padding:0;
+  list-style-type:none;
+}
+
+.taglist ul li{
+  margin:0;
+  padding:0;
+  font-size:90%;
+  padding:5px;
+}
+
+.taglist ul li span {
+  clear:left;
+  float:left;
+  line-height:1.1;
+  margin-right:8px;
+  text-align:right;
+  width:20px;
+}
+
+/* ブックマーク 本体テーブル */
+table.bookmarklist{margin:8px 0 8px 0;}
+table.bookmarklist tr th{
+  position:relative;
+  background-color:#eeeeee;
+  text-align:left;
+}
+
+table.bookmarklist tr th * span{
+
+}
+
+table.bookmarklist tr th * a{
+  font-weight:bold;
+  font-size:100%;
+  color:#0000FF;
+}
+
+table.bookmarklist tr th * a.regist-count{
+  font-size:70% !important;
+  margin-left:5px;
+  background-color:#ffcccc !important;
+  color:#ff0000 !important;
+  font-weight:normal !important;
+}
+
+table.bookmarklist tr th * small{
+  font-size:70%;
+  color:#666666;
+}
+
+table.bookmarklist tr td p.bookmark_comment{
+  position:relative;
+  padding:5px 100px 5px 5px;margin:0;
+  font-size:90%;
+  height:1.5em;
+  overflow:hidden;
+}
+
+table.bookmarklist tr td p.bookmark_comment span{
+  font-size:70%;
+  position:absolute;
+  right:0%;
+  bottom:0%
+}
+
+table.bookmarklist tr td p.bookmark_comment span a{color:blue;}
+/* ブックマーク 本体テーブル タイトル URL部分 */
+table.bookmarkurl{border-collapse:collapse;}
+
+/* ブックマーク 本体テーブル タグ部分 */
+p.bookmark_tag{
+  padding:3px;margin:0;
+  font-size:80%;
+  border-top:1px solid #ffffff;
+  }
+p.bookmark_tag a{color:blue;}
+p.bookmark_tag span.date{}
+p.bookmark_tag span.secret{color:#FF0000;}
+/* ブックマーク 本体テーブル コメント・評価 */
+table.comment{border-collapse:collapse;}
+table.comment tr td{
+  padding:5px;
+  border:1px solid #cccccc;
+  }
+.bmk_td1 {
+  background-color: #FFFFFF;
+  border: 0px;
+
+  color: #333333;
+  font-size: 90%;
+}
+
+.bmk_ranking_text {
+  font-size: 120%;
+  font-weight: bold;
+  color: #333333;
+  margin: 0px;
+  padding: 0px;
+}
+
+.bmk_description{
+  font-size: 80%;
+}
+
+.text_tsuikazumi {
+  font-size: 85%;
+
+  color: #CC3333;
+
+}
+
+.spacer {
+  margin: 5px 0px 0px 0px;
+}
+
+.add_select01 {
+    width: 150px;
+    color: #333333;
+}
+
+.td_label1 td {
+  padding: 4px 4px 4px 4px;
+  background-color: #ffffff;
+  border: 1px;
+  border-color: #cccccc;
+  border-style: solid;
+  color: #014A8C;
+  font-size: 90%;
+}
+
+.td_label2 td {
+  padding: 4px 4px 4px 4px;
+  background-color: #E8F0FC;
+  border: 1px;
+  border-color: #cccccc;
+  border-style: solid;
+  color: #014A8C;
+  font-size: 90%;
+}
+
+.regist_count{
+  background-color:#ffcccc !important;
+  color:#ff0000 !important;
+}
+
+.text_base6 {
+	color: #666666;
+	font-weight:bold;
+	font-size: 90%;
+}
+
+.text_base7 {
+  color: #333333;
+  font-size: 90%;
+}
+.bmk_header_7D91BD_left {
+  background-image: url(../../main/images/main_header_bg_left.gif);
+  text-align: left;
+  padding: 0;
+  height: 30px;
+  border: 0px;
+}
+
+.bmk_header_7D91BD_right {
+  background-image: url(../../main/images/main_header_bg_left.gif);
+  text-align: right;
+  padding: 0;
+  height: 30px;
+  border: 0px;
+}
+
+  /* right block, h2 ,num img */
+  #help-right-func h2.num-back22 {background: url(../images/help_num22.gif) no-repeat left top;}
+  #help-right-func h2.num-back23 {background: url(../images/help_num23.gif) no-repeat left top;}
+  #help-right-func h2.num-back24 {background: url(../images/help_num24.gif) no-repeat left top;}
+  #help-right-func h2.num-back25 {background: url(../images/help_num25.gif) no-repeat left top;}
+  #help-right-func h2.num-back26 {background: url(../images/help_num26.gif) no-repeat left top;}
+  #help-right-func h2.num-back27 {background: url(../images/help_num27.gif) no-repeat left top;}
+  #help-right-func h2.num-back28 {background: url(../images/help_num28.gif) no-repeat left top;}
+
+.bmk_add_btn {
+  background-image: url(../../bookmark/images/btn_mini_add2.gif);
+  cursor:pointer;
+}
+
+.bmk_add_btn2 {
+  background-image: url(../../bookmark/images/btn_mini_add3.gif);
+  cursor:pointer;
+}
+
+.bmk_edit_btn {
+  background-image: url(../../bookmark/images/btn_mini_edit2.gif);
+  cursor:pointer;
+}

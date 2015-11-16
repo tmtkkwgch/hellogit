@@ -1,0 +1,366 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>YUI AccordionView Widget - Feed Frenzy</title>
+
+	<script type="text/javascript" src="../accordionview/utilities.js"></script>
+	<link rel="stylesheet" type="text/css" href="../accordionview/assets/skins/sam/reset-fonts.css"> 
+	<link rel="stylesheet" type="text/css" href="../accordionview/assets/skins/sam/accordionview.css"> 
+	<link rel="stylesheet" type="text/css" href="../accordionview/assets/skins/sam/tabview.css"> 
+
+	<style type="text/css">
+
+	/* specific css for this demo page */
+
+	body {
+		font-size: 0.8em;
+	}
+
+	#wrapper {
+		margin: 20px;
+	}
+
+	.padded {
+		padding: 10px;
+		clear: both;
+		zoom: 1;
+	}
+
+	.yui-content ul li {
+		list-style: inside square;
+	}
+
+	.yui-content ul {
+		margin-left: 1em;
+		margin-bottom: 1em;
+	}
+
+	.block {
+		display: block;
+	}
+
+	ul.info li {
+		list-style: inside square;
+	}
+	ul.info {
+		margin-bottom: 1em;
+	}
+	p.code {
+		background: #000;
+		color: #cfc;
+		padding: 20px;
+		font-family: Courier;
+		font-size: 1.2em;
+		margin-left: 4em;
+	}
+
+	h1 {
+		font-size: 2em;
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+
+	h3 {
+		font-size: 1.6em;
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+
+	p {
+		margin-bottom: 1em;
+	}
+	strong {
+		font-weight: bold;
+	}
+	ol.code { font-size: 1.2em;border: 1px solid #ccc; padding: 5px; margin: 0 0 1em 4em; }
+	ol.code code { display: block; padding: 3px; margin-bottom: 0; }
+	.code li { background: #ddd; border: 1px solid #ccc; margin: 0 0 2px 2.2em; list-style-type: decimal-leading-zero; }
+	.indent1 { padding-left: 1em; }
+	.indent2 { padding-left: 2em; }
+	.indent3 { padding-left: 3em; }
+	
+	.clearfix:after {
+	    content: ".";
+	    display: block;
+	    clear: both;
+	    visibility: hidden;
+	    line-height: 0;
+	    height: 0;
+	}
+
+	.clearfix {
+	    display: inline-block;
+	}
+
+	html[xmlns] .clearfix {
+	    display: block;
+	}
+
+	* html .clearfix {
+	    height: 1%;
+	}
+	.yui-skin-sam .yui-navset .yui-content {
+		border: none;
+	}
+	#p1, #p2, #p3, #p4 {
+		margin-top: 10px;
+	}
+	
+	.headline {
+		max-height: 200px;
+		overflow-y: auto;
+		margin: 1em;
+		border: 1px #ccc solid;
+		background: #eee;
+		padding: 10px;
+	}
+	
+	#wrapper .headline h3 {
+		font-size: 1.4em;
+	}
+	
+	#wrapper .headline h3 a {
+		text-decoration: none;
+		color: #000;
+	}
+	#wrapper .headline h3 a:hover {
+		color: #666;
+		text-decoration: underline;
+	}
+	
+	h4 {
+		color: #000;
+		font-size: 1.2em;
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+	
+
+	
+	#wrapper .yui-content, #wrapper .yui-accordion-content {
+		background: #fff;
+	}
+	
+	#wrapper .yui-content a {
+		color: #666;
+		text-decoration: none;
+	}
+	#wrapper .yui-content a:hover {
+		color: #000;
+		text-decoration: underline;
+	}
+	pre {
+		font-size: 1.2em;
+		padding: 10px;
+	}
+	
+	.yui-accordionview {
+		margin-bottom: 1.5em;
+	}
+	
+	</style>
+</head>
+
+<body class="yui-skin-sam">
+	<div id="wrapper">
+		<h1>YUI AccordionView widget</h1>
+		<h3>Feed Frenzy</h3>
+		<p>This is an example of the <a href="../">YUI AccordionView widget</a> in action. This widget was created by Marco van Hylckama Vlieg. All code is licensed under the BSD license.</p>
+		<div class="padded">
+		<ul>
+			<li><a href="../">Main demo page</a></li>
+			<li><a href="http://www.i-marco.nl/weblog/archive/2008/07/20/yui_powered_javascript_accordi">Announcement blog post</a></li>
+			<li><a href="http://www.i-marco.nl/weblog/">Marco's weblog</a></li>
+		</ul>
+		</div>
+		
+		<div id="container"></div>
+		
+		<p>This is a simple feed reader, generated entirely from script. Because the panels are huge, animation is disabled because it wouldn't look very smooth on most machines. This example uses the <a href="http://developer.yahoo.com/yui/tabview/">YUI TabView widget</a> and some backend PHP code. Of course all this code is included in the zipfile.</p>
+		
+		<noscript><strong>This example only works with Javascript enabled.</strong></noscript>
+		
+
+		<h3>Code</h3>
+
+<pre style='color:#d1d1d1;background:#000000;'><span style='color:#d2cd86; '>(</span><span style='color:#e66170; font-weight:bold; '>function</span><span style='color:#d2cd86; '>(</span><span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>{</span>
+    <span style='color:#e66170; font-weight:bold; '>var</span> myAccordion <span style='color:#d2cd86; '>=</span> <span style='color:#e66170; font-weight:bold; '>new</span> YAHOO<span style='color:#d2cd86; '>.</span>widget<span style='color:#d2cd86; '>.</span>AccordionView<span style='color:#d2cd86; '>(</span><span style='color:#00c4c4; '>'menu'</span><span style='color:#d2cd86; '>,</span> 
+    <span style='color:#b060b0; '>{</span>   collapsible<span style='color:#b060b0; '>:</span> <span style='color:#0f4d75; '>false</span><span style='color:#d2cd86; '>,</span> 
+        expandable<span style='color:#b060b0; '>:</span> <span style='color:#0f4d75; '>false</span><span style='color:#d2cd86; '>,</span> 
+        width<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'auto'</span><span style='color:#d2cd86; '>,</span> 
+        animate<span style='color:#b060b0; '>:</span> <span style='color:#0f4d75; '>false</span>
+    <span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+
+    <span style='color:#e66170; font-weight:bold; '>var</span> myPanels <span style='color:#d2cd86; '>=</span> <span style='color:#d2cd86; '>[</span>
+    <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'World News'</span><span style='color:#d2cd86; '>,</span> content<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'&lt;div id="p1">&lt;/div>'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+    <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Web Development'</span><span style='color:#d2cd86; '>,</span> content<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'&lt;div id="p2">&lt;/div>'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+    <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Design'</span><span style='color:#d2cd86; '>,</span> content<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'&lt;div id="p3">&lt;/div>'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+    <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Gadgets and Photography'</span><span style='color:#d2cd86; '>,</span> content<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'&lt;div id="p4">&lt;/div>'</span><span style='color:#b060b0; '>}</span>
+    <span style='color:#d2cd86; '>]</span><span style='color:#b060b0; '>;</span>
+    myAccordion<span style='color:#d2cd86; '>.</span>addPanels<span style='color:#d2cd86; '>(</span>myPanels<span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+    myAccordion<span style='color:#d2cd86; '>.</span>openPanel<span style='color:#d2cd86; '>(</span><span style='color:#008c00; '>0</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+    myAccordion<span style='color:#d2cd86; '>.</span>appendTo<span style='color:#d2cd86; '>(</span><span style='color:#00c4c4; '>'container'</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+
+    <span style='color:#e66170; font-weight:bold; '>var</span> tabViews <span style='color:#d2cd86; '>=</span> <span style='color:#d2cd86; '>[</span><span style='color:#e66170; font-weight:bold; '>new</span> YAHOO<span style='color:#d2cd86; '>.</span>widget<span style='color:#d2cd86; '>.</span>TabView<span style='color:#d2cd86; '>(</span><span style='color:#d2cd86; '>)</span><span style='color:#d2cd86; '>,</span> 
+                    <span style='color:#e66170; font-weight:bold; '>new</span> YAHOO<span style='color:#d2cd86; '>.</span>widget<span style='color:#d2cd86; '>.</span>TabView<span style='color:#d2cd86; '>(</span><span style='color:#d2cd86; '>)</span><span style='color:#d2cd86; '>,</span> 
+                    <span style='color:#e66170; font-weight:bold; '>new</span> YAHOO<span style='color:#d2cd86; '>.</span>widget<span style='color:#d2cd86; '>.</span>TabView<span style='color:#d2cd86; '>(</span><span style='color:#d2cd86; '>)</span><span style='color:#d2cd86; '>,</span> 
+                    <span style='color:#e66170; font-weight:bold; '>new</span> YAHOO<span style='color:#d2cd86; '>.</span>widget<span style='color:#d2cd86; '>.</span>TabView<span style='color:#d2cd86; '>(</span><span style='color:#d2cd86; '>)</span><span style='color:#d2cd86; '>]</span><span style='color:#b060b0; '>;</span>
+
+    <span style='color:#e66170; font-weight:bold; '>var</span> aFeeds <span style='color:#d2cd86; '>=</span> <span style='color:#d2cd86; '>[</span>
+        <span style='color:#d2cd86; '>[</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Reuters'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://feeds.reuters.com/reuters/topNews'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Associated Press'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://hosted.ap.org/lineups/TOPHEADS.rss?SITE=AP&amp;SECTION=HOME'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'CNN World News'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://rss.cnn.com/rss/cnn_world.rss'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'BBC News'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/front_page/rss.xml'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Yahoo! News'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://rss.news.yahoo.com/rss/topstories'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Google News'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://news.google.com/?output=rss'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+        <span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>,</span>
+        <span style='color:#d2cd86; '>[</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Think Vitamin'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://feeds.feedburner.com/vitaminmasterfeed'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Zeldman'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://www.zeldman.com/rss/'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Chris Heilmann'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://www.wait-till-i.com/feed/'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Roger Johansson'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://www.456bereastreet.com/feed.xml'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'YUI'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://feeds.yuiblog.com/YahooUserInterfaceBlog'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'YDN'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://developer.yahoo.net/blog/index.xml'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Eric Meyer'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://meyerweb.com/eric/thoughts/rss2/summary'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Dave Shea'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://www.mezzoblue.com/rss/index.xml'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Stoyan'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://www.phpied.com/feed/'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Snook'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://feeds.feedburner.com/snookca'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Marco'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://www.i-marco.nl/weblog/rss.xml'</span><span style='color:#b060b0; '>}</span>
+        <span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>,</span>
+        <span style='color:#d2cd86; '>[</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Shaun Inman'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://www.shauninman.com/feeds/posts'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'John Hicks'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://feeds.feedburner.com/hicksdesign'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Veerle Pieters'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://feeds.feedburner.com/veerlesblog'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Cameron Moll'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://www.cameronmoll.com/index.xml'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Jason Santa Maria'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://www.jasonsantamaria.com/articles/rss/'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Mark Boulton'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://www.markboulton.co.uk/journal/rss_2.0/'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Khoi Vinh'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://feeds.feedburner.com/subtraction'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Andy Rutledge'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://www.andyrutledge.com/feeds/arfeed.xml'</span><span style='color:#b060b0; '>}</span>
+        <span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>,</span>
+        <span style='color:#d2cd86; '>[</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Engadget'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://feeds.engadget.com/weblogsinc/engadget'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Gizmodo'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://feeds.gawker.com/gizmodo/excerpts.xml'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'DP Review'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://www.dpreview.com/feeds/news.xml'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Ken Rockwell'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://www.kenrockwell.com/rss.php'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Mac Rumors'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://www.macrumors.com/macrumors.xml'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Uber Gizmo'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://feeds.feedburner.com/ubergizmo'</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>
+            <span style='color:#b060b0; '>{</span>label<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'Crave'</span><span style='color:#d2cd86; '>,</span> feed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'http://news.cnet.com/8300-17938_105-1.xml'</span><span style='color:#b060b0; '>}</span>
+        <span style='color:#d2cd86; '>]</span>
+    <span style='color:#d2cd86; '>]</span><span style='color:#b060b0; '>;</span>
+    <span style='color:#e66170; font-weight:bold; '>var</span> i<span style='color:#d2cd86; '>,</span> j<span style='color:#d2cd86; '>,</span> oConfig<span style='color:#d2cd86; '>,</span> bActive<span style='color:#b060b0; '>;</span>
+    <span style='color:#e66170; font-weight:bold; '>for</span> <span style='color:#d2cd86; '>(</span>i<span style='color:#d2cd86; '>=</span><span style='color:#008c00; '>0</span><span style='color:#b060b0; '>;</span>i<span style='color:#d2cd86; '>&lt;</span>tabViews<span style='color:#d2cd86; '>.</span>length<span style='color:#b060b0; '>;</span>i<span style='color:#d2cd86; '>++</span><span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>{</span>
+        <span style='color:#e66170; font-weight:bold; '>for</span><span style='color:#d2cd86; '>(</span>j<span style='color:#d2cd86; '>=</span><span style='color:#008c00; '>0</span><span style='color:#b060b0; '>;</span>j<span style='color:#d2cd86; '>&lt;</span>aFeeds<span style='color:#d2cd86; '>[</span>i<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>.length</span><span style='color:#b060b0; '>;</span>j<span style='color:#d2cd86; '>++</span><span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>{</span>
+            bActive <span style='color:#d2cd86; '>=</span> <span style='color:#d2cd86; '>(</span>j <span style='color:#d2cd86; '>===</span> <span style='color:#008c00; '>0</span><span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>?</span> <span style='color:#0f4d75; '>true</span> <span style='color:#b060b0; '>:</span> <span style='color:#0f4d75; '>false</span><span style='color:#b060b0; '>;</span>
+        <span style='color:#e66170; font-weight:bold; '>if</span><span style='color:#d2cd86; '>(</span>aFeeds<span style='color:#d2cd86; '>[</span>i<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>[</span>j<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>{</span> <span style='color:#9999a9; '>// no idea why I'm doing this but IE breaks if I don't</span>
+                oConfig <span style='color:#d2cd86; '>=</span> <span style='color:#b060b0; '>{</span>
+                    label<span style='color:#b060b0; '>:</span> aFeeds<span style='color:#d2cd86; '>[</span>i<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>[</span>j<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>.</span>label<span style='color:#d2cd86; '>,</span>
+                    dataSrc<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'php/rss.php?feed='</span> <span style='color:#d2cd86; '>+</span> aFeeds<span style='color:#d2cd86; '>[</span>i<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>[</span>j<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>.</span>feed<span style='color:#d2cd86; '>,</span>
+                    cacheData<span style='color:#b060b0; '>:</span> <span style='color:#0f4d75; '>true</span><span style='color:#d2cd86; '>,</span>
+                    active<span style='color:#b060b0; '>:</span> bActive
+                    <span style='color:#b060b0; '>}</span>
+            <span style='color:#b060b0; '>}</span><span style='color:#b060b0; '>;</span>
+            tabViews<span style='color:#d2cd86; '>[</span>i<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>.</span>addTab<span style='color:#d2cd86; '>(</span><span style='color:#e66170; font-weight:bold; '>new</span> YAHOO<span style='color:#d2cd86; '>.</span>widget<span style='color:#d2cd86; '>.</span>Tab<span style='color:#d2cd86; '>(</span>oConfig<span style='color:#d2cd86; '>)</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+        <span style='color:#b060b0; '>}</span>
+        tabViews<span style='color:#d2cd86; '>[</span>i<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>.</span>appendTo<span style='color:#d2cd86; '>(</span><span style='color:#00c4c4; '>'p'</span> <span style='color:#d2cd86; '>+</span> <span style='color:#d2cd86; '>(</span>i<span style='color:#d2cd86; '>+</span><span style='color:#008c00; '>1</span><span style='color:#d2cd86; '>)</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+    <span style='color:#b060b0; '>}</span>
+<span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>)</span><span style='color:#d2cd86; '>(</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+		</pre>
+		
+			
+		</div>
+
+		<script type="text/javascript" src="../accordionview/accordionview.js"></script>
+		<script type="text/javascript" src="../accordionview/tabview-min.js"></script>
+
+		<script type="text/javascript">
+		
+
+//(function() {
+    
+    var myAccordion = new YAHOO.widget.AccordionView('menu', 
+    {   collapsible: false, 
+        expandable: false, 
+        width: 'auto', 
+        animate: false
+    });
+    
+    var myPanels = [
+    {label: 'World News', content: '<div id="p1"></div>'},
+    {label: 'Web Development', content: '<div id="p2"></div>'},
+    {label: 'Design', content: '<div id="p3"></div>'},
+    {label: 'Gadgets and Photography', content: '<div id="p4"></div>'}
+    ];
+    myAccordion.addPanels(myPanels);
+    myAccordion.openPanel(0);
+    myAccordion.appendTo('container');
+
+    var tabViews = [new YAHOO.widget.TabView(), 
+                    new YAHOO.widget.TabView(), 
+                    new YAHOO.widget.TabView(), 
+                    new YAHOO.widget.TabView()];
+
+    var aFeeds = [
+        [
+            {label: 'Reuters', feed: 'http://feeds.reuters.com/reuters/topNews'},
+            {label: 'Associated Press', feed: 'http://hosted.ap.org/lineups/TOPHEADS.rss?SITE=AP&SECTION=HOME'},
+            {label: 'CNN World News', feed: 'http://rss.cnn.com/rss/cnn_world.rss'},
+            {label: 'BBC News', feed: 'http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/front_page/rss.xml'},
+            {label: 'Yahoo! News', feed: 'http://rss.news.yahoo.com/rss/topstories'},
+            {label: 'Google News', feed: 'http://news.google.com/?output=rss'},
+        ],
+        [
+            {label: 'Think Vitamin', feed: 'http://feeds.feedburner.com/vitaminmasterfeed'},
+            {label: 'Zeldman', feed: 'http://www.zeldman.com/rss/'},
+            {label: 'Chris Heilmann', feed: 'http://www.wait-till-i.com/feed/'},
+            {label: 'Roger Johansson', feed: 'http://www.456bereastreet.com/feed.xml'},
+            {label: 'YUI', feed: 'http://feeds.yuiblog.com/YahooUserInterfaceBlog'},
+            {label: 'YDN', feed: 'http://developer.yahoo.net/blog/index.xml'},
+            {label: 'Eric Meyer', feed: 'http://meyerweb.com/eric/thoughts/rss2/summary'},
+            {label: 'Dave Shea', feed: 'http://www.mezzoblue.com/rss/index.xml'},
+            {label: 'Stoyan', feed: 'http://www.phpied.com/feed/'},
+            {label: 'Snook', feed: 'http://feeds.feedburner.com/snookca'},
+            {label: 'Marco', feed: 'http://www.i-marco.nl/weblog/rss.xml'}
+        ],
+        [
+            {label: 'Shaun Inman', feed: 'http://www.shauninman.com/feeds/posts'},
+            {label: 'John Hicks', feed: 'http://feeds.feedburner.com/hicksdesign'},
+            {label: 'Veerle Pieters', feed: 'http://feeds.feedburner.com/veerlesblog'},
+            {label: 'Cameron Moll', feed: 'http://www.cameronmoll.com/index.xml'},
+            {label: 'Jason Santa Maria', feed: 'http://www.jasonsantamaria.com/articles/rss/'},
+            {label: 'Mark Boulton', feed: 'http://www.markboulton.co.uk/journal/rss_2.0/'},
+            {label: 'Khoi Vinh', feed: 'http://feeds.feedburner.com/subtraction'},
+            {label: 'Andy Rutledge', feed: 'http://www.andyrutledge.com/feeds/arfeed.xml'}
+        ],
+        [
+            {label: 'Engadget', feed: 'http://feeds.engadget.com/weblogsinc/engadget'},
+            {label: 'Gizmodo', feed: 'http://feeds.gawker.com/gizmodo/excerpts.xml'},
+            {label: 'DP Review', feed: 'http://www.dpreview.com/feeds/news.xml'},
+            {label: 'Ken Rockwell', feed: 'http://www.kenrockwell.com/rss.php'},
+            {label: 'Mac Rumors', feed: 'http://www.macrumors.com/macrumors.xml'},
+            {label: 'Uber Gizmo', feed: 'http://feeds.feedburner.com/ubergizmo'},
+            {label: 'Crave', feed: 'http://news.cnet.com/8300-17938_105-1.xml'}
+        ]
+    ];
+    var i, j, oConfig, bActive;
+    for (i=0;i<tabViews.length;i++) {
+        for(j=0;j<aFeeds[i].length;j++) {
+            bActive = (j === 0) ? true : false;
+	    if(aFeeds[i][j]) { // no idea why I'm doing this but IE breaks if I don't
+                oConfig = {
+                    label: aFeeds[i][j].label,
+                    dataSrc: 'php/rss.php?feed=' + aFeeds[i][j].feed,
+                    cacheData: true,
+                    active: bActive
+					}
+            };
+            tabViews[i].addTab(new YAHOO.widget.Tab(oConfig));
+        }
+        tabViews[i].appendTo('p' + (i+1));
+    }
+//})();
+		</script>
+	<script src="/mint/?js" type="text/javascript"></script>	
+	</body>
+	</html>

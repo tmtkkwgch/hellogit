@@ -1,0 +1,15 @@
+◎Group Session $SMTITLE
+
+以下の稟議が$SMDATEに$STATUSされました。
+
+┏━$STATUS
+┃$TITLE
+┃　$UNAME　$DATE
+┗━
+URL:$URL
+
+添付:$FILES
+
+◆内容
+${BODY}
+

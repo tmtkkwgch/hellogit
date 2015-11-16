@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>YUI AccordionView Widget - 'Apple' style accordion</title>
+
+	<script type="text/javascript" src="../accordionview/utilities.js"></script>
+	<link rel="stylesheet" type="text/css" href="../accordionview/assets/skins/sam/reset-fonts.css"> 
+	<link rel="stylesheet" type="text/css" href="../accordionview/assets/skins/sam/accordionview.css"> 
+	<style type="text/css">
+
+	/* specific css for this demo page */
+
+	body {
+		font-size: 0.8em;
+	}
+
+	#wrapper {
+		margin: 20px;
+	}
+
+	.padded {
+		padding: 10px;
+		clear: both;
+		zoom: 1;
+	}
+
+	.padded ul li {
+		list-style: inside square;
+	}
+
+	.block {
+		display: block;
+	}
+
+	ul.info li {
+		list-style: inside square;
+	}
+	ul.info {
+		margin-bottom: 1em;
+	}
+	p.code {
+		background: #000;
+		color: #cfc;
+		padding: 20px;
+		font-family: Courier;
+		font-size: 1.2em;
+		margin-left: 4em;
+	}
+
+	h1 {
+		font-size: 2em;
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+
+	h3 {
+		font-size: 1.6em;
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+
+	li h3 {
+		display: inline;
+	}
+
+	p {
+		margin-bottom: 1em;
+	}
+	strong {
+		font-weight: bold;
+	}
+	ol.code { font-size: 1.2em;border: 1px solid #ccc; padding: 5px; margin: 0 0 1em 4em; }
+	ol.code code { display: block; padding: 3px; margin-bottom: 0; }
+	.code li { background: #ddd; border: 1px solid #ccc; margin: 0 0 2px 2.2em; list-style-type: decimal-leading-zero; }
+	.indent1 { padding-left: 1em; }
+	.indent2 { padding-left: 2em; }
+	.indent3 { padding-left: 3em; }
+	
+	.clearfix:after {
+	    content: ".";
+	    display: block;
+	    clear: both;
+	    visibility: hidden;
+	    line-height: 0;
+	    height: 0;
+	}
+
+	.clearfix {
+	    display: inline-block;
+	}
+
+	html[xmlns] .clearfix {
+	    display: block;
+	}
+
+	* html .clearfix {
+	    height: 1%;
+	}
+	
+	.yui-accordionview {
+		margin-bottom: 1.5em;
+	}
+	
+	</style>
+</head>
+
+<body class="yui-skin-sam">
+	<div id="wrapper">
+		<h1>YUI AccordionView widget</h1>
+			<h3>'Apple' style accordion</h3>
+			<p>This is an example of the <a href="../">YUI AccordionView widget</a> in action. This widget was created by Marco van Hylckama Vlieg. All code is licensed under the BSD license.</p>
+			<div class="padded">
+			<ul>
+				<li><a href="../">Main demo page</a></li>
+				<li><a href="http://www.i-marco.nl/weblog/archive/2008/07/20/yui_powered_javascript_accordi">Announcement blog post</a></li>
+				<li><a href="http://www.i-marco.nl/weblog/">Marco's weblog</a></li>
+			</ul>
+			</div>
+			
+			<ul id="mymenu">
+				<li><h3>Jackie as a puppy</h3>
+					<div><img src="http://farm3.static.flickr.com/2238/2293037745_c688d7a09c_m.jpg" alt="" class="block"></div>
+				</li>
+				<li><h3>Jackie is sleeping</h3>
+					<div><img src="http://farm4.static.flickr.com/3101/2302585787_23c0d91970_m.jpg" alt="" class="block"></div>
+				</li>
+				<li><h3>Looking up</h3>
+					<div><img src="http://farm3.static.flickr.com/2112/2407463493_e2458f4e40_m.jpg" alt="" class="block"></div>
+				</li>
+				<li><h3>Jackie on the computer</h3>
+					<div><img src="http://farm4.static.flickr.com/3047/2438829879_fc0600240d_m.jpg" alt="" class="block"></div>
+				</li>
+				<li><h3>Eek!</h3>
+					<div><img src="http://farm4.static.flickr.com/3076/2629212830_4496f79daa_m.jpg" alt="" class="block"></div>
+				</li>
+			</ul>
+			
+			<p>This accordion's panels activate when hovering over elements with the mouse. A timeout is used to prevent it from acting too nervous like I've seen in many other accordion implementations. I recommend to only use this with <strong>collapsible: false</strong>. Timeout duration is configurable through the <strong>hoverTimeout</strong> parameter.<p>
+			<p class="code">menu5 = new YAHOO.widget.AccordionView('mymenu', {collapsible: false, expandable: false, width: '240px', hoverActivated: true, expandItem: 0, hoverTimeout: 600, animate: true, animationSpeed: '0.5'});</p>
+					
+			
+		</div>
+
+		<script type="text/javascript" src="../accordionview/accordionview.js"></script>
+
+		<script type="text/javascript">
+		var menu5 = new YAHOO.widget.AccordionView('mymenu', {collapsible: false, expandable: false, width: '240px', hoverActivated: true, expandItem: 0, hoverTimeout: 600, animate: true, animationSpeed: '0.5'});		
+		</script>
+		<script src="/mint/?js" type="text/javascript"></script>
+	</body>
+	</html>

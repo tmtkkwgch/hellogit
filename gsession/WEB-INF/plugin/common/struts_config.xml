@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+<!-- ========== Form Bean Definitions =================================== -->
+
+    <form-beans>
+        <form-bean name="emptyForm" type="jp.groupsession.v2.struts.EmptyForm" />
+        <form-bean name="cmn001Form" type="jp.groupsession.v2.cmn.cmn001.Cmn001Form" />
+        <form-bean name="cmn002Form" type="jp.groupsession.v2.cmn.cmn002.Cmn002Form" />
+        <form-bean name="cmn003Form" type="jp.groupsession.v2.cmn.cmn003.Cmn003Form" />
+        <form-bean name="cmn100Form" type="jp.groupsession.v2.cmn.cmn100.Cmn100Form" />
+        <form-bean name="cmn110Form" type="jp.groupsession.v2.cmn.cmn110.Cmn110Form" />
+        <form-bean name="cmn120Form" type="jp.groupsession.v2.cmn.cmn120.Cmn120Form" />
+        <form-bean name="cmn130Form" type="jp.groupsession.v2.cmn.cmn130.Cmn130Form" />
+        <form-bean name="cmn131Form" type="jp.groupsession.v2.cmn.cmn131.Cmn131Form" />
+        <form-bean name="cmn132Form" type="jp.groupsession.v2.cmn.cmn132.Cmn132Form" />
+        <form-bean name="cmn131knForm" type="jp.groupsession.v2.cmn.cmn131kn.Cmn131knForm" />
+        <form-bean name="cmn140Form" type="jp.groupsession.v2.cmn.cmn140.Cmn140Form" />
+        <form-bean name="cmn150Form" type="jp.groupsession.v2.cmn.cmn150.Cmn150Form" />
+        <form-bean name="cmn160Form" type="jp.groupsession.v2.cmn.cmn160.Cmn160Form" />
+        <form-bean name="cmn160knForm" type="jp.groupsession.v2.cmn.cmn160kn.Cmn160knForm" />
+        <form-bean name="cmn170Form" type="jp.groupsession.v2.cmn.cmn170.Cmn170Form" />
+        <form-bean name="cmn180Form" type="jp.groupsession.v2.cmn.cmn180.Cmn180Form" />
+        <form-bean name="cmn190Form" type="jp.groupsession.v2.cmn.cmn190.Cmn190Form" />
+        <form-bean name="cmn200Form" type="jp.groupsession.v2.cmn.cmn200.Cmn200Form" />
+        <form-bean name="cmn210Form" type="jp.groupsession.v2.cmn.cmn210.Cmn210Form" />
+        <form-bean name="cmn220Form" type="jp.groupsession.v2.cmn.cmn220.Cmn220Form" />
+        <form-bean name="cmn230Form" type="jp.groupsession.v2.cmn.cmn230.Cmn230Form" />
+        <form-bean name="cmn240Form" type="jp.groupsession.v2.cmn.cmn240.Cmn240Form" />
+        <form-bean name="cmn990Form" type="jp.groupsession.v2.cmn.cmn990.Cmn990Form" />
+        <form-bean name="cmn996Form" type="jp.groupsession.v2.cmn.cmn996.Cmn996Form" />
+        <form-bean name="cmn997Form" type="jp.groupsession.v2.cmn.cmn997.Cmn997Form" />
+        <form-bean name="cmn998Form" type="jp.groupsession.v2.cmn.cmn998.Cmn998Form" />
+        <form-bean name="cmn999Form" type="jp.groupsession.v2.cmn.cmn999.Cmn999Form" />
+    </form-beans>
+
+<!-- ================================================ Global Exception -->
+
+    <global-exceptions>
+      <exception handler="jp.groupsession.v2.struts.IllegalStateExceptionHandler"
+              key="exceptions.system" type="java.lang.IllegalStateException"/>
+
+      <exception path="/common/cmn999.do?CMD=SYSETEM_ERROR"
+              handler="jp.groupsession.v2.struts.GSExceptionHandler"
+              key="exceptions.system" type="java.lang.Throwable"/>
+    </global-exceptions>
+
+<!-- ========== Global Forward Definitions ============================== -->
+
+  <global-forwards type="org.apache.struts.action.ActionForward">
+        <forward name="gf_domain" path="/common/cmn998.do?CMD=DOMAIN_ERROR" redirect="false"/>
+        <forward name="gf_domain_logout" path="/common/cmn001.do?CMD=logout" redirect="false"/>
+        <forward name="gf_msg" path="/common/cmn999.do?CMD=INFO" redirect="false"/>
+        <forward name="gf_warn" path="/common/cmn999.do?CMD=WARNING" redirect="false"/>
+        <forward name="gf_auth" path="/common/cmn999.do?CMD=AUTH_ERROR" redirect="false"/>
+        <forward name="gf_auth_popup" path="/common/cmn999.do?CMD=AUTH_POPUP_ERROR" redirect="false"/>
+        <forward name="gf_con" path="/common/cmn996.do?CMD=CON_ERROR" redirect="false"/>
+        <forward name="gf_submit" path="/common/cmn999.do?CMD=SUBMIT_ERROR" redirect="false"/>
+        <forward name="gf_power" path="/common/cmn999.do?CMD=POWER_ERROR" redirect="false"/>
+        <forward name="gf_file_size" path="/common/cmn999.do?CMD=FILE_SIZE_ERROR" redirect="false"/>
+        <forward name="gf_ldap" path="/common/cmn999.do?CMD=LDAP_ERROR" redirect="false"/>
+        <forward name="gf_logout" path="/common/cmn001.do" redirect="false"/>
+        <forward name="gf_menu" path="/common/cmn002.do" redirect="false"/>
+        <forward name="gf_license" path="/common/cmn999.do?CMD=LICENSE_ERROR" redirect="false"/>
+        <forward name="mainPageSetting" path="/common/cmn150.do" />
+  </global-forwards>
+
+<!-- ========== Action Mapping Definitions ============================== -->
+
+    <action-mappings>
+
+        <!-- 強制エラー画面 -->
+        <action
+            name="cmn990Form"
+            path="/common/cmn990"
+            input="/WEB-INF/plugin/common/jsp/cmn990.jsp"
+            validate="false"
+            scope="request"
+            type="jp.groupsession.v2.cmn.cmn990.Cmn990Action">
+        </action>
+
+        <!-- ログ再読込画面 -->
+        <action
+            name="emptyForm"
+            path="/common/cmn991"
+            input="/WEB-INF/plugin/common/jsp/cmn990.jsp"
+            validate="false"
+            scope="request"
+            type="jp.groupsession.v2.cmn.cmn991.Cmn991Action">
+        </action>
+
+        <!-- バッチスケジューラの再起動画面 -->
+        <action
+            name="emptyForm"
+            path="/common/cmn992"
+            input="/WEB-INF/plugin/common/jsp/cmn990.jsp"
+            validate="false"
+            scope="request"
+            type="jp.groupsession.v2.cmn.cmn992.Cmn992Action">
+        </action>
+
+        <!-- データベース設定の再読み込み画面 -->
+        <action
+            name="emptyForm"
+            path="/common/cmn993"
+            input="/WEB-INF/plugin/common/jsp/cmn990.jsp"
+            validate="false"
+            scope="request"
+            type="jp.groupsession.v2.cmn.cmn993.Cmn993Action">
+        </action>
+
+        <!-- ファイルキャッシュのリセット画面 -->
+        <action
+            name="emptyForm"
+            path="/common/cmn994"
+            input="/WEB-INF/plugin/common/jsp/cmn990.jsp"
+            validate="false"
+            scope="request"
+            type="jp.groupsession.v2.cmn.cmn994.Cmn994Action">
+        </action>
+
+        <!-- コネクション取得エラー -->
+        <action
+            name="cmn996Form"
+            path="/common/cmn996"
+            input="/WEB-INF/plugin/common/jsp/cmn996.jsp"
+            validate="false"
+            scope="request"
+            type="jp.groupsession.v2.cmn.cmn996.Cmn996Action">
+        </action>
+
+        <!-- ドメインの設定(byCloud用) -->
+        <action
+            name="cmn997Form"
+            path="/common/cmn997"
+            input="/WEB-INF/plugin/common/jsp/cmn990.jsp"
+            validate="false"
+            scope="request"
+            type="jp.groupsession.v2.cmn.cmn997.Cmn997Action">
+        </action>
+
+        <!-- 共通メッセージ画面(byCloud用) -->
+        <action
+            name="cmn998Form"
+            path="/common/cmn998"
+            input="/WEB-INF/plugin/common/jsp/cmn998.jsp"
+            validate="false"
+            scope="request"
+            type="jp.groupsession.v2.cmn.cmn998.Cmn998Action">
+        </action>
+
+        <!-- 共通メッセージ画面 -->
+        <action
+            name="cmn999Form"
+            path="/common/cmn999"
+            input="/WEB-INF/plugin/common/jsp/cmn999.jsp"
+            validate="false"
+            scope="request"
+            type="jp.groupsession.v2.cmn.cmn999.Cmn999Action">
+
+            <exception type="java.lang.Exception" key="exceptions.system" path="/error/500.html"/>
+        </action>
+
+       <!-- ログイン画面 -->
+       <action
+            name="cmn001Form"
+            path="/common/cmn001"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn001.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn001.Cmn001Action">
+      <forward name="frame" path="/common/cmn002.do" />
+      <forward name="pswdLimit" path="/user/usr050.do?CMD=pswdLimit" />
+      <forward name="pswdUpdate" path="/user/usr050.do?CMD=pswdUpdate" />
+       </action>
+
+     <!-- フレーム画面 -->
+       <action
+            name="cmn002Form"
+            path="/common/cmn002"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn002.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn002.Cmn002Action">
+           <forward name="main" path="/main/man001.do" />
+           <forward name="admin" path="/main/man002.do" />
+       </action>
+
+     <!-- メニュー -->
+       <action
+            name="cmn003Form"
+            path="/common/cmn003"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn003.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn003.Cmn003Action">
+            <forward name="menu" path="/WEB-INF/plugin/common/jsp/cmn003.jsp" />
+       </action>
+
+       <!-- ユーザ情報ポップアップ -->
+       <action
+            name="cmn100Form"
+            path="/common/cmn100"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn100.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn100.Cmn100Action">
+       </action>
+
+       <!-- ファイル添付ポップアップ -->
+       <action
+            name="cmn110Form"
+            path="/common/cmn110"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn110.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn110.Cmn110Action">
+       </action>
+
+       <!-- ユーザ選択 -->
+       <action
+            name="cmn120Form"
+            path="/common/cmn120"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn120.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn120.Cmn120Action">
+       </action>
+
+     <!-- マイグループ設定 -->
+       <action
+            name="cmn130Form"
+            path="/common/cmn130"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn130.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn130.Cmn130Action">
+      <forward name="init" path="/common/cmn130.do" />
+      <forward name="groupAddEdit" path="/common/cmn131.do" />
+      <forward name="backToMenu" path="/main/man030.do" />
+      <forward name="view" path="/common/cmn132.do" />
+       </action>
+
+     <!-- マイグループ登録 -->
+       <action
+            name="cmn131Form"
+            path="/common/cmn131"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn131.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn131.Cmn131Action">
+      <forward name="backToList" path="/common/cmn130.do" />
+      <forward name="init" path="/common/cmn131.do" />
+      <forward name="ok" path="/common/cmn131kn.do" />
+       </action>
+
+     <!-- マイグループ登録確認 -->
+       <action
+            name="cmn131knForm"
+            path="/common/cmn131kn"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn131kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn131kn.Cmn131knAction">
+      <forward name="backToList" path="/common/cmn130.do" />
+      <forward name="backToInput" path="/common/cmn131.do" />
+       </action>
+     <!-- 共有マイグループ確認 -->
+       <action
+            name="cmn132Form"
+            path="/common/cmn132"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn132.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn132.Cmn132Action">
+      <forward name="backToList" path="/common/cmn130.do" />
+      <forward name="backToInput" path="/common/cmn130.do" />
+       </action>
+
+       <!-- メニュー項目設定画面 -->
+       <action
+            name="cmn140Form"
+            path="/common/cmn140"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn140.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn140.Cmn140Action">
+            <forward name="menu" path="/main/man030.do" />
+       </action>
+
+       <!-- メニュー項目表示設定画面 -->
+       <action
+            name="cmn150Form"
+            path="/common/cmn150"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn150.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn150.Cmn150Action">
+            <forward name="cmn150back" path="/main/man030.do" />
+            <forward name="changeOk" path="/common/cmn150.do?CMD=cmn150commit" />
+            <forward name="changeCancel" path="/common/cmn150.do" />
+            <forward name="cmn150backMainPage" path="/main/man001.do" />
+       </action>
+
+       <!-- 企業情報画面 -->
+       <action
+            name="cmn160Form"
+            path="/common/cmn160"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn160.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn160.Cmn160Action">
+            <forward name="mainAdmSetting" path="/main/man002.do" />
+            <forward name="confirmEnterprise" path="/common/cmn160kn.do" />
+       </action>
+
+       <!-- 企業情報確認画面 -->
+       <action
+            name="cmn160knForm"
+            path="/common/cmn160kn"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn160kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn160kn.Cmn160knAction">
+            <forward name="mainAdmSetting" path="/main/man002.do" />
+            <forward name="cmn160knBack" path="/common/cmn160.do" />
+       </action>
+
+       <!-- メニュー項目表示設定画面 -->
+       <action
+            name="cmn170Form"
+            path="/common/cmn170"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn170.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn170.Cmn170Action">
+            <forward name="cmn170back" path="/main/man030.do" />
+            <forward name="changeOk" path="/common/cmn170.do?CMD=cmn170commit" />
+            <forward name="changeCancel" path="/common/cmn170.do" />
+       </action>
+
+       <!-- 天気予報(メイン)画面 -->
+       <action
+            name="cmn180Form"
+            path="/common/cmn180"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn180.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn180.Cmn180Action">
+       </action>
+
+       <!-- 今日は何の日？(メイン)画面 -->
+       <action
+            name="cmn190Form"
+            path="/common/cmn190"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn190.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn190.Cmn190Action">
+       </action>
+
+       <!-- 休日設定取得 -->
+       <action
+            name="cmn200Form"
+            path="/common/cmn200"
+            scope="request"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn200.Cmn200Action">
+       </action>
+
+       <!-- グループツリーポップアップ -->
+       <action
+            name="cmn210Form"
+            path="/common/cmn210"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn210.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn210.Cmn210Action">
+       </action>
+
+       <!-- 全グループから選択ポップアップ -->
+       <action
+            name="cmn220Form"
+            path="/common/cmn220"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn220.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn220.Cmn220Action">
+       </action>
+
+       <!-- 全グループから選択ポップアップ(移動先２つ) -->
+       <action
+            name="cmn230Form"
+            path="/common/cmn230"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn230.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn230.Cmn230Action">
+       </action>
+
+       <!-- ニュース(メイン)画面 -->
+       <action
+            name="cmn240Form"
+            path="/common/cmn240"
+            scope="request"
+            input="/WEB-INF/plugin/common/jsp/cmn240.jsp"
+            validate="false"
+            type="jp.groupsession.v2.cmn.cmn240.Cmn240Action">
+       </action>
+    </action-mappings>
+
+<!-- ===================================== Controller Configuration -->
+    <controller multipartClass="jp.co.sjts.util.struts.MultipartRequestHandlerJa" maxFileSize="101M" bufferSize="4096" />
+
+<!-- ======================================== Message Resources Definitions -->
+    <message-resources parameter="Messages" />
+    <message-resources parameter="Messages_ja" key="messages_ja" />
+    <message-resources parameter="Messages_en" key="messages_en" />
+    <message-resources parameter="ApplicationResources_ja" key="message" />
+    <message-resources parameter="ApplicationResources_ja" key="message_ja" />
+    <message-resources parameter="ApplicationResources_en" key="message_en" />
+</struts-config>

@@ -1,0 +1,7 @@
+.tooltip_search {
+  padding:5px 10px 5px 10px;
+  background-color: #EEEEEE;
+  position:absolute;
+  border:solid 1px #666666;
+  font-size: 90%;
+}

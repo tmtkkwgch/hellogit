@@ -1,0 +1,161 @@
+.table_bg_A5B4E1 {
+    background-color: #e5edfe!important;
+    border: solid 1px #cccccc!important;
+    padding: 5px;
+}
+
+/* WEBÉÅÅ[Éã ********************************************/
+
+.yui-content, .searchCondition {
+    border:3px solid #7D91BD !important;
+}
+
+.yui-skin-sam .yui-panel .hd {
+    background:transparent url("../../../common/css/theme1/images/main_header_left.gif") !important;
+    border:1px solid #cccccc;
+    border-top:none;
+}
+
+#standard th, #searchResult th {
+    background:transparent url("../../../common/css/theme1/images/main_header_left.gif");
+    color: ffff00!important;
+}
+#folder_top {
+    height: 35px;
+    border: 1px solid #cccccc;
+    position: relative;
+    background:transparent url("../../../common/css/theme1/images/td_back7D91BD.gif");
+}
+#folder_top .wrap {
+    height: 35px;
+}
+#accountList {
+  background-color: #e5edfe;
+  border: 1px;
+  border-color: #cccccc;
+}
+
+.yui-skin-sam .yui-accordionview {
+	border-bottom: 1px #cccccc solid!important;
+}
+
+.yui-skin-sam .yui-accordionview li.yui-accordion-panel a.yui-accordion-toggle {
+	border-bottom: 1px #cccccc solid!important;
+    background: url(../../../common/css/theme1/images/menu_back.png)!important;
+}
+
+.yui-skin-sam .yui-accordionview li.yui-accordion-panel a.yui-accordion-toggle.active {
+	border-color: #cccccc!important;
+	border-bottom: 1px #cccccc solid!important;
+}
+
+.yui-skin-sam .yui-accordion-content {
+	border-left: 1px #cccccc solid!important;
+	border-right: 1px #cccccc solid!important;
+}
+
+.yui-skin-sam .yui-accordion-toggle.active .indicator {
+    background: url(../../../common/js/yui-accordion/accordionview/assets/skins/sam/sprite.png) 0 -400px;
+    color: #ffffff!important;
+}
+
+.type_p {
+    margin:10px 3px;
+    padding:5px;
+    border:1px solid #cccccc;
+    background:#eeeeee;
+}
+
+.webmail_td1 {
+  background-color: #FFFFFF;
+  border: 1px;
+  border-color: #cccccc;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+  font-size: 80%;
+}
+
+.webmail_td2 {
+  background-color: #FFFFFF;
+  border: 1px;
+  border-color: #cccccc;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: none;
+  border-right-style: solid;
+}
+
+table#wml_settings {
+  width:100%;
+  border-collapse:collapse;
+}
+table#wml_settings tr td input {
+  margin:5px;
+}
+table#wml_settings tr td div {
+  padding:5px 0 0 30px;
+}
+
+table#wml_settings tr th {
+  width:150px;
+  white-space:nowrap;
+  background-color:#e5edfe;
+  font-weight:bold;
+  text-align:left;
+  vertical-align:top;
+  border:1px solid #cccccc;
+  padding:10px;
+}
+table#wml_settings tr td {
+  background-color:#FFFFFF;
+  text-align:left;
+  border:1px solid #cccccc;
+  padding:10px;
+}
+
+.mail_header {
+    background:transparent url(../../../common/css/theme1/images/mail_header.gif);
+    border:1px solid #cccccc;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 80%
+}
+
+.mailHeader {
+    width: 100%;
+    color: #000000;
+    border-left: none;
+    border-right: none;
+    background: transparent url(../../../common/css/theme1/images/mail_header.gif);
+    text-align: left;
+    font-weight: bold;
+}
+
+.yui-skin-sam .yui-navset .yui-nav .selected a,
+.yui-skin-sam .yui-navset .yui-nav .selected a:focus, /* no focus effect for selected */
+.yui-skin-sam .yui-navset .yui-nav .selected a:hover { /* no hover effect for selected */
+    background:#2647a0 url(../../../common/css/theme1/images/td_back7D91BD.gif)!important;
+    color:#fff;
+}
+
+.yui-skin-sam .yui-navset .yui-nav a:hover,
+.yui-skin-sam .yui-navset .yui-nav a:focus {
+    background:#2647a0 url(../../../common/css/theme1/images/main_header_left.gif)!important;
+    outline:0;
+}
+
+.mailList_header {
+    background:transparent url(../../../common/css/theme1/images/td_bacl8_80.gif);
+    padding: 5px;
+}
+
+.mailList_data2 {
+    background-color: #e5edfe;
+    padding: 5px;
+}
+
+.yui-skin-sam .yui-navset .yui-nav .selected a, .yui-skin-sam .yui-navset .yui-nav .selected a em {
+    border-color:#5D789C !important;
+}

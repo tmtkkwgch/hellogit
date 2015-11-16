@@ -1,0 +1,457 @@
+.text_white{
+    font-weight: bold;
+    color: #FFFFFF;
+}
+.text_white_s{
+    color: #FFFFFF;
+}
+
+.text_blue {
+    color: #0000ff;
+    font-size: 90%;
+}
+
+.text_blue_b1 {
+    color: #0000ff;
+    font-size: 90%;
+    font-weight: bold;
+}
+
+.td_padding {
+  margin:  5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+}
+
+.text_base_prj {
+  color: #333333;
+  font-size: 90%;
+}
+
+.text_base_file_up {
+  color: #333333;
+  font-size: 70%;
+}
+
+.text_base_right {
+  color: #333333;
+  font-size: 90%;
+  text-align: right;
+}
+
+.text_r1 {
+  font-size: 85%!important;
+  line-height: 11pt;
+  color: #CC3333;
+  font-weight: bold;
+}
+
+.prj_tbl_base_2 {
+    padding: 5px;
+    font-size: 90%;
+}
+
+
+.prj_tbl_base4 {
+    padding: 5px;
+    border: solid 1px #cccccc;
+}
+
+.prj_tbl_base4_fontsize {
+    font-size: 90%;
+}
+
+.todo_th {
+    background-color: #ADD8E6;
+    font-size: 90%;
+    white-space: nowrap;
+    height: 35px;
+    padding: 0px 5px 0px 5px;
+}
+
+.todo_th2 {
+	background-image: url(../images/prj_todo_ttl_back.gif);
+    font-size: 90%;
+    white-space: nowrap;
+    height: 35px;
+    padding: 0px 5px 0px 5px;
+}
+
+.prj_mokuteki {
+	background-image: url(../images/prj_todo_ttl_back.gif);
+    font-size: 90%;
+    white-space: nowrap;
+    height: 35px;
+    padding: 0px 5px 0px 5px;
+	text-align: left;
+	color: #333333;
+}
+
+.prj_td {
+    border: 1px;
+    border-color: #333333;
+    border-width: 1px;
+    border-style: solid;
+    border-collapse: collapse;
+    padding: 5px 5px 5px 5px;
+}
+
+.td_line_color1 {
+    background-color: #ffffff;
+    vertical-align: middle;
+}
+
+.td_line_color2 {
+    background-color: #e5edfe;
+    vertical-align: middle;
+}
+
+.td_sub_title {
+  margin:  5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+
+  background-color: #a5b4e1;
+  border: solid 1px #cccccc;
+  /* background-image: url(../images/prj_todo_ttl_back.gif); */
+
+  color: #333333;
+  font-size: 90%;
+}
+
+.td_sub_detail {
+    background-color: #ffffff;
+    border: solid 1px #333333;
+    padding: 5px;
+}
+
+div.seach_function_l {
+    width: 54%;
+    float: left;
+}
+.table_bg_7D91BD {
+  padding: 4px;
+  background-color: #7D91BD;
+  border: solid 1px #cccccc;
+}
+
+.text_base7 {
+	color: #333333;
+	font-size: 90%;
+}
+
+.text_prjtodo_list_head {
+  font-size: 90%;
+  line-height: 11pt;
+  color: #03396D;
+  font-weight: bold;
+}
+
+img.bottom {
+  vertical-align:bottom;
+}
+
+.f_tree {
+
+
+}
+
+.btn_folder_n1 {
+  border: solid 1px;
+  BACKGROUND-IMAGE: url(../images/btn_folder.gif);
+  color: #000066;
+  font-size: 90%;
+  height:25px;
+  width:130px;
+  padding-left: 15px;
+  cursor:pointer;
+}
+
+.btn_file_n1 {
+  border: solid 1px;
+  BACKGROUND-IMAGE: url(../images/btn_file.gif);
+  color: #000066;
+  font-size: 90%;
+  height:25px;
+  width:150px;
+  padding-left: 15px;
+  cursor:pointer;
+}
+
+.btn_move_n1
+{
+  border: solid 1px;
+  BACKGROUND-IMAGE: url(../images/btn_move.gif);
+  color: #000066;
+  font-size: 14px!important;
+  height:25px;
+  width:100px;
+  padding-left: 15px;
+  cursor:pointer;
+}
+
+/* ソート ナビゲーション */
+.sort_navi{
+  border:1px solid #000000;
+  background-color:#cccccc;
+  text-align:right;
+  padding:3px;
+  }
+.sort_navi a{color:#0000ff;font-size:80%;}
+.sort_navi strong{font-weight:bold;font-size:80%;}
+.sort_navi span{
+  float:left;
+  font-size:100%;
+  font-weight:bold;
+  }
+
+/* 汎用クラス */
+.small{font-size:90%;}
+
+/* キャビネット 本体テーブル */
+table.cabinetlist{margin:8px 0 8px 0;}
+table.cabinetlist tr th{
+  position:relative;
+  background-color:#E7E2F3;
+  text-align:left;
+  }
+table.cabinetlist tr th * span{
+
+}
+table.cabinetlist tr th * a{
+  font-weight:bold;
+  font-size:100%;
+  color:#0000FF;
+  }
+table.cabinetlist tr th * a.regist-count{
+  font-size:70% !important;
+  margin-left:5px;
+  background-color:#ffcccc !important;
+  color:#ff0000 !important;
+  font-weight:normal !important;
+  }
+table.cabinetlist tr th * small{
+  font-size:70%;
+  color:#666666;
+  }
+table.cabinetlist tr td p.cabinet_comment{
+  position:relative;
+  padding:5px 100px 5px 5px;margin:0;
+  font-size:90%;
+  height:1em;
+  overflow:hidden;
+  }
+table.cabinetlist tr td p.cabinet_comment span{
+  font-size:70%;
+  position:absolute;
+  right:0%;
+  bottom:0%
+  }
+table.cabinetlist tr td p.cabinet_comment span a{color:blue;}
+/* ブックマーク 本体テーブル タイトル URL部分 */
+table.cabineturl{border-collapse:collapse;}
+table.cabineturl tr td{
+  padding:5px;
+  border:1px solid #333333;
+  white-space:nowrap;
+}
+table.cabinetlist tr th * span.text_title{
+  font-size:80% !important;
+  margin-left:5px;
+  background-color:#eeeeee !important;
+  color:#03396D !important;
+  font-weight:normal !important;
+}
+
+table.cabinetlist tr th * span.text_useedsize{
+  font-family: Verdana,Arial,sans-serif;
+/*  background-color:#e5edfe !important;*/
+  color: #333333;
+  font-size: 80%;
+  margin-left:5px;
+  font-weight:normal !important;
+}
+table.cabinetlist tr th * span.text_warning{
+  font-size:80% !important;
+  margin-left:5px;
+  background-color:#ffcccc !important;
+  color:#ff0000 !important;
+  font-weight:normal !important;
+}
+
+table.cabinetlist p span.text_warning{
+  color:#ff0000 !important;
+  font-weight:normal !important;
+  }
+
+.spacer {
+  margin: 5px 0px 0px 0px;
+}
+
+.regist_count{
+  background-color:#ffcccc !important;
+  color:#ff0000 !important;
+}
+
+.display_off{
+  display:none;
+}
+
+.display_on{
+  display:inline;
+}
+
+.text_fileUrl {
+    background-color: #e0e0e0;
+}
+
+
+/* 20090529 Niiseki reDesign */
+a {color:blue;}
+a:hover {color:red;}
+img {border:0;vertical-align:bottom;}
+
+/* 検索ボックス */
+p.file-cabinet-control {
+  margin:0;
+  padding:3px;
+  border:solid 1px #cccccc;
+  margin-bottom:5px;
+  text-align:right;
+  background:url(../images/bg_file_table_list_gray.gif) left bottom repeat-x #ffffff;
+}
+/* キャビネットテーブル */
+table#file-list-table th ,
+table#file-list-table td {
+  border:solid 1px #cccccc;
+  padding:5px;
+  font-size: 80%;
+}
+table#file-list-table th {
+  white-space:nowrap;
+  border:solid 1px #cccccc;
+}
+/* キャビネット説明 */
+table#file-list-table td p {
+  font-size:70% !important;
+  margin:5px 0 0 0;
+  color:#666666;
+}
+table#file-list-table td a {
+  font-size:125% !important;
+  font-weight:bold;
+}
+/* 使用容量WARNING */
+table#file-list-table td  span.text_warning {
+  background-color:#ffcccc !important;
+  color:#ff0000 !important;
+  font-weight:normal !important;
+}
+/* thの文字色 */
+table#file-list-table tr.row-heading a {color:#333333 !important;}
+table#file-list-table tr.row-heading a:hover {color:#666666 !important;}
+
+/* キャビネット名横の画像 */
+/* table#file-list-table td a img {margin-left:5px;} */
+
+/* 右側テーブル */
+table.file-table-right {
+  width:100%;
+  border:solid 1px #cccccc;
+  border-collapse:collapse;
+}
+table.file-table-right th ,
+table.file-table-right td {border:solid 1px #cccccc;}
+
+table.file-table-right th {
+  text-align:left;
+  padding:5px;
+  font-size:100%;
+  font-weight:bold;
+  color:white;
+}
+table.file-table-right td {padding:5px;}
+table.file-table-right td a {font-size: 80%;}
+
+/* ショートカット内テーブル */
+table.file-table-right th table {margin:-3px;}
+table.file-table-right th table th ,
+table.file-table-right th table td {border:none;margin:0;padding:0;}
+
+.td_line_color1 {
+    background: url(../images/bg_file_table_list_gray.gif) left bottom repeat-x #ffffff !important;
+}
+.td_line_color2 {
+    background-color: #e8edef;
+}
+
+.btn_base1s
+{
+  border: solid 1px;
+  BACKGROUND-IMAGE: url(../../common/images/btnback1.gif);
+  color: #000066;
+  font-size: 12px!important;
+  height:25px;
+  width:50px;
+  cursor:pointer;
+}
+.text_bb1 {
+  font-size: 110%!important;
+  line-height: 13pt;
+  color: #000000;
+  font-weight: bold;
+}
+
+.file_text_bb1 {
+  font-size: 95%;
+  line-height: 13pt;
+  color: #000000;
+  font-weight: bold;
+}
+
+.text_center {
+  text-align: center;
+}
+.main_link {
+  text-decoration: underline;
+}
+.main_link_td_padding {
+  padding: 0px 5px 0px 5px;
+}
+.cabinet_combo {
+  padding: 5px 5px 5px 5px;
+  height:30px;
+  text-align: left;
+}
+
+.display_none {
+  display:none;
+}
+
+.sc_link_g {
+    background-color:#dddddd;
+    color: #333333;
+    font-weight:bold;
+    border: 1px;
+    border-color:#333333;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    margin:  0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    font-size: 80%;
+}
+
+.noLinkDir {
+	color: #0000ff !important;
+	cursor:default !important;
+	text-decoration:none !important;
+	color: #333333 !important;
+}
+
+a.noLinkDir {
+    color: #333333 !important;
+}
+
+.noLinkDir:hover {
+	text-decoration:none !important;
+}

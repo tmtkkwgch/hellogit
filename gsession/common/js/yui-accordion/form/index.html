@@ -1,0 +1,309 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>YUI AccordionView Widget - Accordion Organized Form</title>
+
+	<script type="text/javascript" src="../accordionview/utilities.js"></script>
+	<link rel="stylesheet" type="text/css" href="../accordionview/assets/skins/sam/reset-fonts.css"> 
+	<link rel="stylesheet" type="text/css" href="../accordionview/assets/skins/sam/accordionview.css"> 
+	<style type="text/css">
+
+	/* specific css for this demo page */
+
+	body {
+		font-size: 0.8em;
+	}
+
+	#wrapper {
+		margin: 20px;
+	}
+
+	.padded {
+		padding: 10px;
+		clear: both;
+	}
+
+	.padded ul li {
+		list-style: inside square;
+	}
+
+	.block {
+		display: block;
+	}
+
+	ul.info li {
+		list-style: inside square;
+	}
+	ul.info {
+		margin-bottom: 1em;
+	}
+	p.code {
+		background: #000;
+		color: #cfc;
+		padding: 20px;
+		font-family: Courier;
+		font-size: 1.2em;
+		margin-left: 4em;
+	}
+
+	h1 {
+		font-size: 2em;
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+
+	h3 {
+		font-size: 1.6em;
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+
+	li h3 {
+		display: inline;
+	}
+
+	p {
+		margin-bottom: 1em;
+	}
+	strong {
+		font-weight: bold;
+	}
+	ol.code { font-size: 1.2em;border: 1px solid #ccc; padding: 5px; margin: 0 0 1em 4em; }
+	ol.code code { display: block; padding: 3px; margin-bottom: 0; }
+	.code li { background: #ddd; border: 1px solid #ccc; margin: 0 0 2px 2.2em; list-style-type: decimal-leading-zero; }
+	.indent1 { padding-left: 1em; }
+	.indent2 { padding-left: 2em; }
+	.indent3 { padding-left: 3em; }
+	
+	.clearfix:after {
+	    content: ".";
+	    display: block;
+	    clear: both;
+	    visibility: hidden;
+	    line-height: 0;
+	    height: 0;
+	}
+
+	.clearfix {
+	    display: inline-block;
+	}
+
+	html[xmlns] .clearfix {
+	    display: block;
+	}
+
+	* html .clearfix {
+	    height: 1%;
+	}
+
+	fieldset {
+		height: 200px;
+	}
+	
+	fieldset label {
+	display: block;
+	width: 100px;
+	text-align: right;
+	font-weight: bold;
+	float: left;
+	margin-right: 10px;
+	}
+
+	fieldset input {
+		width: 200px;
+	}
+	fieldset .checkbox, fieldset .submit {
+		width: auto;
+	}
+	fieldset legend {
+		padding: 10px;
+		font-style: italic;
+		display:block;
+	}
+		
+	pre {
+		padding: 10px;
+		font-size: 1.2em;
+	}	
+		
+	</style>
+</head>
+
+<body class="yui-skin-sam">
+	<div id="wrapper">
+	<h1>YUI AccordionView widget</h1>
+	<h3>Accordion Organized form</h3>
+	<p>This is an example of the <a href="../">YUI AccordionView widget</a> in action. This widget was created by Marco van Hylckama Vlieg. All code is licensed under the BSD license.</p>
+	<div class="padded">
+	<ul>
+		<li><a href="../">Main demo page</a></li>
+		<li><a href="http://www.i-marco.nl/weblog/archive/2008/07/20/yui_powered_javascript_accordi">Announcement blog post</a></li>
+		<li><a href="http://www.i-marco.nl/weblog/">Marco's weblog</a></li>
+	</ul>
+	</div>
+	<p>This form is enclosed in an accordion organized by sections. Try using TAB and SHIFT-TAB to navigate through the form elements and you'll see the appropriate panels open and close and the right elements receiving focus.</p>
+		
+	<form id="theform" method="post" action="#">
+		<ul id="mymenu">
+			<li><h3>Name</h3>
+				<div>
+				<fieldset class="padded"><legend>Enter your name</legend>
+				<p><label for="firstname">First Name:</label><input type="text" id="firstname"></p>
+				<p><label for="middlename">Middle Name:</label><input type="text" id="middlename"></p>
+				<p><label for="lastname">Last Name:</label><input type="text" id="lastname"></p>
+				</fieldset>
+				</div>
+			</li>
+			<li><h3>Address</h3>
+				<div>
+				<fieldset class="padded"><legend>Enter your full address</legend>
+				<p><label for="street">Street:</label><input type="text" id="street"></p>
+				<p><label for="number">Number:</label><input type="text" id="number"></p>
+				<p><label for="zipcode">Zipcode:</label><input type="text" id="zipcode"></p>
+				<p><label for="city">City:</label><input type="text" id="city"></p>
+				</fieldset>
+				</div>
+			</li>
+			<li><h3>Age / Sex</h3>
+				<div>
+				<fieldset class="padded"><legend>Age and Sex information</legend>
+				<p><label for="age">Age:</label><input type="text" id="age"></p>
+				<p><label for="sex">Sex:</label><select name="sex" id="sex"><option value="m">male</option><option value="f">female</option></select></p>
+				<p><em>You must agree or we'll shoot <a href="http://jackiethejackrussell.com/">this dog</a>.</em></p>
+				<p><label for="agree">TOS:</label><input class="checkbox" type="checkbox" id="agree" name="agree">&nbsp;<em>I agree to the terms of service</em></p>
+				<p><input type="submit" class="submit" value="Submit Information"></p>
+				</fieldset>
+				</div>
+			</li>
+		</ul>
+	</form>
+	
+	<h3>Code</h3>
+	
+	<pre style='color:#d1d1d1;background:#000000;'><span style='color:#e66170; font-weight:bold; '>var</span> menu1 <span style='color:#d2cd86; '>=</span> <span style='color:#e66170; font-weight:bold; '>new</span> YAHOO<span style='color:#d2cd86; '>.</span>widget<span style='color:#d2cd86; '>.</span>AccordionView<span style='color:#d2cd86; '>(</span><span style='color:#00c4c4; '>'mymenu'</span><span style='color:#d2cd86; '>,</span> 
+	<span style='color:#b060b0; '>{</span>   collapsible<span style='color:#b060b0; '>:</span> <span style='color:#0f4d75; '>false</span><span style='color:#d2cd86; '>,</span> 
+	    width<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'400px'</span><span style='color:#d2cd86; '>,</span> 
+	    expandItem<span style='color:#b060b0; '>:</span> <span style='color:#008c00; '>0</span><span style='color:#d2cd86; '>,</span> 
+	    animationSpeed<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'0.3'</span><span style='color:#d2cd86; '>,</span> 
+	    animate<span style='color:#b060b0; '>:</span> <span style='color:#0f4d75; '>true</span><span style='color:#d2cd86; '>,</span> 
+	    effect<span style='color:#b060b0; '>:</span> YAHOO<span style='color:#d2cd86; '>.</span>util<span style='color:#d2cd86; '>.</span>Easing<span style='color:#d2cd86; '>.</span>easeBothStrong
+	<span style='color:#b060b0; '>}</span>
+	<span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>  
+
+	menu1<span style='color:#d2cd86; '>.</span>lastTab <span style='color:#d2cd86; '>=</span> <span style='color:#0f4d75; '>null</span><span style='color:#b060b0; '>;</span>
+
+	<span style='color:#9999a9; '>// track use of tab or shift-tab and store it in menu1.lastTab</span>
+
+	YAHOO<span style='color:#d2cd86; '>.</span>util<span style='color:#d2cd86; '>.</span>Event<span style='color:#d2cd86; '>.</span>on<span style='color:#d2cd86; '>(</span><span style='color:#00c4c4; '>'theform'</span><span style='color:#d2cd86; '>,</span> <span style='color:#00c4c4; '>'keydown'</span><span style='color:#d2cd86; '>,</span> <span style='color:#e66170; font-weight:bold; '>function</span><span style='color:#d2cd86; '>(</span>e<span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>{</span>
+	    <span style='color:#e66170; font-weight:bold; '>if</span><span style='color:#d2cd86; '>(</span>!e<span style='color:#d2cd86; '>.</span>keyCode <span style='color:#d2cd86; '>===</span> <span style='color:#008c00; '>9</span><span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>{</span>
+	        menu1<span style='color:#d2cd86; '>.</span>lastTab <span style='color:#d2cd86; '>=</span> <span style='color:#0f4d75; '>null</span><span style='color:#b060b0; '>;</span>
+	        <span style='color:#e66170; font-weight:bold; '>return</span> <span style='color:#0f4d75; '>true</span><span style='color:#b060b0; '>;</span>
+	    <span style='color:#b060b0; '>}</span>
+	    <span style='color:#d2cd86; '>(</span>e<span style='color:#d2cd86; '>.</span>shiftKey<span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>?</span> menu1<span style='color:#d2cd86; '>.</span>lastTab <span style='color:#d2cd86; '>=</span> <span style='color:#00c4c4; '>'shifttab'</span> <span style='color:#b060b0; '>:</span> menu1<span style='color:#d2cd86; '>.</span>lastTab <span style='color:#d2cd86; '>=</span> <span style='color:#00c4c4; '>'tab'</span><span style='color:#b060b0; '>;</span>
+	<span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+
+	<span style='color:#9999a9; '>// reset in case we're clicking</span>
+
+	YAHOO<span style='color:#d2cd86; '>.</span>util<span style='color:#d2cd86; '>.</span>Event<span style='color:#d2cd86; '>.</span>on<span style='color:#d2cd86; '>(</span><span style='color:#00c4c4; '>'mymenu'</span><span style='color:#d2cd86; '>,</span> <span style='color:#00c4c4; '>'click'</span><span style='color:#d2cd86; '>,</span> <span style='color:#e66170; font-weight:bold; '>function</span><span style='color:#d2cd86; '>(</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>{</span>menu1<span style='color:#d2cd86; '>.</span>lastTab <span style='color:#d2cd86; '>=</span> <span style='color:#0f4d75; '>null</span><span style='color:#b060b0; '>;</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+
+	<span style='color:#9999a9; '>// open panels on focus</span>
+
+	<span style='color:#e66170; font-weight:bold; '>var</span> aElements <span style='color:#d2cd86; '>=</span> menu1<span style='color:#d2cd86; '>.</span>getElementsByClassName<span style='color:#d2cd86; '>(</span><span style='color:#00c4c4; '>'yui-accordion-toggle'</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+	<span style='color:#e66170; font-weight:bold; '>for</span><span style='color:#d2cd86; '>(</span><span style='color:#e66170; font-weight:bold; '>var</span> i<span style='color:#d2cd86; '>=</span><span style='color:#008c00; '>0</span><span style='color:#b060b0; '>;</span>i<span style='color:#d2cd86; '>&lt;</span><span style='color:#008c00; '>3</span><span style='color:#b060b0; '>;</span>i<span style='color:#d2cd86; '>++</span><span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>{</span>
+	    YAHOO<span style='color:#d2cd86; '>.</span>util<span style='color:#d2cd86; '>.</span>Event<span style='color:#d2cd86; '>.</span>on<span style='color:#d2cd86; '>(</span>aElements<span style='color:#d2cd86; '>[</span>i<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>,</span> <span style='color:#00c4c4; '>'click'</span><span style='color:#d2cd86; '>,</span> <span style='color:#e66170; font-weight:bold; '>function</span><span style='color:#d2cd86; '>(</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>{</span>YAHOO<span style='color:#d2cd86; '>.</span>util<span style='color:#d2cd86; '>.</span>Event<span style='color:#d2cd86; '>.</span>stopEvent<span style='color:#d2cd86; '>(</span><span style='color:#00c4c4; '>'focus'</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span><span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+	    YAHOO<span style='color:#d2cd86; '>.</span>util<span style='color:#d2cd86; '>.</span>Event<span style='color:#d2cd86; '>.</span>on<span style='color:#d2cd86; '>(</span>aElements<span style='color:#d2cd86; '>[</span>i<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>,</span> <span style='color:#00c4c4; '>'focus'</span><span style='color:#d2cd86; '>,</span> <span style='color:#e66170; font-weight:bold; '>function</span><span style='color:#d2cd86; '>(</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>{</span>
+	        <span style='color:#e66170; font-weight:bold; '>if</span><span style='color:#d2cd86; '>(</span>menu1<span style='color:#d2cd86; '>.</span>lastTab <span style='color:#d2cd86; '>===</span> <span style='color:#00c4c4; '>'shifttab'</span><span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>{</span>
+	            menu1<span style='color:#d2cd86; '>.</span>openPanel<span style='color:#d2cd86; '>(</span><span style='color:#e66170; font-weight:bold; '>this</span> <span style='color:#d2cd86; '>-</span> <span style='color:#008c00; '>1</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+	        <span style='color:#b060b0; '>}</span> 
+	        <span style='color:#e66170; font-weight:bold; '>else</span> <span style='color:#b060b0; '>{</span>
+	            menu1<span style='color:#d2cd86; '>.</span>openPanel<span style='color:#d2cd86; '>(</span><span style='color:#e66170; font-weight:bold; '>this</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+	        <span style='color:#b060b0; '>}</span>
+	        <span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span> i<span style='color:#d2cd86; '>,</span> <span style='color:#0f4d75; '>true</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+	    <span style='color:#b060b0; '>}</span>
+
+	<span style='color:#9999a9; '>// use the afterPanelOpen event to set focus to the right form element after the panel has finished</span>
+	<span style='color:#9999a9; '>// opening</span>
+
+	menu1<span style='color:#d2cd86; '>.</span>on<span style='color:#d2cd86; '>(</span><span style='color:#00c4c4; '>'afterPanelOpen'</span><span style='color:#d2cd86; '>,</span> <span style='color:#e66170; font-weight:bold; '>function</span><span style='color:#d2cd86; '>(</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>{</span>        
+	    formElements <span style='color:#d2cd86; '>=</span> arguments<span style='color:#d2cd86; '>[</span><span style='color:#008c00; '>0</span><span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>.</span>panel<span style='color:#d2cd86; '>.</span>getElementsByTagName<span style='color:#d2cd86; '>(</span><span style='color:#00c4c4; '>'INPUT'</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+	    <span style='color:#d2cd86; '>(</span>menu1<span style='color:#d2cd86; '>.</span>lastTab <span style='color:#d2cd86; '>===</span> <span style='color:#00c4c4; '>'shifttab'</span><span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>?</span> formElements<span style='color:#d2cd86; '>[</span>formElements<span style='color:#d2cd86; '>.</span>length<span style='color:#d2cd86; '>-</span><span style='color:#008c00; '>1</span><span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>.</span>focus<span style='color:#d2cd86; '>(</span><span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>:</span> formElements<span style='color:#d2cd86; '>[</span><span style='color:#008c00; '>0</span><span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>.</span>focus<span style='color:#d2cd86; '>(</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+	    <span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span> <span style='color:#e66170; font-weight:bold; '>this</span><span style='color:#d2cd86; '>,</span> <span style='color:#0f4d75; '>true</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+
+	<span style='color:#9999a9; '>// override default removal of tabIndex after a state change. </span>
+	<span style='color:#9999a9; '>// In this example we want all panels to have a tabIndex anyway.</span>
+
+	menu1<span style='color:#d2cd86; '>.</span>on<span style='color:#d2cd86; '>(</span><span style='color:#00c4c4; '>'stateChanged'</span><span style='color:#d2cd86; '>,</span> <span style='color:#e66170; font-weight:bold; '>function</span><span style='color:#d2cd86; '>(</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>{</span>
+	    <span style='color:#e66170; font-weight:bold; '>var</span> panels <span style='color:#d2cd86; '>=</span> menu1<span style='color:#d2cd86; '>.</span>getPanels<span style='color:#d2cd86; '>(</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+	    <span style='color:#e66170; font-weight:bold; '>for</span><span style='color:#d2cd86; '>(</span>i<span style='color:#d2cd86; '>=</span><span style='color:#008c00; '>0</span><span style='color:#b060b0; '>;</span>i<span style='color:#d2cd86; '>&lt;</span>panels<span style='color:#d2cd86; '>.</span>length<span style='color:#b060b0; '>;</span>i<span style='color:#d2cd86; '>++</span><span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>{</span>
+	        panels<span style='color:#d2cd86; '>[</span>i<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>.</span>firstChild<span style='color:#d2cd86; '>.</span>tabIndex <span style='color:#d2cd86; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#b060b0; '>;</span>
+	    <span style='color:#b060b0; '>}</span>
+	<span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span> <span style='color:#e66170; font-weight:bold; '>this</span><span style='color:#d2cd86; '>,</span> <span style='color:#0f4d75; '>true</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+	</pre>
+	
+</div>
+		<script type="text/javascript" src="../accordionview/accordionview.js"></script>
+
+		<script type="text/javascript">
+var menu1 = new YAHOO.widget.AccordionView('mymenu', 
+{   collapsible: false, 
+    width: '400px', 
+    expandItem: 0, 
+    animationSpeed: '0.3', 
+    animate: true, 
+    effect: YAHOO.util.Easing.easeBothStrong
+}
+);  
+
+menu1.lastTab = null;
+
+// track use of tab or shift-tab and store it in menu1.lastTab
+
+YAHOO.util.Event.on('theform', 'keydown', function(e) {
+    if(!e.keyCode === 9) {
+        menu1.lastTab = null;
+        return true;
+    }
+    (e.shiftKey) ? menu1.lastTab = 'shifttab' : menu1.lastTab = 'tab';
+});
+
+// reset in case we're clicking
+
+YAHOO.util.Event.on('mymenu', 'click', function(){menu1.lastTab = null;});
+
+// open panels on focus
+
+var aElements = menu1.getElementsByClassName('yui-accordion-toggle');
+for(var i=0;i<3;i++) {
+    YAHOO.util.Event.on(aElements[i], 'click', function(){YAHOO.util.Event.stopEvent('focus');});
+    YAHOO.util.Event.on(aElements[i], 'focus', function(){
+        if(menu1.lastTab === 'shifttab') {
+            menu1.openPanel(this - 1);
+        } 
+        else {
+            menu1.openPanel(this);
+        }
+        }, i, true);
+    }
+
+// use the afterPanelOpen event to set focus to the right form element after the panel has finished
+// opening
+
+menu1.on('afterPanelOpen', function(){		
+    formElements = arguments[0].panel.getElementsByTagName('INPUT');
+    (menu1.lastTab === 'shifttab') ? formElements[formElements.length-1].focus() : formElements[0].focus();
+    }, this, true);
+
+// override default removal of tabIndex after a state change. 
+// In this example we want all panels to have a tabIndex anyway.
+
+menu1.on('stateChanged', function(){
+	var panels = menu1.getPanels();
+	for(i=0;i<panels.length;i++) {
+		panels[i].firstChild.tabIndex = 0;
+	}
+}, this, true);
+		</script>
+		<script src="/mint/?js" type="text/javascript"></script>
+	</body>
+	</html>

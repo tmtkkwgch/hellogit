@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+<!-- ========== Form Bean Definitions =================================== -->
+
+    <form-beans>
+        <form-bean name="tcdmainForm" type="jp.groupsession.v2.tcd.main.TcdMainForm" />
+        <form-bean name="tcd010Form" type="jp.groupsession.v2.tcd.tcd010.Tcd010Form" />
+        <form-bean name="tcd020Form" type="jp.groupsession.v2.tcd.tcd020.Tcd020Form" />
+        <form-bean name="tcd030Form" type="jp.groupsession.v2.tcd.tcd030.Tcd030Form" />
+        <form-bean name="tcd040Form" type="jp.groupsession.v2.tcd.tcd040.Tcd040Form" />
+        <form-bean name="tcd050Form" type="jp.groupsession.v2.tcd.tcd050.Tcd050Form" />
+        <form-bean name="tcd050knForm" type="jp.groupsession.v2.tcd.tcd050kn.Tcd050knForm" />
+        <form-bean name="tcd060Form" type="jp.groupsession.v2.tcd.tcd060.Tcd060Form" />
+        <form-bean name="tcd070Form" type="jp.groupsession.v2.tcd.tcd070.Tcd070Form" />
+        <form-bean name="tcd080Form" type="jp.groupsession.v2.tcd.tcd080.Tcd080Form" />
+        <form-bean name="tcd090Form" type="jp.groupsession.v2.tcd.tcd090.Tcd090Form" />
+        <form-bean name="tcd090knForm" type="jp.groupsession.v2.tcd.tcd090kn.Tcd090knForm" />
+        <form-bean name="tcd100Form" type="jp.groupsession.v2.tcd.tcd100.Tcd100Form" />
+    </form-beans>
+
+<!-- ================================================ Global Exception -->
+
+    <global-exceptions>
+    </global-exceptions>
+
+<!-- ========== Global Forward Definitions ============================== -->
+
+	<global-forwards type="org.apache.struts.action.ActionForward">
+	</global-forwards>
+
+<!-- ========== Action Mapping Definitions ============================== -->
+
+    <action-mappings>
+       <!-- メイン -->
+       <action
+            name="tcdmainForm"
+            path="/timecard/tcdmain"
+            scope="request"
+            input="/WEB-INF/plugin/timecard/jsp/tcdmain.jsp"
+            validate="false"
+            type="jp.groupsession.v2.tcd.main.TcdMainAction">
+           <forward name="redraw" path="/main/man001.do" />
+       </action>
+        <!-- タイムカード一覧画面  -->
+        <action
+            name="tcd010Form"
+            path="/timecard/tcd010"
+            scope="request"
+            input="/WEB-INF/plugin/timecard/jsp/tcd010.jsp"
+            validate="false"
+            type="jp.groupsession.v2.tcd.tcd010.Tcd010Action">
+
+            <forward name="single_edit" path="/timecard/tcd020.do" />
+            <forward name="multi_edit" path="/timecard/tcd020.do" />
+            <forward name="admtool" path="/timecard/tcd030.do" />
+            <forward name="pritool" path="/timecard/tcd100.do" />
+            <forward name="delete" path="/timecard/tcd010.do?CMD=del_ok" />
+            <forward name="reload" path="/timecard/tcd010.do" />
+        </action>
+
+        <!-- 編集 -->
+        <action 
+            name="tcd020Form"
+            path="/timecard/tcd020"
+            scope="request"
+            validate="false"
+            input="/WEB-INF/plugin/timecard/jsp/tcd020.jsp"
+            type="jp.groupsession.v2.tcd.tcd020.Tcd020Action" >
+
+            <forward name="back" path="/timecard/tcd010.do" />
+        </action>
+
+        <!-- 管理者設定メニュー -->
+        <action 
+            name="tcd030Form"
+            path="/timecard/tcd030"
+            scope="request"
+            validate="false"
+            input="/WEB-INF/plugin/timecard/jsp/tcd030.jsp"
+            type="jp.groupsession.v2.tcd.tcd030.Tcd030Action">
+
+            <forward name="back" path="/timecard/tcd010.do" />
+            <forward name="mng" path="/timecard/tcd040.do" />
+            <forward name="base_conf" path="/timecard/tcd050.do" />
+            <forward name="timezone" path="/timecard/tcd060.do" />
+            <forward name="editAuth" path="/timecard/tcd090.do" />
+            <forward name="mainAdmSetting" path="/main/man002.do" />
+        </action>
+
+        <!-- タイムカードマネージャー -->
+        <action 
+            name="tcd040Form"
+            path="/timecard/tcd040"
+            scope="request"
+            validate="false"
+            input="/WEB-INF/plugin/timecard/jsp/tcd040.jsp"
+            type="jp.groupsession.v2.tcd.tcd040.Tcd040Action">
+            <forward name="back" path="/timecard/tcd030.do" />
+            <forward name="export" path="/timecard/tcd040.do" />
+            <forward name="error" path="/timecard/tcd010.do" />
+        </action>
+
+        <!-- 基本設定 -->
+        <action 
+            name="tcd050Form"
+            path="/timecard/tcd050"
+            scope="request"
+            validate="false"
+            input="/WEB-INF/plugin/timecard/jsp/tcd050.jsp"
+            type="jp.groupsession.v2.tcd.tcd050.Tcd050Action">
+
+            <forward name="back" path="/timecard/tcd030.do" />
+            <forward name="submit" path="/timecard/tcd050kn.do" />
+            <forward name="moveLeft" path="/timecard/tcd050.do" />
+            <forward name="moveRight" path="/timecard/tcd050.do" />
+        </action>
+
+        <!-- 基本設定確認 -->
+        <action 
+            name="tcd050knForm"
+            path="/timecard/tcd050kn"
+            scope="request"
+            validate="false"
+            input="/WEB-INF/plugin/timecard/jsp/tcd050kn.jsp"
+            type="jp.groupsession.v2.tcd.tcd050kn.Tcd050knAction">
+
+            <forward name="050kn_back" path="/timecard/tcd050.do" />
+            <forward name="050kn_comp" path="/timecard/tcd030.do" />
+        </action>
+
+        <!-- 時間帯設定 -->
+        <action 
+            name="tcd060Form"
+            path="/timecard/tcd060"
+            scope="request"
+            validate="false"
+            input="/WEB-INF/plugin/timecard/jsp/tcd060.jsp"
+            type="jp.groupsession.v2.tcd.tcd060.Tcd060Action">
+
+            <forward name="back" path="/timecard/tcd030.do" />
+            <forward name="add" path="/timecard/tcd070.do" />
+            <forward name="edit" path="/timecard/tcd070.do" />
+        </action>
+
+        <!-- 時間帯編集 -->
+        <action 
+            name="tcd070Form"
+            path="/timecard/tcd070"
+            scope="request"
+            validate="false"
+            input="/WEB-INF/plugin/timecard/jsp/tcd070.jsp"
+            type="jp.groupsession.v2.tcd.tcd070.Tcd070Action">
+
+            <forward name="back" path="/timecard/tcd060.do" />
+            <forward name="tcd070commit" path="/timecard/tcd070.do?CMD=tcd070commit" />
+            <forward name="tcd070deleteOk" path="/timecard/tcd070.do?CMD=tcd070deleteOk" />
+            <forward name="tcd070cancel" path="/timecard/tcd070.do" />
+        </action>
+
+        <!-- 個人設定 -->
+        <action 
+            name="tcd080Form"
+            path="/timecard/tcd080"
+            scope="request"
+            validate="false"
+            input="/WEB-INF/plugin/timecard/jsp/tcd080.jsp"
+            type="jp.groupsession.v2.tcd.tcd080.Tcd080Action">
+            <forward name="tcd080commit" path="/timecard/tcd080.do?CMD=tcd080commit" />
+            <forward name="Tcd080back" path="/timecard/tcd100.do" />
+            <forward name="tcd080cancel" path="/timecard/tcd080.do" />
+        </action>
+
+        <!-- 編集権限設定 -->
+        <action 
+            name="tcd090Form"
+            path="/timecard/tcd090"
+            scope="request"
+            validate="false"
+            input="/WEB-INF/plugin/timecard/jsp/tcd090.jsp"
+            type="jp.groupsession.v2.tcd.tcd090.Tcd090Action">
+            <forward name="tcd090commit" path="/timecard/tcd090kn.do" />
+            <forward name="tcd090back" path="/timecard/tcd030.do" />
+        </action>
+
+        <!-- 編集権限設定確認 -->
+        <action 
+            name="tcd090knForm"
+            path="/timecard/tcd090kn"
+            scope="request"
+            validate="false"
+            input="/WEB-INF/plugin/timecard/jsp/tcd090kn.jsp"
+            type="jp.groupsession.v2.tcd.tcd090kn.Tcd090knAction">
+            <forward name="tcd090kncommit" path="/timecard/tcd030.do" />
+            <forward name="tcd090knback" path="/timecard/tcd090.do" />
+        </action>
+
+        <!-- 個人設定 メニュー-->
+        <action 
+            name="tcd100Form"
+            path="/timecard/tcd100"
+            scope="request"
+            validate="false"
+            input="/WEB-INF/plugin/timecard/jsp/tcd100.jsp"
+            type="jp.groupsession.v2.tcd.tcd100.Tcd100Action">
+            <forward name="tcd080" path="/timecard/tcd080.do" />
+            <forward name="tcd010" path="/timecard/tcd010.do" />
+            <forward name="mainPriSetting" path="/main/man030.do" />
+        </action>
+
+    </action-mappings>
+
+</struts-config>

@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>YUI AccordionView Widget - Nested Accordions</title>
+
+	<script type="text/javascript" src="../accordionview/utilities.js"></script>
+	<link rel="stylesheet" type="text/css" href="../accordionview/assets/skins/sam/reset-fonts.css"> 
+	<link rel="stylesheet" type="text/css" href="../accordionview/assets/skins/sam/accordionview.css"> 
+	<style type="text/css">
+
+	/* specific css for this demo page */
+
+	body {
+		font-size: 0.8em;
+	}
+
+	#wrapper {
+		margin: 20px;
+	}
+
+	.padded {
+		padding: 10px;
+		clear: both;
+		zoom: 1;
+	}
+
+	.padded ul li {
+		list-style: inside square;
+	}
+
+	.block {
+		display: block;
+	}
+
+	ul.info li {
+		list-style: inside square;
+	}
+	ul.info {
+		margin-bottom: 1em;
+	}
+	p.code {
+		background: #000;
+		color: #cfc;
+		padding: 20px;
+		font-family: Courier;
+		font-size: 1.2em;
+		margin-left: 4em;
+	}
+
+	h1 {
+		font-size: 2em;
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+
+	h3 {
+		font-size: 1.6em;
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+
+	li h3 {
+		display: inline;
+	}
+
+	p {
+		margin-bottom: 1em;
+	}
+	strong {
+		font-weight: bold;
+	}
+	ol.code { font-size: 1.2em;border: 1px solid #ccc; padding: 5px; margin: 0 0 1em 4em; }
+	ol.code code { display: block; padding: 3px; margin-bottom: 0; }
+	.code li { background: #ddd; border: 1px solid #ccc; margin: 0 0 2px 2.2em; list-style-type: decimal-leading-zero; }
+	.indent1 { padding-left: 1em; }
+	.indent2 { padding-left: 2em; }
+	.indent3 { padding-left: 3em; }
+	
+	.clearfix:after {
+	    content: ".";
+	    display: block;
+	    clear: both;
+	    visibility: hidden;
+	    line-height: 0;
+	    height: 0;
+	}
+
+	.clearfix {
+	    display: inline-block;
+	}
+
+	html[xmlns] .clearfix {
+	    display: block;
+	}
+
+	* html .clearfix {
+	    height: 1%;
+	}
+	
+	.yui-accordionview {
+		margin-bottom: 1.5em;
+	}
+	
+	</style>
+</head>
+
+<body class="yui-skin-sam">
+	<div id="wrapper">
+		<h1>YUI AccordionView widget</h1>
+		
+		<h3>Nested Accordions</h3>
+
+		<p>This is an example of the <a href="../">YUI AccordionView widget</a> in action. This widget was created by Marco van Hylckama Vlieg. All code is licensed under the BSD license.</p>
+		<div class="padded">
+		<ul>
+			<li><a href="../">Main demo page</a></li>
+			<li><a href="http://www.i-marco.nl/weblog/archive/2008/07/20/yui_powered_javascript_accordi">Announcement blog post</a></li>
+			<li><a href="http://www.i-marco.nl/weblog/">Marco's weblog</a></li>
+		</ul>
+		</div>
+		
+		
+		<ul id="mymenu2">
+			<li><h3>Item 1</h3><div>
+				<p class="padded">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sit amet neque a elit convallis ullamcorper. Proin fermentum iaculis elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus quis enim quis neque convallis porta. Proin posuere convallis nunc. Aenean quis enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec at justo. Cras odio metus, placerat ultricies, mollis ut, interdum ut, turpis. Aliquam vitae ligula vitae nunc vestibulum aliquet.</p>
+			</div></li>
+			<li><h3>Item 2 (contains nested accordion)</h3><div>
+				<div class="padded clearfix">
+					<ul id="mymenu3">
+						<li><h3>Item 1</h3><div>
+							<div class="padded clearfix">
+								<p><img alt="" src="http://www.i-marco.nl/photoblog/thumbnails/thumb_20080512070603__dsc9612.jpg" style="margin-right:5px;float: left">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum pellentesque. Nunc justo mauris, ultricies et, consequat ac, tristique congue, enim. Vestibulum tempor ultrices leo. Nam venenatis arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse facilisis bibendum mauris.</p>
+							</div>
+						</div></li>
+						<li><h3>Item 2</h3><div>
+							<div class="padded clearfix">
+								<ul>
+									<li>Lorem ipsum dolor sit amet, <a href="http://www.i-marco.nl/">consectetuer</a> adipiscing elit.</li>
+									<li>Ut eleifend dui accumsan lorem.</li>
+
+									<li>Donec fermentum consectetuer purus.</li>
+									<li>Curabitur bibendum elit a nibh.</li>
+									<li>Curabitur fringilla velit sit amet diam.</li>
+									<li>Proin bibendum orci eget ante.</li>
+								</ul>
+							</div>
+						</div></li>
+						<li><h3>Item 3</h3>
+							<div>
+									<p class="padded">Morbi commodo dignissim odio. Donec ac velit id elit molestie consectetuer. Vivamus ac ligula sit amet mi aliquam accumsan. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+							</div>
+						</li>
+						<li><h3>Item 4</h3>
+							<div>
+								<p class="padded">Phasellus purus elit, pretium in, cursus quis, accumsan eget, leo. Proin hendrerit, risus ut convallis egestas, diam urna commodo neque, et pulvinar nunc ipsum bibendum nunc. Suspendisse semper, diam ut eleifend luctus, ipsum nunc congue nibh, vitae mattis erat neque at velit. Maecenas elementum. Suspendisse ornare dictum risus. Vestibulum elit. Aenean sollicitudin iaculis arcu.</p>
+							</div>
+						</li>		
+					</ul>
+
+				</div>
+			</div></li>
+			<li><h3>Item 3</h3>
+				<div>
+					<div class="padded clearfix">
+						<p>Morbi commodo dignissim odio. Donec ac velit id elit molestie consectetuer. Vivamus ac ligula sit amet mi aliquam accumsan. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p> <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam pede pede, convallis sit amet, condimentum a, accumsan tristique, tellus. In justo mi, interdum tempor, fermentum ut, porttitor at, lacus. Nulla lobortis commodo enim. Suspendisse varius auctor est. Phasellus sodales egestas leo.</p>
+					</div>
+				</div>
+			</li>
+			<li><h3>Item 4</h3>
+				<div>
+					<p class="padded">Maecenas mi quam, lobortis eu, feugiat ac, consequat eget, enim. Vivamus ac turpis a velit lacinia tempus. Vestibulum ac arcu. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce porttitor, ligula at cursus accumsan, metus enim gravida metus, id euismod turpis nibh vitae dolor. Sed magna orci, luctus ac, commodo id, malesuada vitae, lorem. Sed mattis metus. Integer vel massa.</p>
+				</div>
+			</li>
+			<li><h3>Item 5</h3>
+				<div>
+					<p class="padded">Donec euismod gravida purus. Suspendisse dignissim velit id lectus. Nunc ultricies pede vel orci. Fusce commodo leo vitae mi. Quisque eleifend blandit quam. Quisque eu arcu sed dolor tincidunt fermentum. Pellentesque lorem erat, pulvinar eget, pellentesque nec, cursus at, risus. Phasellus enim purus, pulvinar eget, viverra at, congue id, massa. Cras ac quam feugiat nulla luctus dapibus.</p>
+				</div>
+				</li>				
+			</ul>
+		
+		<p class="code">menu2 = new YAHOO.widget.AccordionView('mymenu2', {animationSpeed: '0.6', expandItem: 0, width: '600px', animate: true, effect: YAHOO.util.Easing.bounceOut});</p>
+
+		<p>Inside item 2 is a <strong>nested AccordionView</strong> with:</p>
+
+		<p class="code">menu3 = new YAHOO.widget.AccordionView('mymenu3', {collapsible: false, width: '250px', expandItem: 2, animationSpeed: '0.5', animate: true, effect: YAHOO.util.Easing.easeNone});</p>
+
+
+		</div>
+
+		<script type="text/javascript" src="../accordionview/accordionview.js"></script>
+
+		<script type="text/javascript">
+		var menu2 = new YAHOO.widget.AccordionView('mymenu2', {animationSpeed: '0.6', expandItem: 0, width: '600px', animate: true, effect: YAHOO.util.Easing.easeNone});
+		var menu3 = new YAHOO.widget.AccordionView('mymenu3', {collapsible: false, width: '250px', expandItem: 2, animationSpeed: '0.5', animate: true, effect: YAHOO.util.Easing.easeNone});
+		
+		</script>
+	</body>
+	</html>

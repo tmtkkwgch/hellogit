@@ -1,0 +1,138 @@
+
+.normal_link {
+  color: #0000FF;
+  font-size: 100%;
+}
+
+.title_th01 {
+	background-color: #5866C7;
+	color: #FFFFFF;
+	font-size: 90%;
+	text-align: center;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.title_th02 {
+	background-color: #A5B4E1;
+	font-size: 90%;
+	text-align: center;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.title_th03 {
+	background-color: #DDDDDD;
+	font-size: 90%;
+	text-align: center;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.text_base6 {
+	color: #666666;
+	font-weight:bold;
+	font-size: 90%;
+}
+
+.text_base7 {
+	color: #333333;
+	font-size: 90%;
+}
+
+.text_appruser_del {
+  text-decoration: line-through !important;
+}
+
+.td_type_rng_blue {
+  margin:  5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+
+  background-color: #e5edfe;
+  border: 1px;
+  border-color: #333333;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+
+  color: #333333;
+  font-size: 90%;
+}
+
+.btn_base1 {
+  font-size: 14px!important;
+  cursor:pointer;
+}
+
+.btn_folder_n1 {
+  border: solid 1px;
+  background-image: url(../images/btn_folder.gif);
+  color: #000066;
+  font-size: 14px!important;
+  height:25px;
+  width: 110px;
+  padding-left: 15px;
+  cursor:pointer;
+}
+
+.btn_template {
+  background-image: url(../images/btn_all_resv.gif);
+  color: #000066;
+  height:25px;
+  width:140px;
+  font-size: 14px!important;
+  padding-left: 15px;
+  border: solid 1px;
+  cursor:pointer;
+}
+
+.btn_cate_list {
+  background-image: url(../images/btn_list_100.gif);
+  color: #000066;
+  height:25px;
+  width:105px;
+  font-size: 14px!important;
+  padding-left: 15px;
+  border: solid 1px;
+  cursor:pointer;
+}
+
+.btn_cate_edit{
+  border: solid 1px;
+  BACKGROUND-IMAGE: url(../images/btn_edit.gif);
+  color: #000066;
+  font-size: 14px!important;
+  height:25px;
+  width:105px;
+  padding-left: 15px;
+  cursor:pointer;
+}
+
+.btn_sashimodoshi_n1
+{
+  border: solid 1px;
+  BACKGROUND-IMAGE: url(../images/btn_sashimodoshi.gif);
+  color: #000066;
+  font-size: 14px!important;
+  height:25px;
+  width:100px;
+  padding-left: 15px;
+  cursor:pointer;
+}
+
+.td_rng_header {
+  margin:  5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+
+  background-color: #eeeeee;
+  border: 1px;
+  border-color:#cccccc;
+  border-top-style: none!important;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+
+  color: #333333;
+  font-size: 90%;
+}

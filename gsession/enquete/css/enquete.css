@@ -1,0 +1,528 @@
+.display_none {
+  display:none;
+}
+
+.text_tlw_10pt {
+font-size: 80%;
+font-weight: bold;
+color: #FFFFFF;
+}
+
+.cel_enq_head {
+    color: #333333;
+    font-size: 80%;
+}
+
+.text_link_enq {
+  color: #0000FF;
+  font-weight: bold;
+  font-size: 100%;
+  text-decoration: underline!important;
+}
+
+.text_deluser_enq {
+  text-decoration: line-through;
+}
+
+.enq_title {
+    line-height: 1.3em;
+}
+
+.mail_pertical_line {
+width: 16px;
+height: 24px;
+background-image: url(../images/img_pertical_line.gif);
+background-repeat: no-repeat;
+}
+
+.left_menu_child_content_area {
+    width: 190px!important;
+    border-top: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    border-left: 1px solid #dedede;
+    border-bottom: 0px;
+    text-align: left;
+}
+
+.menu_head_folder_area {
+  border-top:1px solid #dedede;
+  border-right:1px solid #dedede;
+  border-left:1px solid #dedede;
+  border-bottom:0px;
+}
+
+.left_menu_child_content_area_once {
+    width: 190px!important;
+    border: 1px solid #dedede;
+    text-align: left;
+}
+
+/* コメント欄の点線 */
+.btm-border-dot {
+    margin-top: 0px;
+    margin-right: 4px;
+    margin-bottom: 3px;
+    margin-left: 4px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 2px;
+    padding-left: 0px;
+    background-position: left bottom;
+    background-image: url(../images/dot-line.gif);
+    background-repeat: repeat-x;
+
+    color: #333333;
+    font-size: 90%;
+}
+
+.td_temp_link {
+    font-size: 90%;
+}
+
+/* 回答  */
+/* テキストボックス */
+.ans_text {
+    width: 450px;
+}
+/* テキストエリア */
+.ans_textarea {
+    width: 450px;
+    height: 100px;
+}
+/* 数値のテキストボックス */
+.ans_text_num {
+    width: 150px;
+}
+.ans_text_num2 {
+    width: 100px;
+}
+/* その他のテキストボックス */
+.ans_text_other {
+    width: 320px;
+}
+/* その他のテキストエリア */
+.ans_textarea_other {
+    width: 320px;
+    height: 60px;
+}
+
+/* 設問詳細 */
+/* 設問番号 */
+.que_no {
+    width: 80px;
+}
+/* 設問 */
+.que_question {
+    width: 500px;
+}
+/* 表示名 */
+.que_dsp_name {
+    width: 300px;
+}
+/* 初期値 テキスト */
+.que_text_init {
+    width: 380px;
+}
+/* 初期値 テキストエリア */
+.que_textarea_init {
+    width: 380px;
+    height:80px;
+}
+/* 数値 */
+.que_text_int {
+    width: 80px;
+}
+
+
+/* 回答欄 */
+.td_type1_enq {
+    margin:  5px 5px 5px 5px!important;
+    border-collapse:separate;
+    background-color: #FFFFFF;
+    border: 1px solid #cccccc!important;
+    color: #333333;
+    font-size: 90%;
+}
+
+/* 回答テーブル */
+.table_ans {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.table_ans2 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+/* メニュー左 */
+.left_menu_area {
+  width:195px!important;
+  text-align:center;
+  vertical-align:top;
+  padding:3px!important;
+}
+
+/* テンプレート欄 */
+.template_add_wrap {
+    padding-left: 25px;
+}
+
+.content_area {
+  vertical-align:top;
+  padding-top:3px!important;
+  padding-bottom:3px!important;
+  padding-left:0px!important;
+  padding-right:0px!important;
+}
+
+/* 回答欄 */
+.text_answer {
+    margin:  10px 10px 10px 30px;
+}
+.table_answer {
+  margin-bottom: 15px;
+}
+
+/* コメント欄 */
+.text_comment {
+    margin:  10px 10px 10px 10px;
+}
+
+.mkm_comadd_tbl {
+    padding: 5px;
+    font-size: 90%;
+    border: solid 1px #cccccc;
+}
+
+.text_question {
+  font-size: 90%;
+  color: #03396D;
+  font-weight: bold;
+}
+
+.text_question2 {
+  font-size: 90%;
+  border 0px;
+  vertical-align:top;
+}
+.area_question {
+    margin:  5px 0px 5px 0px;
+}
+
+
+/* 回答済、公開完了リンク色 */
+.enq_link_already {
+    color: #990099!important;
+}
+
+.answered {
+  color: #0000FF;
+  text-decoration: underline;
+}
+.answer {
+  color: #0000FF;
+  text-decoration: underline!important;
+}
+
+
+/* 検索テーブル背景 */
+.enq_search_area {
+padding: 5px;
+background-color: #eeeeee;
+border: solid 1px #cccccc;
+color: #333333;
+}
+
+.enq_comment_area {
+  padding: 3px 3px 3px 3px ;
+  background-color: #eeeeee;
+}
+
+
+.btn_arrow_d {
+    border: solid 0px;
+    background-color: #FFFFFF;
+    BACKGROUND-IMAGE: url(../images/arrow_down.png);
+    background-repeat: no-repeat;
+    color: #363636;
+    font-size: 13px!important;
+    font-weight: bold;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.btn_arrow_u {
+    border: solid 0px;
+    background-color: #FFFFFF;
+    BACKGROUND-IMAGE: url(../images/arrow_up.png);
+    background-repeat: no-repeat;
+    color: #363636;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+
+.table_setsumon {
+    margin: 0px 15px 0px 0px;
+}
+
+.border_0 {
+    border: 0px;
+}
+
+/* 基本・設問情報タイトル */
+.text_info_title {
+    font-size: 100%;
+    color: #03396D;
+    font-weight: bold;
+}
+
+/* 基本・設問テーブルのヘッダー文字 */
+.text_header {
+    font-weight: bold;
+    font-size: 80%;
+    color: #333333;
+}
+/* 基本・設問情報タイトル */
+.text_header2 {
+    font-size: 90%;
+    color: #03396D;
+    font-weight: bold;
+}
+/* 基本・設問情報タイトル */
+.text_header3 {
+    font-size: 90%;
+    color: #03396D;
+    font-weight: bold;
+}
+
+
+
+/* 設問情報見出しセル*/
+.td_1 {
+    border-bottom-width: 0;
+    border-top-width: 0;
+}
+.td_2 {
+    border-top-width: 0;
+}
+
+/* +ボタン */
+.add_btn {
+float: left;
+font-size: 12px;
+color: #000066;
+padding-top: 3px;
+padding-right: 10px;
+padding-left: 10px;
+padding-bottom: 1px;
+cursor: pointer;
+background-image: url(../images/add_icon.gif);
+background-repeat: no-repeat;
+height: 20px;
+vertical-align: center;
+}
+
+
+/* 検索テーブル */
+.tbl_search {
+    margin: 0;
+    padding: 10px !important;
+}
+
+/* 追加テーブル */
+.tbl_add {
+    margin: 0;
+    padding: 5px !important;
+}
+.td_add {
+    border-left: 2px solid #AAAAAA;
+}
+.td_add2 {
+    border-right: 2px solid #AAAAAA;
+}
+
+/* 重要度（★） */
+.star {
+    vertical-align: bottom;
+    margin: -5px 10px 1px 2px;
+}
+.star2 {
+    vertical-align: bottom;
+    margin: 0px 10px 0px 2px;
+    cursor: pointer;
+}
+.star3 {
+    vertical-align: bottom;
+    margin: -5px 2px 2px 2px;
+}
+.star4 {
+    vertical-align: bottom;
+    margin: -5px 0px 2px 0px;
+}
+
+
+/* 通知ボタン */
+.btn_notice {
+    border: 0;
+    background-color: #FFFFFF;
+    padding: 1px;
+    cursor: pointer;
+    background-image: url(../images/mail_outgoing.png);
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+    vartical-align: middle;
+}
+/* 対象者追加ボタン */
+.btn_add_user {
+    border: 0;
+    background-color: #FFFFFF;
+    padding: 1px;
+    cursor: pointer;
+    background-image: url(../images/Add.png);
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+    vartical-align: middle;
+}
+/* 設問の編集ボタン */
+.btn_edit {
+    border: 0;
+    background-color: #FFFFFF;
+    padding: 1px;
+    cursor: pointer;
+    background-image: url(../images/pen_3.png);
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+    vartical-align: middle;
+}
+/* 設問の削除ボタン */
+.btn_bin {
+    border: 0;
+    background-color: #FFFFFF;
+    padding: 1px;
+    cursor: pointer;
+    background-image: url(../images/bin.png);
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+    vartical-align: middle;
+}
+
+/* 対象者追加ボタン */
+.btn_add_choices {
+    border: 0;
+    background-color: #FFFFFF;
+    padding: 1px;
+    cursor: pointer;
+    background-image: url(../images/circle_plus.png);
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+    vartical-align: middle;
+}
+
+/* 削除ボタン */
+.btn_delete1 {
+    border: 0;
+    padding: 1px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    background-image: url(../images/delete1.png);
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    vartical-align: middle;
+}
+
+.btn_add_row {
+    border: solid 1px;
+    BACKGROUND-IMAGE: url(../images/btn_add4.gif);
+    color: #000066;
+    font-size: 14px!important;
+    height: 25px;
+    width: 80px;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+/* ラジオボタン、チェックボックスの折り返し */
+.enqSelLabel {
+    white-space:nowrap;
+    display: inline-block;
+    _display: inline;
+    vertical-align: top;
+    padding-right:15px;
+}
+.enqSelLabel2 {
+    white-space:nowrap;
+    display: inline-block;
+    _display: inline;
+    vertical-align: top;
+    padding-right:5px;
+}
+
+/* 左メニュー、テンプレート一覧 */
+.template_txt_div {
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+/* 左メニュー、テンプレート一覧Txt */
+.template_sel_txt {
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 30px;
+    color: #0000ee;
+}
+
+.td_comboBox {
+    min-width: 250px;
+}
+
+/* ショートメール通知ダイアログ */
+.dialog_checkbox {
+    font-size: 12px;
+    font-weight: bold;
+    /*color: #ff0000;*/
+    cursor: pointer;
+}
+
+.img_pointer {
+    cursor: pointer;
+}
+
+.btn_edit_sub {
+/*  border: solid 1px; */
+  border: 1px;
+  BACKGROUND-IMAGE: url(../images/btn_edit_sub.gif);
+  font-size: 90%;
+  width:70px;
+  height:19px;
+  color: #000033;
+  padding-left: 15px;
+  cursor:pointer;
+}
+
+.btn_smail_sub {
+/*  border: solid 1px; */
+  border: 1px;
+  BACKGROUND-IMAGE: url(../images/btn_smail_sub.gif);
+  font-size: 90%;
+  width:70px;
+  height:19px;
+  color: #000033;
+  padding-left: 15px;
+  cursor:pointer;
+}
+.min_width_img {
+  margin: 0px;
+  margin-top:-1px;
+  line-height:0px;
+}

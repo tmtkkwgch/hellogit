@@ -1,0 +1,1149 @@
+body {
+    background-color: #FFFFFF;
+    visibility: hidden;
+}
+
+.yui-skin-sam .yui-layout .yui-layout-unit div.yui-layout-bd {
+    border: none;
+}
+
+#searchBox {
+    position: absolute;
+    right: 0;
+    top: 1px;
+    width: 400px;
+    height: 30px;
+    padding-top: 5px;
+}
+#searchBox input {
+    border: 1px solid #C0C0C0;
+    color: #A6A6A6;
+    height: 24px;
+    position: absolute;
+    top: 0px;
+    right: 46px;
+    width: 180px;
+}
+#search {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#searchBox span.links {
+    padding: 5px;
+}
+a {
+    text-decoration: none;
+    color: #0066CC;
+}
+#logo {
+    background-image: url("../images/assets/logo.png");
+    height: 35px;
+    width: 177px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+#info {
+    width: 193px;
+    position: absolute;
+    top: 7px;
+    left: 200px;
+    font-size: 85%;
+    text-align: left;
+}
+
+#info strong {
+    font-weight: bold;
+}
+
+#info span.links {
+    display: block;
+}
+
+#left1 {
+    text-align: left;
+}
+
+#folder_list {
+    height: 100%;
+
+    border: 1px solid #ffffff;
+    position: relative;
+    overflow-y:auto;
+    overflow-x:hidden;
+    background-color: #fff;
+}
+#folder_list .wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    white-space:nowrap;
+}
+
+#address_list .wrap {
+    height: 100%;
+    position: relative;
+    white-space:nowrap;
+}
+#address_list {
+    height: 100%;
+    overflow-y:auto;
+    overflow-x:hidden;
+    position: relative;
+    border-left: 1px solid #ffffff;border-right: 1px solid #ffffff;border-bottom: 1px solid #ffffff;
+    background-color: #fff;
+}
+
+#popular_shain table td,
+#popular_address table td,
+#popular_destlist table td,
+#folder_list table td{
+
+}
+
+#folder_list ul li.ydn-delicious em {
+    background-image: url( http://del.icio.us/favicon.ico );
+}
+#folder_list ul li.yws-flickr em {
+    background-image: url( http://flickr.com/favicon.ico );
+}
+
+#shain_list ul,
+#address_list ul,
+#destlist_list ul  {
+    padding: 5px;
+}
+#shain_list ul li,
+#address_list ul li,
+#destlist_list ul li {
+    background-image: url(../images/assets/card.gif);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    overflow:hidden;
+    white-space:nowrap;
+    padding:0px 3px 5px 15px;
+}
+#shain_list ul li a,
+#address_list ul li a,
+#destlist_list ul li a {
+    padding: 2px;
+    color: #000;
+}
+#shain_list ul li small,
+#address_list ul li small,
+#destlist_list ul li small {color:#666666;}
+
+#check_buttons {
+    padding: 3px;
+}
+
+#center2 div.yui-layout-hd {
+    color: #000;
+    border-left: none;
+    border-right: none;
+    background:transparent url("../images/assets/sprite.png") repeat-x scroll 0pt -1700px;
+}
+#center2 div.yui-layout-hd h2 {
+    color: #000;
+}
+#center2 .yui-layout-bd {
+    text-align: left;
+}
+#center2 .yui-layout-bd p {
+    margin: 1em;
+}
+#center2 .yui-layout-bd strong {
+    font-weight: bold;
+}
+
+.yui-skin-sam .yui-navset .yui-nav, .yui-skin-sam .yui-navset .yui-navset-top .yui-nav {
+    text-align: left;
+}
+.yui-skin-sam .yui-navset .loading {
+    background-image: url("../images/assets/progress.gif" );
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.yui-layout .yui-layout-unit .yui-content {
+    padding: 0;
+    text-align: left;
+    position: relative;
+}
+.yui-layout .yui-layout-unit .yui-content p {
+    margin: 2em;
+}
+.yui-skin-sam .yui-layout .yui-layout-unit div.yui-layout-bd {
+}
+.yui-skin-sam .yui-navset .yui-nav .selected a, .yui-skin-sam .yui-navset .yui-nav .selected a em {
+    border-color:#333333;
+}
+
+#wml010sendContent {
+}
+.yui-skin-sam .yui-editor-container {
+    border: none;
+}
+#composeViewEl {
+    display: none;
+}
+#composeBarWrap {
+    background-color:#eee;
+}
+#composeAddr span {
+    display: block;
+    width: 100%;
+    padding: .15em;
+}
+#composeAddr label {
+    display: block;
+    float: left;
+    width: 4em;
+}
+#composeAddr img {
+/**    display: block;
+    float: left; */
+    vertical-align: middle;
+}
+#composeAddr input {
+    border: 1px solid #333333;
+    width: 60%;
+}
+
+#composeSubject span {
+    display: block;
+    width: 100%;
+    padding: .25em;
+}
+#composeSubject label {
+    width: 4em;
+}
+#composeSubject input {
+    border: 1px solid #333333;
+    width: 80%;
+}
+
+#composeSendSign span {
+    display: block;
+    width: 100%;
+    padding: .25em;
+}
+#composeSendSign label {
+    width: 4em;
+}
+#composeSendSign input {
+    border: 1px solid #333333;
+    width: 80%;
+}
+
+#composeSendDate span {
+    display: block;
+    width: 100%;
+    padding: .25em;
+}
+#composeSendDate label {
+    width: 4em;
+}
+#composeSendDate input {
+/*
+    border: 1px solid #333333;
+    width: 80%;
+*/
+}
+
+#composeTempFile {
+    padding: 10px 0px 10px 0px;
+    width: 100%;
+    border: 1px solid #9EBAEE;
+    line-height: 180%!important;
+}
+
+#news {
+    position: relative;
+    top: 55px;
+    left: 5px;
+    width: 460px;
+}
+#news h3 {
+    font-weight: bold;
+}
+#news .yui-content ul {
+    margin-left: 20px;
+}
+#news .yui-content ul li {
+    list-style-type: disc;
+}
+
+#news p {
+    margin: 0;
+    font-size: 85%;
+}
+#news img {
+    padding: 8px;
+}
+#news .yui-nav li {
+    margin: 0;
+    padding: 0;
+    margin-left: 1px;
+    text-align: center;
+}
+#newsTop {
+    margin-left: 0;
+}
+#newsTop a {
+    width: 145px
+}
+#newsWorld a {
+    width: 70px;
+}
+#newsEnt a {
+    width: 160px;
+}
+#newsSports a {
+    width: 72px;
+}
+
+.yui-skin-sam .yui-navset .yui-nav .selected a, .yui-skin-sam .yui-navset .yui-nav .selected a:focus, .yui-skin-sam .yui-navset .yui-nav .selected a:hover {
+    background: #B3D4FF url("../images/assets/sprite.png") repeat-x scroll left -1400px;
+    color:#FFF;
+}
+.yui-skin-sam .yui-navset .yui-nav, .yui-skin-sam .yui-navset .yui-navset-top .yui-nav {
+    border-width: 0;
+}
+.yui-skin-sam .yui-navset .yui-nav .selected a em {
+    padding: 0.25em 0.75em;
+}
+
+#homeView,
+#inboxView,
+#newsView,
+#composeView {
+    position: relative;
+}
+
+#homeView em,
+#inboxView em,
+#newsView em,
+#composeView em {
+    font-weight: normal;
+    color: #333333;
+}
+
+#homeView.selected em,
+#inboxView.selected em,
+#newsView.selected em,
+#composeView.selected em {
+    font-weight: bold;
+    color: #FFF;
+}
+
+#homeView a,
+#inboxView a,
+#composeView a {
+    width: auto;
+}
+#composeView,
+#composeView a,
+#newsView,
+#newsView a {
+    width: 11em;
+}
+#homeView a:hover,
+#inboxView a:hover,
+#newsView a:hover,
+#composeView a:hover {
+    background:#BFDAFF url("../images/assets/sprite.png") repeat-x scroll left -1700px;
+}
+
+#homeView em,
+#composeView em {
+    padding-left: 20px;
+}
+
+#homeView span {
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    _left: -18px;
+    height: 14px;
+    width: 17px;
+    background-image: url("../images/assets/example.png");
+    background-position: -480px 0;
+}
+#homeView.selected span {
+    background-position: -140px 0;
+}
+
+#composeView span,
+#newsView span {
+    display: block;
+    position: absolute;
+    height: 17px;
+    width: 17px;
+    background-image: url("../images/assets/example.png");
+    background-position: -420px 0;
+}
+#composeView span.close,
+#newsView span.close {
+    top: 4px;
+    right: 3px;
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
+#composeView.selected span.close,
+#newsView.selected span.close,
+#composeView.selected span.icon {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+#composeView span.icon {
+    background-image: url("../images/assets/example.png");
+    background-position: -440px 0;
+    top: 5px;
+    left: 3px;
+    _left: -18px;
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
+
+
+.yui-skin-sam .yui-layout-unit .yui-resize-handle-b {
+    background-color: #f2f2f2;
+    border-top: 1px solid #333333;
+}
+
+
+.yui-skin-sam .yui-layout-unit .yui-resize-handle-r {
+    background-color: transparent;
+}
+
+#welcomeWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    color: #000;
+    background: #B3D4FF url("../images/assets/sprite.png") repeat-x scroll left -1300px;
+    border-bottom: 1px solid #2647A0;
+}
+#welcomeWrapper h2 {
+    font-size: 120%;
+    font-weight: bold;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+
+#weather {
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 50px;
+    color: #2647A0;
+    border-left: 1px solid #333333;
+    cursor: pointer;
+}
+
+#weather span {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 125px;
+}
+#weather span em {
+    display: block
+}
+
+#checkButton, #newButton {
+    background: url("../images/assets/sprite.png") repeat-x scroll 0pt 0px;
+    position: relative;
+    display: block;
+    float: left;
+}
+#checkButton.yui-button-hover, #newButton.yui-button-hover {
+    background: url("../images/assets/sprite.png") repeat-x scroll 0pt -1300px;
+}
+
+#checkButton .icon, #newButton .icon {
+    display: block;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    background-image: url("../images/assets/example.png");
+    background-repeat: no-repeat;
+}
+#checkButton button, #newButton button {
+    padding: 0 2px 0 21px;
+    line-height:20px;
+    vertical-align:middle;
+}
+#checkButton .icon {
+    background-position: -200px 0;
+}
+#newButton .icon {
+    background-position: -180px 0;
+}
+
+
+#inboxToolbar, #inboxToolbarBottom, #composeBar {
+    border: none;
+}
+#inboxToolbar .yui-push-button,
+ #inboxToolbarBottom .yui-push-button,
+ #composeBar .yui-push-button {
+    background:transparent url("../images/assets/sprite.png") repeat-x scroll 0 0px;
+    text-align: left;
+}
+
+#inboxToolbar .yui-push-button-hover,
+ #inboxToolbarBottom .yui-push-button-hover,
+ #composeBar .yui-push-button-hover {
+    background:transparent url("../images/assets/sprite.png") repeat-x scroll 0 -1300px;
+}
+
+#inboxToolbar .yui-button,
+ #inboxToolbarBottom .yui-button,
+ #composeBar .yui-button {
+    width: 88px;
+    height: 25px;
+    position: relative;
+    overflow: visible;
+    color: #000;
+    float: left;
+zindex: 999;
+}
+#inboxToolbar .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-icon,
+ #composeBar .yui-toolbar-icon {
+    background-image: url("../images/assets/example.png");
+    height: 20px;
+    width: 20px;
+    top: 6px;
+    left: 4px;
+}
+
+#inboxToolbar .yui-toolbar-delete,
+ #inboxToolbar .yui-toolbar-spam,
+ #inboxToolbar .yui-toolbar-reply,
+ #inboxToolbarBottom .yui-toolbar-delete,
+ #inboxToolbarBottom .yui-toolbar-spam,
+ #inboxToolbarBottom .yui-toolbar-reply,
+ #composeBar .yui-toolbar-send {
+    width: 82px;
+}
+
+#inboxToolbar .yui-toolbar-mailMove,
+ #inboxToolbar .yui-toolbar-changeMailDir,
+ #inboxToolbar .yui-toolbar-mailEdit,
+ #inboxToolbar .yui-toolbar-movePrevMail,
+ #inboxToolbar .yui-toolbar-moveNextMail,
+ #inboxToolbar .yui-toolbar-share,
+ #inboxToolbar .yui-toolbar-read,
+ #inboxToolbar .yui-toolbar-unread,
+ #inboxToolbarBottom .yui-toolbar-mailMove,
+ #inboxToolbarBottom .yui-toolbar-changeMailDir,
+ #inboxToolbarBottom .yui-toolbar-mailEdit,
+ #inboxToolbarBottom .yui-toolbar-movePrevMail,
+ #inboxToolbarBottom .yui-toolbar-moveNextMail,
+ #inboxToolbarBottom .yui-toolbar-share,
+ #inboxToolbarBottom .yui-toolbar-read,
+ #inboxToolbarBottom .yui-toolbar-unread {width: 60px!important;}
+
+#inboxToolbar .yui-toolbar-allReply,
+ #inboxToolbar .yui-toolbar-new,
+ #inboxToolbar .yui-toolbar-mailClose,
+ #inboxToolbar .yui-toolbar-label,
+ #inboxToolbar .yui-toolbar-emlOutput,
+ #inboxToolbarBottom .yui-toolbar-allReply,
+ #inboxToolbarBottom .yui-toolbar-new,
+ #inboxToolbarBottom .yui-toolbar-export,
+ #inboxToolbarBottom .yui-toolbar-mailClose,
+ #inboxToolbarBottom .yui-toolbar-label,
+ #inboxToolbarBottom .yui-toolbar-emlOutput  {width: 95px;}
+
+#inboxToolbar .yui-toolbar-delete .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-delete .yui-toolbar-icon {
+    background-position: -20px 0;
+}
+
+#inboxToolbar .yui-toolbar-new .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-new .yui-toolbar-icon {
+    background-position: -180px 0;
+}
+
+#inboxToolbar .yui-toolbar-mailClose .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-mailClose .yui-toolbar-icon {
+    background-position: -0px 0;
+    background-image: url("../images/assets/back.png")!important;
+    height: 20px;
+    width: 20px;
+    top: 6px;
+    left: 4px;
+}
+
+#inboxToolbar .yui-toolbar-read .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-read .yui-toolbar-icon {
+    background-position: -0px 0;
+    background-image: url("../images/assets/read.png")!important;
+    height: 20px;
+    width: 20px;
+    top: 4px;
+    left: 4px;
+}
+
+#inboxToolbar .yui-toolbar-unread .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-unread .yui-toolbar-icon {
+    background-position: -0px 0;
+    background-image: url("../images/assets/unread.png")!important;
+    height: 20px;
+    width: 20px;
+    top: 4px;
+    left: 4px;
+}
+
+#inboxToolbar .yui-toolbar-emlOutput .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-emlOutput .yui-toolbar-icon {
+    background-position: -0px 0;
+    background-image: url("../images/assets/mail_export.png")!important;
+    height: 20px;
+    width: 20px;
+    top: 7px;
+    left: 4px;
+}
+#inboxToolbar .yui-toolbar-mailMove .yui-toolbar-icon,
+ #inboxToolbar .yui-toolbar-changeMailDir .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-mailMove .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-changeMailDir .yui-toolbar-icon {
+    background-position: -320px 0;
+}
+
+#inboxToolbar .yui-toolbar-mailEdit .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-mailEdit .yui-toolbar-icon {
+    background-position: -180px 0;
+}
+
+#inboxToolbar .yui-toolbar-reply .yui-toolbar-icon,
+ #inboxToolbar .yui-toolbar-allReply .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-reply .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-allReply .yui-toolbar-icon {
+    background-position: -240px 0;
+    top: 3px;
+}
+
+#inboxToolbar .yui-toolbar-forward .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-forward .yui-toolbar-icon {
+    background-position: -260px 0;
+    top: 3px;
+}
+#inboxToolbar .yui-toolbar-spam .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-spam .yui-toolbar-icon {
+    background-position: -280px 0;
+}
+#inboxToolbar .yui-toolbar-move .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-move .yui-toolbar-icon {
+    background-position: -320px 0;
+}
+#inboxToolbar .yui-toolbar-share .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-share .yui-toolbar-icon {
+    background-position: -200px 0;
+}
+#inboxToolbar .yui-toolbar-label .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-label .yui-toolbar-icon {
+    background-position: -160px 0;
+}
+#inboxToolbar .yui-toolbar-print .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-print .yui-toolbar-icon {
+    background-position: -300px 0;
+    top: 3px;
+}
+
+#inboxToolbarBottom .yui-toolbar-export .yui-toolbar-icon {
+    background-position: -380px 0;
+    top: 3px;
+}
+
+#inboxToolbar .yui-button .first-child a,
+ #inboxToolbarBottom .yui-button .first-child a {
+    padding-left: 22px;
+}
+
+#inboxToolbar .yui-toolbar-subcont,
+ #inboxToolbarBottom .yui-toolbar-subcont {
+    margin: 0;
+    padding: 4px;
+}
+
+#inboxToolbar .yui-toolbar-movePrevMail .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-movePrevMail .yui-toolbar-icon {
+    background-position: -0px 0;
+    background-image: url("../images/assets/back.png")!important;
+    height: 20px;
+    width: 20px;
+    top: 6px;
+    left: 4px;
+}
+
+#inboxToolbar .yui-toolbar-moveNextMail .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-moveNextMail .yui-toolbar-icon {
+    background-position: -0px 0;
+    background-image: url("../images/assets/next.png")!important;
+    height: 20px;
+    width: 20px;
+    top: 6px;
+    left: 4px;
+}
+
+#composeBar .yui-toolbar-subcont {
+    border: none;
+}
+
+#composeBar .yui-toolbar-send .yui-toolbar-icon {
+    background-position: -200px 0;
+}
+
+#composeBar .yui-toolbar-attach .yui-toolbar-icon {
+    background-position: -340px 0;
+}
+
+#composeBar .yui-toolbar-savedraft {width: 100px;}
+
+#composeBar .yui-toolbar-savedraft .yui-toolbar-icon {
+    background-position: -380px 0;
+    top: 3px;
+}
+
+#composeBar .yui-toolbar-mailtemplate {width: 110px;}
+
+#composeBar .yui-toolbar-mailtemplate .yui-toolbar-icon {
+    background-position: -160px 0;
+}
+
+#composeBar .yui-toolbar-spelling .yui-toolbar-icon {
+    background-position: -360px 0;
+}
+
+#composeBar .yui-toolbar-cancel .yui-toolbar-icon {
+    background-position: -400px 0;
+}
+#composeBar {
+    padding-top: 2px;
+}
+#composeBar .yui-button .first-child a {
+    padding-left: 23px;
+}
+
+#datetime {
+    position: absolute;
+    bottom: 2px;
+    right: 205px;
+    font-size: 85%;
+}
+
+.yui-skin-sam .yui-toolbar-container {
+    background-color: #eeeeee;
+}
+.yui-skin-sam .yui-toolbar-container .yui-push-button,
+.yui-skin-sam .yui-toolbar-container .yui-color-button,
+.yui-skin-sam .yui-toolbar-container .yui-menu-button {
+    background:transparent url("../images/assets/sprite.png") repeat-x scroll 0 0px;
+}
+
+.yui-skin-sam .yui-toolbar-container .yui-button-hover {
+    background:transparent url("../images/assets/sprite.png") repeat-x scroll 0 -1300px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-push-button span.yui-toolbar-icon,
+.yui-skin-sam .yui-toolbar-container .yui-color-button span.yui-toolbar-icon,
+.yui-skin-sam .yui-toolbar-container .yui-menu-button span.yui-toolbar-icon {
+    background-image: url("../images/assets/editor-sprite-active.gif");
+}
+
+/* Swap out the image to an active image */
+.yui-skin-sam .yui-toolbar-container .yui-button-selected span.yui-toolbar-icon, .yui-skin-sam .yui-toolbar-container .yui-button-hover span.yui-toolbar-icon {
+    background-image: url("../images/assets/editor-sprite.gif");
+}
+.yui-skin-sam .yui-dt-scrollable .yui-dt-hd,
+.yui-skin-sam .yui-dt-scrollable .yui-dt-bd {
+    border: none;
+}
+.yui-skin-sam .yui-dt-scrollable .yui-dt-hd {
+    border-top: 1px solid #333333;
+}
+.yui-skin-sam .yui-dt th {
+    background:transparent url("../images/assets/sprite.png") repeat-x scroll 0 -1700px;
+    border-bottom:1px solid;
+  border-color:-moz-use-text-color #999999 #999999 -moz-use-text-color;
+}
+.yui-skin-sam .yui-dt td {
+  border-color:-moz-use-text-color #999999 -moz-use-text-color -moz-use-text-color;
+}
+#top2 .yui-toolbar-container .yui-toolbar-subcont,
+#bottom2 .yui-toolbar-container .yui-toolbar-subcont {
+    border: none;
+}
+
+.yui-skin-sam .yui-navset .yui-content, .yui-skin-sam .yui-navset .yui-navset-top .yui-content {
+border:1px solid #333333;
+}
+
+#standard {
+    font-size: 90%;
+}
+
+.yui-dt-liner {padding:5px 8px !important;}
+#calBox {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 20px;
+    border-top: 1px solid #333333;
+    width: 100%;
+    background:transparent url("../images/assets/sprite.png") repeat-x scroll 0 -1300px;
+    cursor: pointer;
+}
+
+#calBox em {
+    display: block;
+    padding-left: 25px;
+    padding-top: 2px;
+    color: #333333;
+}
+
+#calBox .icon {
+    position: absolute;
+    display: block;
+    top: 3px;
+    left: 4px;
+    height: 20px;
+    width: 20px;
+    background-image: url("../images/assets/example.png");
+    background-repeat: no-repeat;
+    background-position: -120px 0;
+}
+#calContainer {
+    position: absolute;
+    left: 0;
+    bottom: 21px;
+    overflow: hidden;
+    height: 0;
+}
+
+#calContainer .yui-calcontainer {
+    border: none;
+    border-top: 1px solid #333333;
+    border-right: 1px solid #333333;
+    background-color: #FFFFFF;
+}
+
+#calContainer .yui-calendar td.calcell.oom {
+    background-color: #FFFFFF;
+}
+.yui-skin-sam .yui-dialog .ft span.default {
+    background:transparent url("../images/assets/sprite.png") repeat-x scroll 0pt -1300px;
+}
+.yui-skin-sam .yui-dialog .ft span.default button {
+    color: #000;
+}
+.yui-skin-sam .yui-ac-content li.yui-ac-highlight {
+    background: #FFFFFF none repeat scroll 0%;
+    color: #000;
+}
+
+#weatherTooltip.yui-tt .bd strong {
+    font-weight: bold;
+}
+#weatherTooltip.yui-tt .bd,
+#newsTip.yui-tt .bd {
+    text-align: left;
+}
+#newsTip.yui-tt .bd img {
+    padding: 5px;
+}
+#newsTip.yui-tt .bd a {
+    color: #000;
+}
+#newsTip h3 {
+    font-weight: bold;
+}
+
+#newsEl {
+    overflow: auto;
+}
+.newsFeeds {
+    width: 500px;
+    font-size: 93%
+}
+.newsFeeds .feedData {
+    border: 1px dotted #FFFFFF;
+    border-bottom: 5px solid #FFFFFF;
+    margin: .5em;
+    padding: .25em;
+}
+.newsFeeds h3 {
+    font-weight: bold;
+}
+.newsFeeds a {
+    color: #000;
+}
+.newsFeeds img {
+    padding: 8px;
+}
+
+#news .moreNews {
+    font-size: 110%;
+}
+
+#newsSlider {
+    position: absolute;
+    top: 3px;
+    right: 20px;
+    height: 45px;
+    border: 1px solid #333333;
+    background-color: #fff;
+    width: 230px;
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
+#newsSlider.over {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+#newsSlider h3 {
+    font-weight: bold;
+    text-align: center;
+}
+
+#slider-bg {
+    position: relative;
+    background: url("../images/assets/bg-fader.gif") 5px 0 no-repeat;
+    height: 28px;
+    width: 228px;
+}
+
+#slider-thumb {
+    position: absolute;
+    top: 4px;
+    cursor: pointer;
+}
+
+.yui-skin-sam .yui-log {
+    margin: 0;
+    padding: 0;
+}
+.yui-skin-sam .yui-log .yui-log-bd {
+    border: none;
+}
+
+.yui-skin-sam .yui-log .yui-log-btns,
+.yui-skin-sam .yui-log .yui-log-hd {
+    display: none;
+}
+.yui-skin-sam .yui-log .info {
+    background-color: #FFFFFF;
+    color: #000;
+}
+
+.yui-skin-sam .yui-log pre.yui-log-verbose {
+    font-family: arial,helvetica,clean,sans-serif;
+}
+.yui-skin-sam .yui-layout .yui-layout-unit-right div.yui-layout-bd {
+    border-left: 1px solid #333333;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+}
+.yui-skin-sam .yui-layout .yui-layout-hd {
+    background:transparent url("../images/assets/sprite.png") repeat-x scroll 0pt -1700px;
+    border:1px solid #333333;
+}
+.yui-skin-sam .yui-layout .yui-layout-unit div.yui-layout-hd h2 {
+    color: #000;
+}
+
+#top1 table{
+    margin:5px;
+}
+#bottom1 p{
+    padding:5px;
+    text-align:center;
+    }
+.yui-layout-bd,
+.yui-layout-bd-nohd,
+.yui-layout-bd-noft,
+.yui-layout-unit,
+.yui-layout-unit-left,
+.yui-resize,
+.yui-content{
+    background-color:#FFFFFF !important;
+/* background-color:#c0c0c0 !important; */
+margin: 0 !important;
+padding: 0 !important;
+    }
+.mailSearch {text-align:right;padding-right:10px;}
+.mailSearch img{
+	margin:1px;
+	vertical-align:bottom;
+	border:none;
+}
+.mailSearch input {
+	width:100px;
+	font-size:80%;
+}
+.mailSearch button {
+	font-size:80%;
+}
+span#mailControl,span#mailControlBottom,
+span#searchResultControl,span#searchResultControlBottom {
+	position:relative;float:right;
+	padding:5px;
+	font-size:80%;
+	background-color:#eeeeee;;
+}
+span#mailControl img,span#searchResultControl img{vertical-align:bottom;margin:3px;}
+span#mailControl input,span#searchResultControl input {width:8em;}
+span#mailControl button,span#searchResultControl button{}
+
+.address_search{padding:2px;border-bottom:1px solid #cccccc;}
+
+#dialog1 table td,#dialog2 table td{
+    text-align:left;
+    padding:5px 5px 5px 20px;
+}
+
+#treewrapper {background: #fff; position:relative;}
+#treediv {position:relative; width:100%; background: #fff;}
+
+#treediv * a {
+    padding: 2px;
+    color: #000;
+}
+#treediv * .selected a {
+    background-color: #B3D4FF;
+    color: #000;
+}
+#treediv * em{
+/*    background-image: url("../images/assets/example.png"); */
+    background-image: url("../images/assets/tree_icons.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 17px;
+    display: block;
+    float: left;
+    margin: 0 0px;
+    overflow: hidden;
+}
+
+#treediv * .inbox em{background-position: -60px 0;}
+#treediv * .unsent em{background-position: -500px 0;}
+#treediv * .sent em{background-position: -460px 0;}
+#treediv * .spam em{background-position: -40px 0;}
+#treediv * .trash em{background-position: -20px 0;}
+#treediv * .contacts em{background-position: -100px 0;}
+#treediv * .calendar em{background-position: -120px 0;}
+#treediv * .notepad em{background-position: -160px 0;}
+.address em{background: url(../images/assets/card.gif) no-repeat top left !important;
+height: 20px;width: 17px;display: block;float: left;margin: 0 1px;overflow: hidden;}
+
+
+/* first or middle sibling, no children */
+.ygtvtn { background: url(../js/yui/assets/img/folders/tn.gif) 0 0 no-repeat; width:17px; height:22px; }
+/* first or middle sibling, collapsable */
+.ygtvtm { background: url(../js/yui/assets/img/folders/tm.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+/* first or middle sibling, collapsable, hover */
+.ygtvtmh { background: url(../js/yui/assets/img/folders/tmh.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+/* first or middle sibling, expandable */
+.ygtvtp { background: url(../js/yui/assets/img/folders/tp.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+/* first or middle sibling, expandable, hover */
+.ygtvtph { background: url(../js/yui/assets/img/folders/tph.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+/* last sibling, no children */
+.ygtvln { background: url(../js/yui/assets/img/folders/ln.gif) 0 0 no-repeat; width:17px; height:22px; }
+/* Last sibling, collapsable */
+.ygtvlm { background: url(../js/yui/assets/img/folders/lm.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+/* Last sibling, collapsable, hover */
+.ygtvlmh { background: url(../js/yui/assets/img/folders/lmh.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+/* Last sibling, expandable */
+.ygtvlp { background: url(../js/yui/assets/img/folders/lp.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+/* Last sibling, expandable, hover */
+.ygtvlph { background: url(../js/yui/assets/img/folders/lph.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+/* Loading icon */
+.ygtvloading { background: url(../js/yui/assets/img/folders/loading.gif) 0 0 no-repeat; width:16px; height:22px; }
+/* the style for the empty cells that are used for rendering the depth
+ * of the node */
+.ygtvdepthcell { background: url(../js/yui/assets/img/folders/vline.gif) 0 0 no-repeat; width:17px; height:22px; }
+.ygtvblankdepthcell { width:17px; height:22px; }
+/* the style of the div around each node */
+.ygtvitem { }
+.ygtvitem  table{margin-bottom:0;}
+.ygtvitem  td {border:none;padding:0;}
+/* the style of the div around each node's collection of children */
+.ygtvchildren { }
+* html .ygtvchildren { height:1%; }
+/* the style of the text label in ygTextNode */
+.ygtvlabel, .ygtvlabel:link, .ygtvlabel:visited, .ygtvlabel:hover {
+  margin-left:2px;text-decoration: none;
+}
+ygtvhtml,
+ygtvitem,
+ygtvchildren{white-space:nowrap;position:relative;}
+
+.mailLabel {
+    background-color: #ffffcc;
+    color: #666666;
+    font-size: 85%!important;
+    font-weight: normal!important;
+    padding: 2px;
+    border:solid 1px #cccccc;
+}
+
+.emptyDustBox {
+  color:#3d67ce!important;
+  text-decoration:underline!important;
+}
+
+.emlExportBtn {
+    background:transparent url("../images/assets/sprite.png") repeat-x scroll 0 0px;
+    text-align: left;
+    font-weight: normal!important;
+    width: 140px;
+    height: 25px;
+/*
+    background-image: url("../images/assets/example.png");
+    height: 20px;
+    width: 20px;
+    top: 6px;
+    left: 4px;
+    background-position: -380px 0;
+    top: 3px;
+*/
+}
+
+/*
+#inboxToolbar .yui-toolbar-icon,
+ #inboxToolbarBottom .yui-toolbar-icon,
+ #composeBar .yui-toolbar-icon {
+    background-image: url("../images/assets/example.png");
+    height: 20px;
+    width: 20px;
+    top: 6px;
+    left: 4px;
+}
+#inboxToolbar .yui-push-button-hover,
+ #inboxToolbarBottom .yui-push-button-hover,
+ #composeBar .yui-push-button-hover {
+    background:transparent url("../images/assets/sprite.png") repeat-x scroll 0 -1300px;
+}
+*/
+
+.emlExportLink {
+    background-image: url("../images/assets/example.png");
+    background-position: -380px 0;
+}

@@ -1,0 +1,51 @@
+.yui-panel#subPanel {
+overflow: visible;
+border: none;
+background-color: transparent;
+}
+
+.yui-panel#subPanel .bd {
+border-right: 1px solid #333333;
+border-left: 1px solid #333333;
+border-bottom: 1px solid #333333;
+background-color: white;
+color: black;
+height: 150px;
+padding: 2px;
+overflow: auto;
+}
+
+
+.yui-panel#labelAddPanel {
+overflow: visible;
+border: none;
+background-color: transparent;
+}
+
+.yui-panel#labelAddPanel .bd {
+border-right: 1px solid #333333;
+border-left: 1px solid #333333;
+border-bottom: 1px solid #333333;
+background-color: white;
+color: black;
+height: 210px;
+padding: 2px;
+overflow: auto;
+}
+
+.yui-panel#labelPanel {
+overflow: visible;
+border: none;
+background-color: transparent;
+}
+
+.yui-panel#labelPanel .bd {
+border-right: 1px solid #333333;
+border-left: 1px solid #333333;
+border-bottom: 1px solid #333333;
+background-color: white;
+color: black;
+height: 200px;
+padding: 2px;
+overflow: auto;
+}

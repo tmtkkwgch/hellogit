@@ -1,0 +1,202 @@
+.ptl_body {
+  min-width: 900px!important;
+}
+
+.text_base6 {
+	color: #666666;
+	font-weight:bold;
+	font-size: 90%;
+}
+
+.text_base7 {
+	color: #333333;
+	font-size: 90%;
+}
+
+.btn_base1 {
+  font-size: 14px!important;
+  cursor:pointer;
+}
+
+.btn_folder_n1 {
+  border: solid 1px;
+  background-image: url(../images/btn_folder.gif);
+  color: #000066;
+  font-size: 14px!important;
+  height:25px;
+  width: 110px;
+  padding-left: 15px;
+  cursor:pointer;
+}
+
+.btn_template {
+  background-image: url(../images/btn_all_resv.gif);
+  color: #000066;
+  height:25px;
+  width:140px;
+  font-size: 14px!important;
+  padding-left: 15px;
+  border: solid 1px;
+  cursor:pointer;
+}
+
+.btn_cate_list {
+  background-image: url(../images/btn_list_100.gif);
+  color: #000066;
+  height:25px;
+  width:105px;
+  font-size: 14px!important;
+  padding-left: 15px;
+  border: solid 1px;
+  cursor:pointer;
+}
+
+.btn_cate_edit{
+  border: solid 1px;
+  background-image: url(../images/btn_edit.gif);
+  color: #000066;
+  font-size: 14px!important;
+  height:25px;
+  width:105px;
+  padding-left: 15px;
+  cursor:pointer;
+}
+
+.portal_area {
+  border: 2px;
+  border-color: #333333;
+  border-width: 2px;
+  border-style: solid;
+  border-collapse: collapse;
+  padding: 2px 2px 2px 2px;
+  margin: 0px 0px 0px 0px;
+  cursor:pointer;
+}
+
+.portal_area_main {
+  padding: 2px 2px 2px 2px;
+  margin: 0px 0px 0px 0px;
+}
+
+.text_portal_base1 {
+	color: #666666;
+	font-weight:bold;
+	font-size: 90%;
+}
+
+.text_portal_base2 {
+  color: #333333;
+  font-size: 90%;
+}
+
+.portlet_area2 {
+  height: 40px!important;
+  vertical-align: top;
+}
+
+.portlet_area2_closed {
+  height: 40px!important;
+  vertical-align: top;
+  background-color: #cccccc!important;
+}
+
+.now_forcus{
+  font-size: 90%!important;
+  font-weight:bold!important;
+  color: #000000!important;
+  background-image: url(../images/portal_tab_forcus.gif);
+  background-repeat:no-repeat;
+  width: 130px;
+}
+
+.none_forcus{
+  font-size: 90%!important;
+  font-weight:bold!important;
+  color: #999999!important;
+  background-image: url(../images/portal_tab_nonforcus.gif);
+  background-repeat:no-repeat;
+  width: 130px;
+  border-bottom: solid 1px #cccccc;
+}
+
+.btn_portlet_n1
+{
+  border: solid 1px;
+  BACKGROUND-IMAGE: url(../images/btn_portlet.gif);
+  color: #000066;
+  font-size: 14px!important;
+  height:25px;
+  width:100px;
+  padding-left: 15px;
+  cursor:pointer;
+
+}
+
+.btn_portlet_n2
+{
+  border: solid 1px;
+  BACKGROUND-IMAGE: url(../images/btn_portlet.gif);
+  color: #000066;
+  font-size: 14px!important;
+  height:25px;
+  width:130px;
+  padding-left: 15px;
+  cursor:pointer;
+
+}
+
+.plt_td {
+  border: 0px!important;
+  padding: 10px 5px 5px 5px;
+  margin: 10px 5px 5px 5px;
+}
+
+.plt_tab_td2 {
+  text-align: center;
+  padding: 5px 0 0 0;
+  margin: 5px 0 0 0;
+  border-top: hidden!important;
+  border-left: hidden!important;
+  border-right: hidden!important;
+  border-bottom: solid 1px #cccccc;
+}
+
+.plt_tab_td2 a {
+  text-align: left;
+  font-size: 90%!important;
+  font-weight:bold!important;
+  color: #FFFFFF;
+}
+
+.plt_title {
+  font-weight:bold;
+  color: #000000;
+  margin-left:5px;
+  font-size: 90%;
+}
+
+.portlet_style {
+  margin-bottom: 10px;
+}
+
+.portlet_style p {
+  margin: 0 5px 0 5px;
+  padding: 0 5px 0 5px;
+}
+
+.plt_left {
+  padding-right: 10px;
+}
+
+.plt_center {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.plt_right {
+  padding-left: 10px;
+}
+
+.plt_top {
+  padding-top: 5px;
+}

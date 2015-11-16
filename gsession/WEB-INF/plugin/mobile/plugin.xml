@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<plugin>
+
+  <!-- プラグインID -->
+  <id>mobile</id>
+
+  <!-- 名称  -->
+  <name>GSモバイル</name>
+  <name-eng>Mobile</name-eng>
+
+  <!-- 説明  -->
+  <description>
+GroupSessionを携帯端末からアクセスし活用することが出来ます。
+  </description>
+  <!-- ログ出力を設定する。 -->
+  <log-info>
+    <!-- ログ出力 対象/非対象 -->
+    <output>true</output>
+  </log-info>
+</plugin>

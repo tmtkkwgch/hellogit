@@ -1,0 +1,79 @@
+.t_top {
+    vertical-align: top;
+}
+
+a.anpi_link {
+  color: #0000FF;
+  font-size: 90%;
+  text-decoration: underline !important;
+}
+
+a:hover.anpi_link {
+  text-decoration: none;
+}
+
+.text_jokyoGood {
+    color: #008000;
+}
+
+.text_jokyoKeisyo {
+color: #E48E00;
+}
+
+.text_jokyoJyusyo {
+    color: #ff0000;
+}
+
+.text_jokyoSyusyaNo {
+    color: #ff0000;
+}
+
+.btn_haisin
+{
+  border: solid 1px;
+  BACKGROUND-IMAGE: url(../images/btnHaisin.gif);
+  color: #000066;
+  font-size: 14px!important;
+  height:25px;
+  width:100px;
+  padding-left: 15px;
+}
+
+.btn_resend
+{
+  border: solid 1px;
+  BACKGROUND-IMAGE: url(../images/btnResend.gif);
+  color: #000066;
+  font-size: 14px!important;
+  height:25px;
+  width:100px;
+  padding-left: 15px;
+}
+
+.btn_info
+{
+  border: solid 1px;
+  BACKGROUND-IMAGE: url(../images/btnInfo.gif);
+  color: #000066;
+  font-size: 14px!important;
+  height:25px;
+  width:100px;
+  padding-left: 20px;
+}
+
+.btn_ans
+{
+  border: solid 1px;
+  BACKGROUND-IMAGE: url(../images/btn_reply.gif);
+  color: #000066;
+  font-size: 14px!important;
+  height:25px;
+  width:100px;
+  padding-left: 10px;
+}
+
+.table_bg_FFC1C1 {
+    background-color: #ffc1c1;
+    border: solid 1px #cccccc;
+    padding: 5px;
+}

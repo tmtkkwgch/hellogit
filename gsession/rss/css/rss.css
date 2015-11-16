@@ -1,0 +1,157 @@
+
+.rsswinMain{
+  width:100%;
+  border-collapse: collapse;
+  position: relative;
+  margin: 5px 0px 5px 0px;
+}
+
+.rss_description{
+  font-size: 80%;
+}
+
+.rss_link_text{
+  font-size: 80%;
+  text-decoration: underline;
+  margin: 5px;
+  padding-left: 10px;
+}
+
+.rss_author_text{
+  display:none;
+}
+
+.rss_text_base {
+	color: #666666;
+	font-weight:bold;
+	font-size: 90%;
+}
+
+.rss_date_text{
+  font-size: 80%;
+  color: #666666;
+  background-color: #FFFFCC;
+}
+.rss_description_text{
+  display:none;
+  /* visibility: hidden; */
+}
+
+.rss_description_text_notdsp{
+  display:none;
+}
+
+.rss_description_text_dsp{
+  display:inline;
+  font-size: 80%;
+  background-color: #FFFFCC;
+}
+
+.rss_description_text_dsp2{
+  display:inline;
+}
+
+
+div#container {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%;
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 0 1px 0 1px;
+  margin-bottom: 10px;
+}
+
+
+#rss_list{
+  position: relative;
+  /* float: left; */
+  /* width: 80%; */
+  width: 100%;
+  /* height: auto; */
+  top: 5;
+}
+
+#rss_menu{
+  display:none;
+  position: relative;
+  float: right;
+  width: 20%;
+  height: auto;
+}
+
+.nowrap {	white-space: nowrap; }
+.float_left {  float: left; }
+.float_right { float: right; }
+
+.clear {
+  clear: both;
+}
+
+.rss_srh_img{
+}
+
+.rss_ranking_text {
+  font-size: 120%;
+  font-weight: bold;
+  color: #333333;
+  margin: 0px;
+  padding: 0px;
+}
+
+.rss_td1 {
+  background-color: #FFFFFF;
+  border: 0px;
+
+  color: #333333;
+  font-size: 90%;
+}
+
+.rss_td2 {
+  background-color: #e5edfe;
+  border: 0px;
+
+  color: #333333;
+  font-size: 90%;
+}
+
+.swd_rank_nom {
+    font-size: 80%;
+}
+.swd_rank_best3 {
+    color: #FC5402;
+    font-weight:bold;
+    font-size: 105%;
+}
+
+.text_koudokuzumi {
+  font-size: 85%;
+
+  color: #CC3333;
+
+}
+
+.btn_kodoku {
+  border: solid 0px #999999;
+  background-color: #ffffff;
+  BACKGROUND-IMAGE: url(../../common/images/btn_kodoku_bg.gif);
+  color: #000066;
+  font-size: 80%;
+  height:20px;
+  width: 50px;
+  cursor:pointer;
+}
+
+#rss_area a:visited {
+    color: #990099!important;
+}
+
+.column { width:50%; padding-bottom: 100px; }
+.portlet { margin: 0 0 0 0;}
+.portlet-header { margin: 0.3em; padding-bottom: 4px; padding-left: 0.2em; }
+.portlet-header .ui-icon { float: right; }
+.portlet-content { padding: 0.4em; }
+.ui-sortable-placeholder { visibility: visible !important; height: 200px !important; }
+.ui-sortable-placeholder * { visibility: hidden; }

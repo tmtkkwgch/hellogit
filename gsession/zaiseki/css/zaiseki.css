@@ -1,0 +1,240 @@
+.can_drop {
+
+}
+.cart-active {
+  background-color:#ffffdd;
+}
+
+.zsk_uio_etc {
+  cursor:pointer;
+  position:absolute;
+  font-size: 80%;
+  color:black;
+  margin:  5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+  background-color: #FFEEBB;
+  border: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-color: #7D91BD;
+  color: #000000;
+  white-space:nowrap;
+}
+
+.zsk_uio_etc a {
+  color: #000000;
+}
+
+.zsk_uio_in {
+  cursor:pointer;
+  position:absolute;
+  font-size: 80%;
+  color:black;
+  margin:  5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+  background-color: #FFFFFF;
+  border: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-color: #7D91BD;
+  color: #000000;
+  white-space:nowrap;
+}
+
+.zsk_uio_in a {
+  color: #000000;
+}
+
+.zsk_uio_leave {
+  cursor:pointer;
+  position:absolute;
+  font-size: 80%;
+  color:black;
+  margin:  5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+  background-color: #9BDBAF;
+  border: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-color: #7D91BD;
+  color: #000000;
+  white-space:nowrap;
+}
+
+.zsk_uio_leave a {
+  color: #000000;
+}
+
+.zsk_rsv {
+  cursor:pointer;
+  position:absolute;
+  font-size: 80%;
+  color:black;
+  white-space:nowrap;
+  margin:  5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+  background-color: #FFFFFF;
+  border: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-color: #9BDBAF;
+  color: #000000;
+}
+.zsk_rsv_used {
+  cursor:pointer;
+  position:absolute;
+  font-size: 80%;
+  color:black;
+  white-space:nowrap;
+  margin:  5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+  background-color: #ffc1c1;
+  border: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-color: #9BDBAF;
+  color: #000000;
+}
+
+
+.zsk_msg {
+  cursor:pointer;
+  position:absolute;
+  font-size: 80%;
+  color:black;
+  white-space:nowrap;
+  margin:  0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  border: 0px;
+  border-top-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  color: #000000;
+}
+
+.zsk_description_text_dsp{
+  display:inline;
+}
+
+.zsk_description_text_notdsp{
+  display:none;
+}
+
+.zsk_line_style {
+  margin:  5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+  border: 1px;
+  border-color: #333333;
+  border-top-style: dotted;
+  border-bottom-style: dotted;
+  border-left-style: dotted;
+  border-right-style: dotted;
+}
+
+.img_middle {
+  vertical-align:top;
+}
+.img_btm {
+  vertical-align:bottom;
+}
+
+.zsk_header_7D91BD_left {
+  background-image: url(../../main/images/main_header_bg_left.gif);
+  text-align: left;
+  padding: 0;
+  height: 30px;
+  border: 0px;
+}
+
+.zsk_header_7D91BD_right {
+  background-image: url(../../main/images/main_header_bg_left.gif);
+  text-align: right;
+  padding: 0;
+  height: 30px;
+  border: 0px;
+}
+
+.left_space {
+  padding: 0px 0px 0px 10px;
+}
+
+
+.text_zsk_text2 {
+  color: #333333;
+  font-size: 90%;
+  margin:  0px 0px 0px 10px;
+}
+
+.block_color_etc {
+    background-color:#FFEEBB;
+    margin:2px 4px 1px 1px;
+    padding:2px 4px 1px 1px;
+    border: solid 1px #333333;
+}
+.block_color_in {
+    background-color:#FFFFFF;
+    margin:2px 4px 1px 1px;
+    padding:2px 4px 1px 1px;
+    border: solid 1px #333333;
+}
+.block_color_leave {
+    background-color:#9BDBAF;
+    margin:2px 4px 1px 1px;
+    padding:2px 4px 1px 1px;
+    border: solid 1px #333333;
+}
+
+.td_type_kekkin2 {
+  margin:  5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+
+  background-color: #FFEEBB;
+  border: 0px;
+
+  color: #333333;
+  font-size: 90%;
+}
+
+.td_type_gaisyutu2 {
+  margin:  5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+
+  background-color: #9BDBAF;
+  border: 0px;
+
+  color: #333333;
+  font-size: 90%;
+}
+
+.display_hide {
+  display:none;
+}
+
+.z_index_10 {
+  z-index:10;
+}
+
+.z_index_20 {
+  z-index:20;
+}
+
+.display_none {
+  display:none;
+}
+.menu a:hover {
+  text-decoration: underline;
+}
+/* .menu_on { */
+/*   background-color: #908f8f!important; */
+/* } */

@@ -1,0 +1,77 @@
+
+.lastlogin_tdBgColor1 {
+    background-color: #ffffff;
+}
+.lastlogin_tdBgColor2 {
+    background-color: #EEFFFF;
+}
+.lastlogin_tdBgColor3 {
+    background-color: #EEEEFF;
+}
+.lastlogin_tdBgColor4 {
+    background-color: #DDFFDD;
+}
+.lastlogin_tdBgColor5 {
+    background-color: #FFFFCC;
+}
+.lastlogin_tdBgColor6 {
+    background-color: #FFBBBB;
+}
+.lastlogin_tdBgColor7 {
+    background-color: #FFAAFF;
+}
+.lastlogin_tdBgColor8 {
+    background-color: #dddddd;
+}
+
+.txt_status {
+    margin-left: 10px;
+}
+
+.text_r1 {
+  font-size: 85%!important;
+  line-height: 11pt;
+  color: #CC3333;
+  font-weight: bold;
+}
+/** */
+.main_tab_top_bg {
+  background-image: url(../images/tab_bg.gif);
+  vertical-align: bottom;
+}
+
+.plugin_list {
+  height: 30px;
+}
+
+.plugin_menu {
+  padding: 3px;
+}
+
+.img_space {
+  width:40px
+}
+
+.img_border {
+    border: solid 1px #333333;
+}
+
+.td_type_main_pop {
+  margin:  5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+
+  background-color: #FFFFFF;
+  border: 1px;
+  border-color: #999999;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+}
+
+.text_base_main3 {
+ font-family: Verdana,Arial,sans-serif;
+  font-size: 90%;
+  font-weight: bold;
+  color: #000000;
+}

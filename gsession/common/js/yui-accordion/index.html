@@ -1,0 +1,271 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>YUI AccordionView Widget</title>
+
+	<script type="text/javascript" src="accordionview/utilities.js"></script>
+	<link rel="stylesheet" type="text/css" href="accordionview/assets/skins/sam/reset-fonts.css"> 
+	<link rel="stylesheet" type="text/css" href="accordionview/assets/skins/sam/accordionview.css"> 
+	<style type="text/css">
+
+	/* specific css for this demo page */
+
+	body {
+		font-size: 0.8em;
+	}
+
+	#wrapper {
+		margin: 20px;
+	}
+
+	.padded {
+		padding: 10px;
+		clear: both;
+		zoom: 1;
+	}
+
+	.padded ul li {
+		list-style: inside square;
+	}
+
+	.block {
+		display: block;
+	}
+
+	ul.info li {
+		list-style: inside square;
+	}
+	ul.info {
+		margin-bottom: 1em;
+	}
+	p.code {
+		background: #000;
+		color: #cfc;
+		padding: 20px;
+		font-family: Courier;
+		font-size: 1.2em;
+		margin-left: 4em;
+	}
+
+	h1 {
+		font-size: 2em;
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+
+	h3 {
+		font-size: 1.6em;
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+
+	li h3 {
+		display: inline;
+	}
+
+	p {
+		margin-bottom: 1em;
+	}
+	strong {
+		font-weight: bold;
+	}
+	ol.code { font-size: 1.2em;border: 1px solid #ccc; padding: 5px; margin: 0 0 1em 4em; }
+	ol.code code { display: block; padding: 3px; margin-bottom: 0; }
+	.code li { background: #ddd; border: 1px solid #ccc; margin: 0 0 2px 2.2em; list-style-type: decimal-leading-zero; }
+	.indent1 { padding-left: 1em; }
+	.indent2 { padding-left: 2em; }
+	.indent3 { padding-left: 3em; }
+	
+	.clearfix:after {
+	    content: ".";
+	    display: block;
+	    clear: both;
+	    visibility: hidden;
+	    line-height: 0;
+	    height: 0;
+	}
+
+	.clearfix {
+	    display: inline-block;
+	}
+
+	html[xmlns] .clearfix {
+	    display: block;
+	}
+
+	* html .clearfix {
+	    height: 1%;
+	}
+	
+	.yui-accordionview {
+		margin-bottom: 2em;
+	}
+	
+	</style>
+</head>
+
+<body class="yui-skin-sam">
+	<div id="wrapper">
+		<h1>YUI AccordionView widget</h1>
+
+		<p>This is a <a href="http://developer.yahoo.com/yui">YUI</a> AccordionView widget as seen <a href="http://yuiblog.com/blog/2008/07/25/accordionview/">on the YUI Blog</a>. It can do many different things. See below if this page for configuration options. It even supports nested accordions as you can see by looking at the second item in the second accordion.</p>
+		<p>It has been skinned with the default YUI 'Sam' look but of course you can style it in any way you like.</p>
+		<p>While the quality of the widget is definitely improving I still consider it 'beta'. If you encounter any problems, please report them! I'm determined to make this widget rock solid!</p>
+		<p>Comments, hints, cheers, flames, they're all welcome.</p>
+		<p>This widget is discussed in <a href="http://www.i-marco.nl/weblog/archive/2008/07/20/yui_powered_javascript_accordi">this entry on my weblog</a>.</p>
+		<p>Copyright &copy;2008 <a href="http://www.i-marco.nl/weblog/">Marco van Hylckama Vlieg</a>.</p>
+
+		<h3>Examples first!</h3>
+		<p>Here's some examples of how you can use the widget. I'm working on more examples. If you would like to see a specific example feel free to email me and I may consider creating one!</p>
+		<div class="padded">
+		<ul>
+			<li><a href="#basic">Basic usage, from markup</a></li>
+			<li><a href="nested/">Nested accordions</a>
+			<li><a href="dynamic/">Dynamic, creation from script</a>
+			<li><a href="menu/">A menu</a></li>
+			<li><a href="apple/">'Apple' style accordion with mouseover action</a></li>
+			<li><a href="form/">A sophisticated form wrapped inside an accordion</a></li>
+			<li><a href="feeds/">A feed reader combining AccordionView and TabView for a compact UI</a></li>
+		</ul>
+		</div>
+		<h3>API Documentation</h3>
+		<p>Documentation is <a href="docs/YAHOO.widget.AccordionView.html">available here</a>.</p>
+		<h3>Update Log</h3>
+		<div class="padded clearfix">
+		<ul>
+			<li>Sunday July 20, 2008 - initial release</li>
+			<li>Monday July 21, 2008 - Fixed a small bug where clicking the + / - icons wouldn't open a panel</li>
+			<li>Tuesday July 22, 2008 - Code cleanup, added <strong>hoverActivated</strong> configuration option</li>
+			<li>Tuesday July 22, 2008 - Applied a (hopefully temporary) rather nasty IE6 fix related to nested menus not displaying</li>
+			<li>Wednesday July 23, 2008 - Fix that makes external links within panels work right in all browsers</li>
+			<li>Tuesday July 24, 2008 - Fixed the above fix (DOH) because it was applied to ALL browsers instead of just IE6</li>
+			<li>Saturday, Jul 26, 2008 - Improvements resulting in better YUI widget compliancy. Enabled runtime modification of configuration options. Beter use of inheritance of Element. Various cleanups.</li>
+			<li>Sunday, Jul 27, 2008 - Ability to create menus from scratch. Extremely simple markup requirements: list items with any two elements in them. Added ARIA roles and states for enhanced accessibility. Further code cleanups and enhancements. Note that this new version should be 100% backward compatible with the earlier one.</li>
+			<li>Wednesday, Jul 30, 2008 - Fixed a small bug that made it impossible to enable panel [1] by default. Added custom events for important Accordion events. Added a timeout for the hover activated accordion. Added missing documentation. Started providing a YUI compressed version of accordionview.js. Various small fixes. Provided more interesting examples. Added openPanel and closePanel methods.</li>
+			<li>Saturday, Aug 2, 2008 - Tiny bugfix related to creating accordions from script. Added the <a href="feeds/">feed reader example</a>.</li>
+			<li>Sunday, Aug 3, 2008 - A whole slew of internal code improvements and a few minor bugfixes.</li>
+			<li>Wednesday, Aug 6, 2008 - Proper event delegation in place, various fixes, IE6 tweaks.</li>
+			<li>Thursday, Aug 7, 2008 - Small fix in openPanel method, made ARIA stuff conditional (only IE8 and FF3). Added <a href="docs/YAHOO.widget.AccordionView.html">API documentation</a>.</li>
+			<li>Sunday, Aug 10, 2008 - Added <a href="menu/">menu</a> example and modified the widget to support items that don't have a panel. Moved +/- indicators to the right to facilitate this new behavior better. Eliminated flash in Gecko &lt; 1.9</li>
+			<li>Saturday, Aug 16, 2008 - Added full keyboard navigation. New custom event 'stateChanged'. Several parts refactored, bugfixes. Lots of good stuff. Updated API documentation.</li>
+			<li>Tuesday, Aug 19, 2008 - Internal robustness improvements</li>
+			<li>Thursday, Aug 21, 2008 - Made tag names configurable, documented all custom Events, code reorganisation and a few minor bugfixes</li>
+		</ul>
+		</div>
+
+		<h3>Download</h3>
+		<p>You can download an archive of this demo <a href="yui-accordion.zip">here</a>.</p>
+		<p>Check back regularly as this widget is a work in progress and this page and the archive will probably get updated.</p>
+
+		<p>License: <a href="http://developer.yahoo.com/yui/license.html">BSD License</a>.</p>
+		<h3>Dependencies</h3>
+
+		<p>This widget depends on the YUI utilities rollup file and the YUI reset-fonts CSS file and of course it's own CSS and javascript. See the sourcecode of the demo page for details.</p>
+
+		<h3>Markup to use</h3>
+		<ol class="code">
+		<li><code>&lt;ul id=&quot;mymenu&quot;&gt;</code></li>
+		<li><code>&lt;li&gt;&lt;ANYELEMENT&gt;Item 1&lt;/ANYELEMENT&gt;</code></li>
+		<li><code>&lt;ANYELEMENT&gt;</code></li>
+		<li><code>&lt;!-- content goes here --&gt;</code></li>
+		<li><code>&lt;/ANYELEMENT&gt;</code></li>
+		<li><code>&lt;/li&gt;</code></li>
+		<li><code>&lt;li&gt;&lt;ANYELEMENT&gt;Item 2&lt;/ANYELEMENT&gt;</code></li>
+		<li><code>&lt;ANYELEMENT&gt;</code></li>
+		<li><code>&lt;!-- content goes here --&gt;</code></li>
+		<li><code>&lt;/ANYELEMENT&gt;</code></li>
+		<li><code>&lt;/li&gt;</code></li>
+		<li><code>&lt;li&gt;&lt;ANYELEMENT&gt;Item 3&lt;/ANYELEMENT&gt;</code></li>
+		<li><code>&lt;ANYELEMENT&gt;</code></li>
+		<li><code>&lt;!-- content goes here --&gt;</code></li>
+		<li><code>&lt;/ANYELEMENT&gt;</code></li>
+		<li><code>&lt;/li&gt;</code></li>
+		<li><code>&lt;li&gt;&lt;ANYELEMENT&gt;Item 4&lt;/ANYELEMENT&gt;</code></li>
+		<li><code>&lt;ANYELEMENT&gt;</code></li>
+		<li><code>&lt;!-- content goes here --&gt;</code></li>
+		<li><code>&lt;/ANYELEMENT&gt;</code></li>
+		<li><code>&lt;/li&gt;</code></li>
+		<li><code>...</code></li>
+		<li><code>...</code></li>
+		<li><code>...</code></li>
+		<li><code>&lt;/ul&gt;</code></li>
+		</ol>
+		<p>Note: this means you can use ANY two elements inside the list elements. The first one contains the label text and the second one whatever content you want to show in the accordion.</p>
+		<h3>Invocation</h3>
+		<p class="code">accordion = new YAHOO.widget.AccordionView('mymenu', options);</p>
+		<p><strong>options</strong> is an object containing various configurable parameters. All available options are:</p>
+
+		<ul class="info">
+			<li><strong>width</strong>: css value for width including unit (example: '400px', '15em', etc.)</li>
+			<li><strong>expandItem</strong>: index of item to expand at initialization, default is none. 0 is the first, 1 the second, etc.</li>
+			<li><strong>animationSpeed</strong>: speed in seconds for animation. The default is 0.7</li>
+			<li><strong>animate</strong>: true or false, default is true</li>
+			<li><strong>effect</strong>: YUI Animation effect to use on animation. See <a href="http://developer.yahoo.com/yui/docs/YAHOO.util.Easing.html">the documentation on YAHOO.util.Easing</a>. Default is YAHOO.util.Easing.easeBoth</li>
+			<li><strong>collapsible</strong>: true or false, whether the whole thing can be collapsed or not, default is true</li>
+			<li><strong>expandable</strong>: true or false, whether the whole thing can expand (true) or act as an accordion where only one item can be open (false). default is false</li>
+			<li><strong>hoverActivated</strong>: true or false, when set to true, the items are activated on hover. Note that this activates on click ALSO in order to keep keyboard navigation working.</li>
+			<li><strong>hoverTimeout</strong>: time in milliseconds to way for a toggle when hoverActivated is used. Default is 500ms</li>
+		</ul>
+		
+		<p>The above parameters (except for expandItem and hoverActivated) can be changed at runtime. So let's say we have an AccordionView widget with ID coolMenu. We can then change the animation speed at runtime:</p>
+		<p class="code">coolMenu.set('animationSpeed', 1.5)</p>
+		
+		<h3>Keyboard navigation</h3>
+		<p>The widget now has full keyboard navigation. At any time, only opened panels have tabIndex. Once an open element has focus you can use up/left to move focus up and down/right to move focus down. Enter toggles the panel. When all panels are closed, the first item in the widget has tabIndex to still be able to tab into the widget.</p>
+		
+		<h3><a name="basic">A basic example</a></h3>
+		
+		<ul id="mymenu">
+			<li><p>Item 1</p><div>
+				<div class="padded clearfix">
+					<p><img alt="" src="http://www.i-marco.nl/photoblog/thumbnails/thumb_20080512070603__dsc9612.jpg" style="margin-right:5px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum pellentesque. Nunc justo mauris, ultricies et, consequat ac, tristique congue, enim. Vestibulum tempor ultrices leo. Nam venenatis arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse facilisis bibendum mauris.</p>
+				</div>
+			</div></li>
+			<li><p>Item 2</p><div>
+				<div class="padded clearfix">
+					<ul>
+						<li><a href="http://www.apple.com/">Lorem ipsum dolor sit amet</a>, consectetuer adipiscing elit.</li>
+						<li>Ut eleifend dui <a href="http://www.i-marco.nl/">accumsan lorem</a>.</li>
+
+						<li>Donec fermentum consectetuer purus.</li>
+						<li>Curabitur bibendum elit a nibh.</li>
+						<li>Curabitur fringilla velit sit amet diam.</li>
+						<li>Proin bibendum orci eget ante.</li>
+					</ul>
+				</div>
+			</div></li>
+			<li><p>Item 3</p>
+				<div>
+					<div class="padded clearfix">
+						<p>Morbi commodo dignissim odio. Donec ac velit id elit molestie consectetuer. Vivamus ac ligula sit amet mi aliquam accumsan. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p> <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam pede pede, convallis sit amet, condimentum a, accumsan tristique, tellus. In justo mi, interdum tempor, fermentum ut, porttitor at, lacus. Nulla lobortis commodo enim. Suspendisse varius auctor est. Phasellus sodales egestas leo.</p>
+					</div>
+				</div>
+			</li>
+			<li><p>Item 4</p>
+				<div>
+					<div class="padded">
+						<img alt="" src="http://www.i-marco.nl/photoblog/thumbnails/thumb_20080531222225__dsc9644.jpg" style="margin-right: 5px;">
+						<img alt="" src="http://www.i-marco.nl/photoblog/thumbnails/thumb_20080512084039__dsc9282.jpg" style="margin-right: 5px;">
+						<img alt="" src="http://www.i-marco.nl/photoblog/thumbnails/thumb_2008041213023600__DSC8909-Edit.jpg" style="margin-right: 5px;">
+					</div>
+				</div>
+			</li>		
+		</ul>
+		
+		<p>This AccordionView can be collapsed, is 400px wide, has the third item expanded by default, animates at a speed of 0.3 seconds with the YAHOO.util.Easing.easeBothStrong effect.</p>
+		<p class="code">menu1 = new YAHOO.widget.AccordionView('mymenu', {collapsible: true, width: '400px', expandItem: 2, animationSpeed: '0.3', animate: true, effect: YAHOO.util.Easing.easeBothStrong}</p>
+
+		<p>We also dynamically add a panel:</p>
+		<p class="code">menu1.addPanel({label: 'Dynamically added panel', content: 'This was inserted dynamically. This was inserted dynamically. This was inserted dynamically. This was inserted dynamically. This was inserted dynamically.'});</p>			
+		</div>
+
+		<script type="text/javascript" src="accordionview/accordionview.js"></script>
+
+		<script type="text/javascript">
+		var menu1 = new YAHOO.widget.AccordionView('mymenu', {collapsible: true, width: '400px', expandItem: 2, animationSpeed: '0.3', animate: true, effect: YAHOO.util.Easing.easeBothStrong});
+		menu1.addPanel({label: 'Dynamically added panel', content: 'This was inserted dynamically. This was inserted dynamically. This was inserted dynamically. This was inserted dynamically. This was inserted dynamically.'});
+		</script>
+		<script src="/mint/?js" type="text/javascript"></script>
+	</body>
+	</html>

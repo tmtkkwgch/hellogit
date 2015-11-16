@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>[Group Session  ヘルプ] 稟議 稟議内容確認</title>
+<link rel=stylesheet href="../../common/css/default.css" type="text/css">
+<link rel=stylesheet href="../../help/css/help.css" type="text/css">
+<script language="JavaScript" src='../../common/js/jquery-1.5.2.min.js'></script>
+<script type="text/javascript" src="../../help/js/help.js"></script>
+
+</head>
+<!-- '../help_ajax/ajax_xxx_left_list.html' を編集 -->
+<body onLoad="ajaxGetContents('help-left-func-in', '../help_ajax/ajax_rng_left_list.html');chengeHeaderText('[ 稟議 稟議内容確認 ]');">
+<div id="container"><a name="top"></a>
+	<div align="right" class="help-align-right">
+	<input type="button" value="稟議  トップへ" class="btn_base0" onClick="commonHelpLocationChange('./index.html');">
+	</div>
+    <!-- ナビゲーション -->
+	<div id="help-left-func">
+	  <div class="help-content-tr"><div class="help-content-tl"><img src="../../help/images/help_content_text_dsp.gif" alt="画面一覧" height="30"></div></div>
+      <div class="help-content-mr"><div class="help-content-ml">
+		  <div id="help-left-func-in">
+            <!-- ここにajax_xxx_left_list.htmlが入ります -->
+		  </div>
+	  </div></div>
+        <div class="help-content-br"><div class="help-content-bl"><img src="../../common/images/spacer.gif" width="1" height="15" alt=""></div>
+      </div>
+	</div>
+
+	<!-- コンテンツ -->
+	<div id="help-right-func">
+    <div class="help-content-tr"><div class="help-content-tl"><img src="../../help/images/help_content_text_func.gif" alt="機能詳細" height="30"></div></div>
+		<div class="help-content-mr"><div class="help-content-ml pad">
+        <p>稟議の承認・否認・却下の作業や、完了した内容の確認などがおこなえる画面です。</p>
+		<!-- img要素のsrc,alt属性を編集 -->
+		<h1 class="help-right-func-img"><img src="images/scr_help_big_rng030.gif" alt="稟議内容確認 機能詳細"></h1>
+        <p class="help-right-func-p">機能説明</p>
+        <table summary="機能詳細" class="help-right-func-more" cellpadding="0" cellspacing="0">
+        <!-- h2要素の中身と、p要素の中身を編集。項目数の調整 -->
+		<tr>
+		<th>
+          <h2 class="num-back01">承認ボタン</h2>
+		  <p>自分が承認経路にいて、確認の順番が回ってきた場合に表示されます。クリックすると承認確認画面へ遷移します。承認確認画面でOKボタンをクリックすると稟議を承認します。</p>
+		</th>
+		<td>
+          <h2 class="num-back02">却下ボタン</h2>
+		  <p>自分が承認経路にいて、確認の順番が回ってきた場合に表示されます。クリックすると却下確認画面へ遷移します。却下確認画面でOKボタンをクリックすると稟議を却下します。</p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+          <h2 class="num-back03">差し戻しボタン</h2>
+		  <p>自分が承認経路にいて、確認の順番が回ってきた場合に表示されます。クリックすると差し戻し確認画面へ遷移します。差し戻し確認画面でOKボタンをクリックすると稟議を一人前へ差し戻します。</p>
+		</td>
+		<th>
+          <h2 class="num-back04">戻るボタン</h2>
+		  <p>遷移元の画面へ遷移します。</p>
+        </th>
+		</tr>
+		<tr>
+		<th>
+          <h2 class="num-back05">強制完了ボタン</h2>
+		  <p>管理者が申請中案件管理画面から遷移してきた場合に表示されます。クリックすると強制完了確認画面へ遷移します。強制完了確認画面でOKボタンをクリックすると稟議を強制的に完了させます。</p>
+		</th>
+		<td>
+          <h2 class="num-back06">強制削除ボタン</h2>
+		  <p>管理者が申請中案件管理画面から遷移してきた場合に表示されます。クリックすると強制削除確認画面へ遷移します。強制削除確認画面でOKボタンをクリックすると稟議を削除します。</p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+          <h2 class="num-back07">スキップボタン</h2>
+		  <p>管理者が申請中案件管理画面から遷移してきて、現在確認中の承認者が承認経路の最後ではない場合に表示されます。クリックするとスキップ確認画面へ遷移します。スキップ確認画面でOKボタンをクリックすると承認の順番をスキップし次の承認者へ進めます。</p>
+		</td>
+		<th>
+          <h2 class="num-back08">完了ボタン</h2>
+		  <p>自分が承認した稟議を、自分より後の経路の承認者が承認せず差し戻してきた場合に表示されます。クリックすると完了確認画面へ遷移します。完了確認画面でOKボタンをクリックすると稟議を完了させます。</p>
+        </th>
+		</tr>
+		<tr>
+		<th>
+          <h2 class="num-back09">確認ボタン</h2>
+		  <p>自分が最終確認にいる場合に表示されます。クリックすると確認画面へ遷移します。確認画面でOKボタンをクリックすると稟議の承認状況を確認済にします。</p>
+		</th>
+		<td>
+          <h2 class="num-back10">再申請ボタン</h2>
+		  <p>自分が作成した稟議であり、承認経路の承認者から差し戻されてきた場合に表示されます。クリックすると再申請確認画面へ遷移します。再申請確認画面でOKボタンをクリックすると稟議を再申請します。</p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+          <h2 class="num-back11">複写して新規申請ボタン</h2>
+		  <p>自分が作成し、かつ完了した稟議の場合に表示されます。クリックすると稟議新規登録画面へ遷移します。その際、申請内容が各入力項目に設定されます。</p>
+		</td>
+		<th>
+          <h2 class="num-back12">添付ファイル名</h2>
+		  <p>クリックすると添付ファイルのダウンロードができます。</p>
+        </th>
+		</tr>
+		<tr>
+		<th>
+          <h2 class="num-back13">削除ボタン</h2>
+		  <p>添付のリストで選択中の添付ファイルを削除します。</p>
+		</th>
+		<td>
+          <h2 class="num-back14">添付ボタン</h2>
+		  <p>添付ファイル選択画面をポップアップで表示します。ファイルを選択し、確定すると添付のリストに選択したファイル名が追加されます。</p>
+		</td>
+		</tr>
+		</table>
+
+        <p class="help-right-func-p">表示・入力項目説明</p>
+        <div class="help-right-func-item">
+          <h2>状態</h2>
+          <p>稟議の状態が表示されます。</p>
+          <h2>タイトル</h2>
+          <p>稟議のタイトルが表示されます。</p>
+          <h2>申請者</h2>
+          <p>稟議の作成者が表示されます。</p>
+          <h2>作成日時</h2>
+          <p>稟議の作成日時が表示されます。</p>
+          <h2>内容</h2>
+          <p>稟議の内容が表示されます。</p>
+          <h2>添付</h2>
+          <p>添付ファイル名が表示されます。</p>
+          <h2>コメント</h2>
+          <p>承認作業時に表示されます。コメントを入力します（300文字以内）。</p>
+          <h2>確認時添付</h2>
+          <p>承認作業時に表示されます。添付ファイルを指定します。</p>
+          <h2>経路情報</h2>
+          <p>承認経路、最終確認の役職・ユーザ名・コメント・確認時添付・確認日時・状態が表示されます。</p>
+        </div>
+
+		</div></div>
+    <div class="help-content-br"><div class="help-content-bl"><img src="../../common/images/spacer.gif" width="1" height="15" alt=""></div></div>
+
+	<div class="help-align-right"><a href="#top">▲画面トップへ</a></div>
+	</div>
+</div>
+</body>
+</html>

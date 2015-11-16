@@ -1,0 +1,230 @@
+.body_09 {
+	margin: 0;
+    padding: 0;
+    background-color: #999999;
+    background-image: url(../images/login/login_back.png);
+    background-repeat: repeat-x;
+    text-align:center;
+}
+
+#login_lt{
+    margin-left: auto;
+    margin-right: auto;
+    height: 768px;
+    width: 900px;
+    background-image: url(../images/login/login_sample.png);
+    background-repeat: no-repeat;
+    text-align:left;
+}
+
+
+
+#footer_login {
+    clear:both;
+	margin-top: 50px;
+	width: 900px;
+	text-align: left;
+}
+
+#footer_links {
+    text-align: right;
+	margin-right: 70px;
+}
+
+#footer_login a {
+    color: #CCCCCC;
+    font-size: 60%;
+}
+
+
+#login_box .login_msg{
+    color: #333333;
+    font-size: 75%;
+}
+
+#login_box .login_text{
+    color: #333333;
+    /* font-weight: bold; */
+    font-size: 60%;
+}
+
+#login_box{
+    width: 450px;
+    clear:both;
+    float: right;
+    position: absolute;
+    top: 260px;
+    left: 50%;
+    /* border: solid 1px #cccccc; */
+    text-align: left;
+    padding: 10px;
+    /* background-color: #FFFFFF; */
+}
+
+#tutorial{
+    width: 450px;
+    clear:both;
+    float: right;
+    margin-top: 30px;
+}
+#tutorial .link_style {
+    color: #333333;
+    font-size: 75%;
+    clear:both;
+}
+
+#login_options {
+    height: 200px;;
+    width: 450px;
+    clear:both;
+    float: right;
+    margin-top: 10px;
+}
+
+#login_options .link_style {
+    color: #333333;
+    font-size: 75%;
+    /* font-weight: bold; */
+    clear:both;
+}
+
+.login_uid {
+  border: solid 2px #cccccc;
+  font-size: 100%;
+  height:28px;
+  width:140px;
+  padding-top: 4px;
+  background-color: #ffffff;
+}
+.login_uid_focus {
+  border: solid 2px #ff8040;
+  font-size: 100%;
+  height:28px;
+  width:140px;
+  font-weight:bold;
+  color: #000000;
+  background-color: #ffffcc;
+  padding-top: 4px;
+}
+
+.login_pw {
+  border: solid 2px #cccccc;
+  font-size: 100%;
+  height:28px;
+  width:140px;
+  padding-top: 4px;
+  background-color: #ffffff;
+}
+.login_pw_focus {
+  border: solid 2px #ff8040;
+  font-size: 100%;
+  height:28px;
+  width:140px;
+  color: #000000;
+  padding-top: 4px;
+  background-color: #ffffcc;
+}
+
+.login_btn {
+  border: solid 1px #cccccc;
+  BACKGROUND-IMAGE: url(../images/btnback1.gif);
+  color: #000066;
+  font-size: 75%;
+  height:25px;
+  width:100px;
+}
+
+
+#search_login{
+    clear:both;
+    float: left;
+    margin-top: 130px;
+}
+
+#search_login .srhttl{
+    font-size: 80%;
+    color: #eeeeee;
+}
+
+#search_login .qbox{
+    font-size: 80%;
+    color: #000000;
+    border: solid 2px #cccccc;
+    width: 280px;
+    height: 30px;
+    top:0px;
+    padding-top: 4px;
+}
+
+#search_login .qbox_focus{
+    font-size: 80%;
+    color: #000000;
+    border: solid 2px #ff8040;
+    width: 280px;
+    height: 30px;
+    top:0px;
+    font-weight:bold;
+    color: #000000;
+    background-color: #ffffcc;
+    padding-top: 4px;
+}
+
+#search_login .powered{
+    font-size: 70%;
+    color: #eeeeee;
+}
+
+#search_login .web{
+    font-size: 75%;
+    background: url(../images/leafbank/r_top_ic1.gif) no-repeat 0 0;
+    margin-left:12px;
+    padding-left: 20px;
+    padding-bottom:1px;
+}
+
+#search_login .image{
+    font-size: 75%;
+    background: url(../images/leafbank/r_top_ic1.gif) no-repeat 0 -34px;
+    margin-left:12px;
+    padding-left: 25px;
+}
+
+#search_login .map{
+    font-size: 75%;
+    background: url(../images/leafbank/r_top_ic1.gif) no-repeat 0 -101px;
+    margin-left:12px;
+    padding-left: 25px;
+}
+
+#search_login a:link {
+  text-decoration: none;
+  text-color: #eeeeee;
+}
+#search_login a:visited {
+  text-decoration: none;
+  color: #eeeeee;
+}
+#search_login a:hover {
+  font-weight: bold;
+  color: #ff9933!important;
+}
+#search_login a:active {
+  text-decoration: none;
+  font-weight: bold;
+  color: #ff9933!important;
+}
+
+.text_error {
+  line-height: 12pt;
+  color: #CC3333;
+  font-weight: bold;
+}
+
+.mode_font_select {
+  color: #ff9933!important;
+  font-weight:bold;
+}
+.mode_font_not_select{
+  text-color: #eeeeee;
+  font-weight:bold;
+}

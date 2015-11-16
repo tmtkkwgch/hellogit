@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>[Group Session  ヘルプ] 稟議 経路テンプレート編集</title>
+<link rel=stylesheet href="../../common/css/default.css" type="text/css">
+<link rel=stylesheet href="../../help/css/help.css" type="text/css">
+<script language="JavaScript" src='../../common/js/jquery-1.5.2.min.js'></script>
+<script type="text/javascript" src="../../help/js/help.js"></script>
+
+</head>
+<!-- '../help_ajax/ajax_xxx_left_list.html' を編集 -->
+<body onLoad="ajaxGetContents('help-left-func-in', '../help_ajax/ajax_rng_left_list.html');chengeHeaderText('[ 稟議 経路テンプレート編集 ]');">
+<div id="container"><a name="top"></a>
+
+
+	<div align="right" class="help-align-right">
+	<input type="button" value="稟議 トップへ" class="btn_base0" onClick="commonHelpLocationChange('./index.html');">
+	</div>
+    <!-- ナビゲーション -->
+	<div id="help-left-func">
+	  <div class="help-content-tr"><div class="help-content-tl"><img src="../../help/images/help_content_text_dsp.gif" alt="画面一覧" height="30"></div></div>
+      <div class="help-content-mr"><div class="help-content-ml">
+		  <div id="help-left-func-in">
+            <!-- ここにajax_xxx_left_list.htmlが入ります -->
+		  </div>
+	  </div></div>
+        <div class="help-content-br"><div class="help-content-bl"><img src="../../common/images/spacer.gif" width="1" height="15" alt=""></div>
+      </div>
+	</div>
+
+	<!-- コンテンツ -->
+	<div id="help-right-func">
+    <div class="help-content-tr"><div class="help-content-tl"><img src="../../help/images/help_content_text_func.gif" alt="機能詳細" height="30"></div></div>
+		<div class="help-content-mr"><div class="help-content-ml pad">
+        <p>経路テンプレートを編集する画面です。</p>
+		<!-- img要素のsrc,alt属性を編集 -->
+		<h1 class="help-right-func-img"><img src="images/scr_help_big_rng1101.gif" alt="稟議 経路テンプレート編集 機能詳細"></h1>
+        <p class="help-right-func-p">機能説明</p>
+        <table summary="機能詳細" class="help-right-func-more" cellpadding="0" cellspacing="0">
+        <!-- h2要素の中身と、p要素の中身を編集。項目数の調整 -->
+		<tr>
+		<th>
+          <h2 class="num-back01">削除ボタン</h2>
+		  <p>削除確認画面へ遷移します。経路テンプレートを削除します。</p>
+		</th>
+		<td>
+          <h2 class="num-back02">ＯＫボタン</h2>
+		  <p>経路テンプレートを編集し、編集完了画面へ遷移します。</p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+          <h2 class="num-back03">戻るボタン</h2>
+		  <p>遷移元の画面へ遷移します。</p>
+		</td>
+		<th>
+          <h2 class="num-back04">全グループから選択ボタン</h2>
+          <p>ポップアップで全グループから選択画面が開きます。<br>全グループから選択画面でユーザを選択し、適用ボタンを押すと、<br></>クリックしたユーザが選択ユーザに表示されます。</p>
+		</th>
+		</tr>
+		<tr>
+		<th>
+          <h2 class="num-back05">グループコンボ</h2>
+          <p>選択したグループに所属するユーザがユーザ一覧に表示されます（既に経路に追加されているユーザは表示されません）。</p>
+		</th>
+		<td>
+          <h2 class="num-back06">グループボタン</h2>
+          <p>ポップアップでグループ選択画面が開きます。<br>グループ選択画面でグループをクリックすると、<br></>クリックしたグループが選択グループに表示されます。</p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+          <h2 class="num-back07">上へボタン</h2>
+          <p>承認経路で選択したユーザの順序を1つ上に移動します。</p>
+		</td>
+		<th>
+          <h2 class="num-back08">下へボタン</h2>
+          <p>承認経路で選択したユーザの順序を1つ下に移動します。</p>
+		</th>
+		</tr>
+		<tr>
+		<th>
+          <h2 class="num-back09">追加ボタン（承認経路）</h2>
+          <p>ユーザ一覧で選択されているユーザを、承認経路に追加します。</p>
+		</th>
+		<td>
+          <h2 class="num-back10">削除ボタン（承認経路）</h2>
+          <p>承認経路で選択されているユーザを、承認経路から除外します。</p>
+		</td>
+		</tr>
+        <tr>
+        <td>
+          <h2 class="num-back11">追加ボタン（最終確認）</h2>
+          <p>ユーザ一覧で選択されているユーザを、最終確認に追加します。</p>
+        </td>
+        <th>
+          <h2 class="num-back12">削除ボタン（最終確認）</h2>
+          <p>最終確認で選択されているユーザを、最終確認から除外します。</p>
+        </th>
+        </tr>
+		</table>
+
+		<!-- 項目の説明 -->
+        <p class="help-right-func-p">表示・入力項目説明</p>
+		<div class="help-right-func-item">
+		<h2>経路名称</h2>
+		<p>経路名称を入力します（20文字以内）。</p>
+		<h2>経路</h2>
+		<p>経路として設定するユーザを、ユーザ一覧から選択し追加します。</p>
+		</div>
+
+		</div></div>
+    <div class="help-content-br"><div class="help-content-bl"><img src="../../common/images/spacer.gif" width="1" height="15" alt=""></div></div>
+
+	<div class="help-align-right"><a href="#top">▲画面トップへ</a></div>
+	</div>
+</div>
+</body>
+</html>

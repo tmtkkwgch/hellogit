@@ -1,0 +1,1975 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+<!-- ========== Form Bean Definitions =================================== -->
+
+    <form-beans>
+      <form-bean name="emptyForm" type="jp.groupsession.v2.struts.EmptyForm" />
+      <form-bean name="cmn001Form" type="jp.groupsession.v2.cmn.cmn001.Cmn001Form" />
+      <form-bean name="mbhMan001Form" type="jp.groupsession.v3.mbh.man001.MbhMan001Form" />
+      <form-bean name="mbhMan002Form" type="jp.groupsession.v3.mbh.man002.MbhMan002Form" />
+      <form-bean name="mbhCmn001Form" type="jp.groupsession.v3.mbh.cmn001.MbhCmn001Form" />
+      <form-bean name="mbhCmn002Form" type="jp.groupsession.v3.mbh.cmn002.MbhCmn002Form" />
+      <form-bean name="mbhCmn998Form" type="jp.groupsession.v3.mbh.cmn998.MbhCmn998Form" />
+      <form-bean name="mbhCmn999Form" type="jp.groupsession.v3.mbh.cmn999.MbhCmn999Form" />
+      <form-bean name="mbhSch010Form" type="jp.groupsession.v3.mbh.sch010.MbhSch010Form" />
+      <form-bean name="mbhSch020Form" type="jp.groupsession.v3.mbh.sch020.MbhSch020Form" />
+      <form-bean name="mbhSch030Form" type="jp.groupsession.v3.mbh.sch030.MbhSch030Form" />
+      <form-bean name="mbhSch040Form" type="jp.groupsession.v3.mbh.sch040.MbhSch040Form" />
+      <form-bean name="mbhSch050Form" type="jp.groupsession.v3.mbh.sch050.MbhSch050Form" />
+      <form-bean name="mbhSch060Form" type="jp.groupsession.v3.mbh.sch060.MbhSch060Form" />
+      <form-bean name="mbhSml010Form" type="jp.groupsession.v3.mbh.sml010.MbhSml010Form" />
+      <form-bean name="mbhSml020Form" type="jp.groupsession.v3.mbh.sml020.MbhSml020Form" />
+      <form-bean name="mbhSml030Form" type="jp.groupsession.v3.mbh.sml030.MbhSml030Form" />
+      <form-bean name="mbhSml040Form" type="jp.groupsession.v3.mbh.sml040.MbhSml040Form" />
+      <form-bean name="mbhSml040knForm" type="jp.groupsession.v3.mbh.sml040kn.MbhSml040knForm" />
+      <form-bean name="mbhSml050Form" type="jp.groupsession.v3.mbh.sml050.MbhSml050Form" />
+      <form-bean name="mbhSml060Form" type="jp.groupsession.v3.mbh.sml060.MbhSml060Form" />
+      <form-bean name="mbhAdr010Form" type="jp.groupsession.v3.mbh.adr010.MbhAdr010Form" />
+      <form-bean name="mbhAdr020Form" type="jp.groupsession.v3.mbh.adr020.MbhAdr020Form" />
+      <form-bean name="mbhAdr030Form" type="jp.groupsession.v3.mbh.adr030.MbhAdr030Form" />
+      <form-bean name="mbhAdr040Form" type="jp.groupsession.v3.mbh.adr040.MbhAdr040Form" />
+      <form-bean name="mbhUsr010Form" type="jp.groupsession.v3.mbh.usr010.MbhUsr010Form" />
+      <form-bean name="mbhUsr020Form" type="jp.groupsession.v3.mbh.usr020.MbhUsr020Form" />
+      <form-bean name="mbhUsr030Form" type="jp.groupsession.v3.mbh.usr030.MbhUsr030Form" />
+      <form-bean name="mbhUsr040Form" type="jp.groupsession.v3.mbh.usr040.MbhUsr040Form" />
+      <form-bean name="mbhBbs010Form" type="jp.groupsession.v3.mbh.bbs010.MbhBbs010Form" />
+      <form-bean name="mbhBbs020Form" type="jp.groupsession.v3.mbh.bbs020.MbhBbs020Form" />
+      <form-bean name="mbhBbs030Form" type="jp.groupsession.v3.mbh.bbs030.MbhBbs030Form" />
+      <form-bean name="mbhBbs040Form" type="jp.groupsession.v3.mbh.bbs040.MbhBbs040Form" />
+      <form-bean name="mbhBbs050Form" type="jp.groupsession.v3.mbh.bbs050.MbhBbs050Form" />
+      <form-bean name="mbhBbs060Form" type="jp.groupsession.v3.mbh.bbs060.MbhBbs060Form" />
+      <form-bean name="mbhBbs070Form" type="jp.groupsession.v3.mbh.bbs070.MbhBbs070Form" />
+      <form-bean name="mbhBbs080Form" type="jp.groupsession.v3.mbh.bbs080.MbhBbs080Form" />
+      <form-bean name="mbhRng010Form" type="jp.groupsession.v3.mbh.rng010.MbhRng010Form" />
+      <form-bean name="mbhRng020Form" type="jp.groupsession.v3.mbh.rng020.MbhRng020Form" />
+      <form-bean name="mbhRng030Form" type="jp.groupsession.v3.mbh.rng030.MbhRng030Form" />
+      <form-bean name="mbhRng040Form" type="jp.groupsession.v3.mbh.rng040.MbhRng040Form" />
+      <form-bean name="mbhRng040knForm" type="jp.groupsession.v3.mbh.rng040kn.MbhRng040knForm" />
+      <form-bean name="mbhRng050Form" type="jp.groupsession.v3.mbh.rng050.MbhRng050Form" />
+      <form-bean name="mbhRng060Form" type="jp.groupsession.v3.mbh.rng060.MbhRng060Form" />
+      <form-bean name="mbhWml010Form" type="jp.groupsession.v3.mbh.wml010.MbhWml010Form" />
+      <form-bean name="mbhWml020Form" type="jp.groupsession.v3.mbh.wml020.MbhWml020Form" />
+      <form-bean name="mbhWml030Form" type="jp.groupsession.v3.mbh.wml030.MbhWml030Form" />
+      <form-bean name="mbhWml040Form" type="jp.groupsession.v3.mbh.wml040.MbhWml040Form" />
+      <form-bean name="mbhWml040knForm" type="jp.groupsession.v3.mbh.wml040kn.MbhWml040knForm" />
+      <form-bean name="mbhWml050Form" type="jp.groupsession.v3.mbh.wml050.MbhWml050Form" />
+      <form-bean name="mbhWml060Form" type="jp.groupsession.v3.mbh.wml060.MbhWml060Form" />
+      <form-bean name="mbhWml070Form" type="jp.groupsession.v3.mbh.wml070.MbhWml070Form" />
+      <form-bean name="mbhRsv010Form" type="jp.groupsession.v3.mbh.rsv010.MbhRsv010Form" />
+      <form-bean name="mbhRsv020Form" type="jp.groupsession.v3.mbh.rsv020.MbhRsv020Form" />
+      <form-bean name="mbhRsv030Form" type="jp.groupsession.v3.mbh.rsv030.MbhRsv030Form" />
+      <form-bean name="mbhRsv040Form" type="jp.groupsession.v3.mbh.rsv040.MbhRsv040Form" />
+      <form-bean name="mbhRsv050Form" type="jp.groupsession.v3.mbh.rsv050.MbhRsv050Form" />
+      <form-bean name="mbhCir010Form" type="jp.groupsession.v3.mbh.cir010.MbhCir010Form" />
+      <form-bean name="mbhCir020Form" type="jp.groupsession.v3.mbh.cir020.MbhCir020Form" />
+      <form-bean name="mbhCir030Form" type="jp.groupsession.v3.mbh.cir030.MbhCir030Form" />
+      <form-bean name="mbhCir040Form" type="jp.groupsession.v3.mbh.cir040.MbhCir040Form" />
+      <form-bean name="mbhCir050Form" type="jp.groupsession.v3.mbh.cir050.MbhCir050Form" />
+      <form-bean name="mbhCir050knForm" type="jp.groupsession.v3.mbh.cir050kn.MbhCir050knForm" />
+      <form-bean name="mbhCir060Form" type="jp.groupsession.v3.mbh.cir060.MbhCir060Form" />
+      <form-bean name="mbhCir070Form" type="jp.groupsession.v3.mbh.cir070.MbhCir070Form" />
+      <form-bean name="mbhNtp010Form" type="jp.groupsession.v3.mbh.ntp010.MbhNtp010Form" />
+      <form-bean name="mbhNtp020Form" type="jp.groupsession.v3.mbh.ntp020.MbhNtp020Form" />
+      <form-bean name="mbhNtp030Form" type="jp.groupsession.v3.mbh.ntp030.MbhNtp030Form" />
+      <form-bean name="mbhNtp040Form" type="jp.groupsession.v3.mbh.ntp040.MbhNtp040Form" />
+      <form-bean name="mbhNtp050Form" type="jp.groupsession.v3.mbh.ntp050.MbhNtp050Form" />
+      <form-bean name="mbhNtp060Form" type="jp.groupsession.v3.mbh.ntp060.MbhNtp060Form" />
+      <form-bean name="mbhNtp070Form" type="jp.groupsession.v3.mbh.ntp070.MbhNtp070Form" />
+      <form-bean name="mbhNtp080Form" type="jp.groupsession.v3.mbh.ntp080.MbhNtp080Form" />
+
+      <form-bean name="mbhApiAppLoginForm" type="jp.groupsession.v3.mbh.api.login.MbhApiAppLoginForm" />
+    </form-beans>
+
+<!-- ================================================ Global Exception -->
+
+    <global-exceptions>
+
+    </global-exceptions>
+
+<!-- ========== Global Forward Definitions ============================== -->
+
+  <global-forwards type="org.apache.struts.action.ActionForward">
+    <forward name="mb_gf_msg" path="/mobile/mh_cmn999.do?CMD=INFO" redirect="false"/>
+    <forward name="sp_gf_msg" path="/mobile/sp_cmn999.do?CMD=INFO" redirect="false"/>
+    <forward name="mb_gf_system" path="/mobile/mh_cmn999.do?CMD=SYSETEM_ERROR" redirect="false"/>
+    <forward name="sp_gf_system" path="/mobile/sp_cmn999.do?CMD=SYSETEM_ERROR" redirect="false"/>
+    <forward name="mb_gf_rslt" path="/mobile/mh_cmn999.do?CMD=RSLT" redirect="false"/>
+    <forward name="sp_gf_rslt" path="/mobile/sp_cmn999.do?CMD=RSLT" redirect="false"/>
+    <forward name="mb_gf_warn" path="/mobile/mh_cmn999.do?CMD=WARNING" redirect="false"/>
+    <forward name="sp_gf_warn" path="/mobile/sp_cmn999.do?CMD=WARNING" redirect="false"/>
+    <forward name="mb_gf_auth" path="/mobile/mh_cmn999.do?CMD=AUTH_ERROR" redirect="false"/>
+    <forward name="sp_gf_auth" path="/mobile/sp_cmn999.do?CMD=AUTH_ERROR" redirect="false"/>
+
+    <forward name="mb_gf_domain" path="/mobile/mh_cmn998.do?CMD=DOMAIN_ERROR" redirect="false"/>
+    <forward name="sp_gf_domain" path="/mobile/sp_cmn998.do?CMD=DOMAIN_ERROR" redirect="false"/>
+    <forward name="mb_gf_domain_logout" path="/mobile/mh_cmn001.do" redirect="false"/>
+    <forward name="sp_gf_domain_logout" path="/mobile/sp_cmn001.do" redirect="false"/>
+
+    <forward name="mb_gf_submit" path="/mobile/mh_cmn999.do?CMD=SUBMIT_ERROR" redirect="false"/>
+    <forward name="sp_gf_submit" path="/mobile/sp_cmn999.do?CMD=SUBMIT_ERROR" redirect="false"/>
+    <forward name="mb_gf_power" path="/mobile/mh_cmn999.do?CMD=POWER_ERROR" redirect="false"/>
+    <forward name="sp_gf_power" path="/mobile/sp_cmn999.do?CMD=POWER_ERROR" redirect="false"/>
+    <forward name="mb_gf_file_size" path="/mobile/mh_cmn999.do?CMD=FILE_SIZE_ERROR" redirect="false"/>
+    <forward name="sp_gf_file_size" path="/mobile/sp_cmn999.do?CMD=FILE_SIZE_ERROR" redirect="false"/>
+    <forward name="mb_gf_license" path="/mobile/mh_cmn001.do?CMD=LICENSE_ERROR" redirect="false"/>
+    <forward name="sp_gf_license" path="/mobile/sp_cmn001.do?CMD=LICENSE_ERROR" redirect="false"/>
+    <forward name="mh_gf_main" path="/mobile/mh_man001.do" redirect="false"/>
+    <forward name="sp_gf_main" path="/mobile/sp_man001.do" redirect="false"/>
+    <forward name="mh_bbs010" path="/mobile/mh_bbs010.do" redirect="false"/>
+    <forward name="sp_bbs010" path="/mobile/sp_bbs010.do" redirect="false"/>
+    <forward name="mh_bbs020" path="/mobile/mh_bbs020.do" redirect="false"/>
+    <forward name="sp_bbs020" path="/mobile/sp_bbs020.do" redirect="false"/>
+  </global-forwards>
+
+<!-- ========== Action Mapping Definitions ============================== -->
+
+    <action-mappings>
+
+       <!-- HTML版 -->
+       <!-- ログイン -->
+       <action
+            name="mbhCmn001Form"
+            path="/mobile/mh_cmn001"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_cmn001.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cmn001.MbhCmn001Action">
+            <forward name="frame" path="/mobile/mh_man001.do" />
+       </action>
+
+       <!-- メッセージ -->
+       <action
+            name="mbhCmn999Form"
+            path="/mobile/mh_cmn999"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_cmn999.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cmn999.MbhCmn999Action">
+            <forward name="gf_logout" path="/mobile/mh_cmn001.do" redirect="false"/>
+            <forward name="gf_menu" path="/mobile/mh_man001.do" redirect="false"/>
+            <forward name="frame" path="/mobile/mh_cmn999.do" />
+            <forward name="sml010" path="/mobile/mh_sml010.do" />
+            <forward name="sch_040_week" path="/mobile/mh_sch010.do" />
+            <forward name="sch_040_group" path="/mobile/mh_sch020.do" />
+            <forward name="sch_040_day" path="/mobile/mh_sch030.do" />
+            <forward name="sch_040_month" path="/mobile/mh_sch020.do" />
+            <forward name="sch_040_del_ok" path="/mobile/mh_sch040.do?CMD=sch_040_del_ok" />
+            <forward name="sch_040_del_cancel" path="/mobile/mh_sch040.do" />
+            <forward name="sch_040_warning_ok" path="/mobile/mh_sch040.do?CMD=sch_040_ok_dup_nocheck" />
+            <forward name="sch_040_warning_cancel" path="/mobile/mh_sch040.do?CMD=sch_040_back" />
+            <forward name="ntp_040_week" path="/mobile/mh_ntp010.do" />
+            <forward name="ntp_040_group" path="/mobile/mh_ntp020.do" />
+            <forward name="ntp_040_day" path="/mobile/mh_ntp030.do" />
+            <forward name="ntp_040_month" path="/mobile/mh_ntp020.do" />
+            <forward name="ntp_040_del_ok" path="/mobile/mh_ntp040.do?CMD=ntp_040_del_ok" />
+            <forward name="ntp_040_del_cancel" path="/mobile/mh_ntp040.do" />
+            <forward name="ntp_040_warning_ok" path="/mobile/mh_ntp040.do?CMD=ntp_040_ok_dup_nocheck" />
+            <forward name="ntp_040_warning_cancel" path="/mobile/mh_ntp040.do?CMD=ntp_040_back" />
+            <forward name="bbs020" path="/mobile/mh_bbs020.do" />
+            <forward name="bbs030" path="/mobile/mh_bbs030.do" />
+            <forward name="rng010" path="/mobile/mh_rng010.do" />
+            <forward name="rng020" path="/mobile/mh_rng020.do" />
+            <forward name="rng030" path="/mobile/mh_rng030.do" />
+            <forward name="rng030ok" path="/mobile/mh_rng030.do?CMD=rngConfirm" />
+            <forward name="webmailDetail" path="/mobile/mh_wml030.do" redirect="false"/>
+            <forward name="webmail" path="/mobile/mh_wml010.do" redirect="false"/>
+            <forward name="webmailList" path="/mobile/mh_wml020.do" redirect="false"/>
+            <forward name="rsv010" path="/mobile/mh_rsv010.do" />
+            <forward name="rsv020" path="/mobile/mh_rsv020.do" />
+            <forward name="rsv030del_ok" path="/mobile/mh_rsv030.do?CMD=deleteOk" />
+            <forward name="rsv030del_cancel" path="/mobile/mh_rsv030.do" />
+            <forward name="rsv030del_ok_cancel" path="/mobile/mh_rsv030.do" />
+            <forward name="cir020" path="/mobile/mh_cir020.do" />
+            <forward name="cir_030_del_ok" path="/mobile/mh_cir030.do?CMD=deleteExe" />
+            <forward name="cir_030_del_cancel" path="/mobile/mh_cir030.do" />
+            <forward name="cir_040_del_ok" path="/mobile/mh_cir040.do?CMD=deleteExe" />
+            <forward name="cir_040_del_cancel" path="/mobile/mh_cir040.do" />
+            <forward name="cir010back" path="/mobile/mh_cir010.do" />
+       </action>
+
+        <!-- 共通メッセージ画面(byCloud用) -->
+        <action
+            name="mbhCmn998Form"
+            path="/mobile/mh_cmn998"
+            input="/WEB-INF/plugin/mobile/jsp/mh_cmn998.jsp"
+            validate="false"
+            scope="request"
+            type="jp.groupsession.v3.mbh.cmn998.MbhCmn998Action">
+        </action>
+
+       <!-- メイン -->
+       <action
+            name="mbhMan001Form"
+            path="/mobile/mh_man001"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_man001.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.man001.MbhMan001Action">
+            <forward name="sml020" path="/mobile/mh_sml020.do?sml010ProcMode=0" />
+            <forward name="bbs010" path="/mobile/mh_bbs010.do" />
+            <forward name="rng020" path="/mobile/mh_rng020.do?rngProcMode=0" />
+            <forward name="cir010" path="/mobile/mh_cir010.do" />
+            <forward name="cir020" path="/mobile/mh_cir020.do?mobileType=1" />
+            <forward name="webmailList" path="/mobile/mh_wml020.do?" redirect="false"/>
+            <forward name="man002" path="/mobile/mh_man002.do" />
+       </action>
+
+       <!-- インフォメーション -->
+       <action
+            name="mbhMan002Form"
+            path="/mobile/mh_man002"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_man002.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.man002.MbhMan002Action">
+            <forward name="man001" path="/mobile/mh_man001.do" />
+       </action>
+
+       <!-- スケジュール 個人週間 -->
+       <action
+            name="mbhSch010Form"
+            path="/mobile/mh_sch010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_sch010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sch010.MbhSch010Action">
+       </action>
+
+       <!--スケジュール グループ日間 -->
+       <action
+            name="mbhSch020Form"
+            path="/mobile/mh_sch020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_sch020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sch020.MbhSch020Action">
+       </action>
+
+       <!-- スケジュール 個人日間 -->
+       <action
+            name="mbhSch030Form"
+            path="/mobile/mh_sch030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_sch030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sch030.MbhSch030Action">
+       </action>
+
+       <!-- スケジュール  登録･確認 -->
+       <action
+            name="mbhSch040Form"
+            path="/mobile/mh_sch040"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_sch040.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sch040.MbhSch040Action">
+            <forward name="sch_040_usr_add" path="/mobile/mh_sch050.do?sch050Cmd=usrAdd" />
+            <forward name="sch_040_rsv_add" path="/mobile/mh_sch060.do" />
+            <forward name="sch_040_week" path="/mobile/mh_sch010.do" />
+            <forward name="sch_040_group" path="/mobile/mh_sch020.do" />
+            <forward name="sch_040_day" path="/mobile/mh_sch030.do" />
+            <forward name="sch_040_dsp" path="/mobile/mh_sch040kn.do" />
+            <forward name="sch_040_del_ok" path="/mobile/mh_sch040.do?CMD=sch_040_del_ok" />
+            <forward name="sch_040_del_cancel" path="/mobile/mh_sch040.do" />
+            <forward name="sch_040_main" path="/mobile/mh_sch001.do" />
+            <forward name="sch_040_warning_ok" path="/mobile/mh_sch040.do?CMD=sch_040_ok_dup_nocheck" />
+            <forward name="sch_040_warning_cancel" path="/mobile/mh_sch040.doCMD=sch_040_back" />
+       </action>
+
+       <!-- スケジュール 同時登録 -->
+       <action
+            name="mbhSch050Form"
+            path="/mobile/mh_sch050"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_sch050.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sch050.MbhSch050Action">
+            <forward name="mh_sch040" path="/mobile/mh_sch040.do" />
+            <forward name="sch_050_week" path="/mobile/mh_sch010.do" />
+            <forward name="sch_050_gday" path="/mobile/mh_sch020.do" />
+            <forward name="sch_050_day" path="/mobile/mh_sch030.do" />
+            <forward name="sch_050_usr_add" path="/mobile/mh_sch040.do?CMD=sch_040_add_usr" />
+            <forward name="sch_050_back" path="/mobile/mh_sch040.do?CMD=sch_040_back" />
+       </action>
+
+       <!-- スケジュール 施設選択 -->
+       <action
+            name="mbhSch060Form"
+            path="/mobile/mh_sch060"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_sch060.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sch060.MbhSch060Action">
+            <forward name="mh_sch040" path="/mobile/mh_sch040.do" />
+            <forward name="sch_060_week" path="/mobile/mh_sch010.do" />
+            <forward name="sch_060_gday" path="/mobile/mh_sch020.do" />
+            <forward name="sch_060_day" path="/mobile/mh_sch030.do" />
+            <forward name="sch_060_rsv_add" path="/mobile/mh_sch040.do?CMD=sch_040_add_rsv" />
+            <forward name="sch_060_back" path="/mobile/mh_sch040.do?CMD=sch_040_back" />
+       </action>
+
+       <!-- ショートメール（ﾄｯﾌﾟ） -->
+       <action
+            name="mbhSml010Form"
+            path="/mobile/mh_sml010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_sml010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sml010.MbhSml010Action">
+       </action>
+
+       <!-- ショートメール（一覧） -->
+       <action
+            name="mbhSml020Form"
+            path="/mobile/mh_sml020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_sml020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sml020.MbhSml020Action">
+            <forward name="sml010" path="/mobile/mh_sml010.do" />
+       </action>
+
+       <!-- ショートメール（内容確認） -->
+       <action
+            name="mbhSml030Form"
+            path="/mobile/mh_sml030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_sml030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sml030.MbhSml030Action">
+            <forward name="sml020" path="/mobile/mh_sml020.do" />
+            <forward name="sml040" path="/mobile/mh_sml040.do" />
+       </action>
+
+       <!-- ショートメール（新規作成） -->
+       <action
+            name="mbhSml040Form"
+            path="/mobile/mh_sml040"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_sml040.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sml040.MbhSml040Action">
+            <forward name="sml010" path="/mobile/mh_sml010.do" />
+            <forward name="sml020" path="/mobile/mh_sml020.do" />
+            <forward name="sml030" path="/mobile/mh_sml030.do" />
+            <forward name="sml040kn" path="/mobile/mh_sml040kn.do" />
+            <forward name="sml050" path="/mobile/mh_sml050.do" />
+            <forward name="sml050Cc" path="/mobile/mh_sml050.do?sml050cmdMode=1" />
+            <forward name="sml050Bcc" path="/mobile/mh_sml050.do?sml050cmdMode=2" />
+            <forward name="mb_gf_msg" path="/mobile/mh_cmn999.do?CMD=INFO" redirect="false" />
+       </action>
+
+       <!-- ショートメール（確認） -->
+       <action
+            name="mbhSml040knForm"
+            path="/mobile/mh_sml040kn"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_sml040kn.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sml040kn.MbhSml040knAction">
+            <forward name="sml010" path="/mobile/mh_sml010.do" />
+            <forward name="sml040" path="/mobile/mh_sml040.do" />
+            <forward name="mb_gf_msg" path="/mobile/mh_cmn999.do?CMD=INFO" redirect="false" />
+       </action>
+
+       <!-- ショートメール（宛先選択） -->
+       <action
+            name="mbhSml050Form"
+            path="/mobile/mh_sml050"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_sml050.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sml050.MbhSml050Action">
+            <forward name="sml040" path="/mobile/mh_sml040.do" />
+            <forward name="sml040Cc" path="/mobile/mh_sml040.do?sml040SelectMode=1" />
+            <forward name="sml040Bcc" path="/mobile/mh_sml040.do?sml040SelectMode=2" />
+            <forward name="sml060" path="/mobile/mh_sml060.do" />
+       </action>
+
+       <!-- ショートメール（宛先選択） -->
+       <action
+            name="mbhSml060Form"
+            path="/mobile/mh_sml060"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_sml060.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sml060.MbhSml060Action">
+       </action>
+
+       <!-- アドレス帳（トップ） -->
+       <action
+            name="mbhAdr010Form"
+            path="/mobile/mh_adr010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_adr010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.adr010.MbhAdr010Action">
+       </action>
+
+       <!-- アドレス帳（ユーザ情報） -->
+       <action
+            name="mbhAdr020Form"
+            path="/mobile/mh_adr020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_adr020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.adr020.MbhAdr020Action">
+            <forward name="adr010" path="/mobile/mh_adr010.do" />
+            <forward name="adr030" path="/mobile/mh_adr030.do" />
+       </action>
+
+      <!-- アドレス帳（会社情報） -->
+       <action
+            name="mbhAdr030Form"
+            path="/mobile/mh_adr030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_adr030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.adr030.MbhAdr030Action">
+            <forward name="adr010" path="/mobile/mh_adr010.do" />
+            <forward name="adr010_simei" path="/mobile/mh_adr010.do?adr010cmdMode=1" />
+            <forward name="adr020" path="/mobile/mh_adr020.do" />
+       </action>
+
+       <!-- アドレス帳（電話orメール確認 -->
+       <action
+            name="mbhAdr040Form"
+            path="/mobile/mh_adr040"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_adr040.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.adr040.MbhAdr040Action">
+            <forward name="adr020" path="/mobile/mh_adr020.do" />
+            <forward name="wml040" path="/mobile/mh_wml040.do" />
+       </action>
+
+       <!-- 掲示板（ｽﾚｯﾄﾞ一覧） -->
+       <action
+            name="mbhBbs010Form"
+            path="/mobile/mh_bbs010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_bbs010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.bbs010.MbhBbs010Action">
+       </action>
+
+       <!-- 掲示板（投稿一覧） -->
+       <action
+            name="mbhBbs020Form"
+            path="/mobile/mh_bbs020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_bbs020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.bbs020.MbhBbs020Action">
+            <forward name="bbs040" path="/mobile/mh_bbs040.do?CMD=addThre" />
+            <forward name="bbs010" path="/mobile/mh_bbs010.do" />
+       </action>
+
+       <!-- 掲示板（内容） -->
+       <action
+            name="mbhBbs030Form"
+            path="/mobile/mh_bbs030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_bbs030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.bbs030.MbhBbs030Action">
+            <forward name="bbs020" path="/mobile/mh_bbs020.do" />
+            <forward name="bbs070" path="/mobile/mh_bbs070.do?CMD=addWrite" />
+       </action>
+
+       <!-- 掲示板（新規ｽﾚｯﾄﾞ） -->
+       <action
+            name="mbhBbs040Form"
+            path="/mobile/mh_bbs040"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_bbs040.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.bbs040.MbhBbs040Action">
+            <forward name="bbs020" path="/mobile/mh_bbs020.do" />
+            <forward name="bbs050" path="/mobile/mh_bbs050.do" />
+            <forward name="bbs050_change" path="/mobile/mh_bbs050.do?CMD=change" />
+            <forward name="bbs060" path="/mobile/mh_bbs060.do" />
+       </action>
+
+       <!-- 掲示板（期限設定） -->
+       <action
+            name="mbhBbs050Form"
+            path="/mobile/mh_bbs050"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_bbs050.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.bbs050.MbhBbs050Action">
+            <forward name="bbs040" path="/mobile/mh_bbs040.do" />
+            <forward name="bbs040_limit" path="/mobile/mh_bbs040.do?CMD=limit" />
+       </action>
+
+       <!-- 掲示板（投稿確認） -->
+       <action
+            name="mbhBbs060Form"
+            path="/mobile/mh_bbs060"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_bbs060.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.bbs060.MbhBbs060Action">
+            <forward name="bbs040" path="/mobile/mh_bbs040.do" />
+            <forward name="mb_gf_msg" path="/mobile/mh_cmn999.do?CMD=INFO" redirect="false" />
+       </action>
+
+       <!-- 掲示板（返信） -->
+       <action
+            name="mbhBbs070Form"
+            path="/mobile/mh_bbs070"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_bbs070.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.bbs070.MbhBbs070Action">
+            <forward name="bbs030" path="/mobile/mh_bbs030.do" />
+            <forward name="bbs080" path="/mobile/mh_bbs080.do" />
+       </action>
+
+       <!-- 掲示板（返信確認） -->
+       <action
+            name="mbhBbs080Form"
+            path="/mobile/mh_bbs080"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_bbs080.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.bbs080.MbhBbs080Action">
+            <forward name="bbs030" path="/mobile/mh_bbs030.do" />
+            <forward name="bbs070" path="/mobile/mh_bbs070.do" />
+            <forward name="mb_gf_msg" path="/mobile/mh_cmn999.do?CMD=INFO" redirect="false" />
+       </action>
+
+       <!-- 稟議（ﾄｯﾌﾟ） -->
+       <action
+            name="mbhRng010Form"
+            path="/mobile/mh_rng010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_rng010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rng010.MbhRng010Action">
+       </action>
+
+       <!-- 稟議（一覧） -->
+       <action
+            name="mbhRng020Form"
+            path="/mobile/mh_rng020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_rng020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rng020.MbhRng020Action">
+            <forward name="rng010" path="/mobile/mh_rng010.do" />
+       </action>
+
+       <!-- 稟議（内容確認） -->
+       <action
+            name="mbhRng030Form"
+            path="/mobile/mh_rng030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_rng030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rng030.MbhRng030Action">
+            <forward name="rng010" path="/mobile/mh_rng010.do" />
+            <forward name="rng020" path="/mobile/mh_rng020.do" />
+            <forward name="mine" path="/mobile/mh_rng030.do" />
+            <forward name="mb_gf_msg" path="/mobile/mh_cmn999.do?CMD=INFO" redirect="false" />
+            <forward name="mb_gf_rslt" path="/mobile/mh_cmn999.do?CMD=RSLT" redirect="false"/>
+       </action>
+
+       <!-- 稟議（新規作成） -->
+       <action
+            name="mbhRng040Form"
+            path="/mobile/mh_rng040"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_rng040.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rng040.MbhRng040Action">
+            <forward name="rng010" path="/mobile/mh_rng010.do" />
+            <forward name="rng020" path="/mobile/mh_rng020.do" />
+            <forward name="rng050" path="/mobile/mh_rng050.do" />
+            <forward name="rng040kn" path="/mobile/mh_rng040kn.do" />
+            <forward name="mb_gf_msg" path="/mobile/mh_cmn999.do?CMD=INFO" redirect="false" />
+       </action>
+
+       <!-- 稟議（確認） -->
+       <action
+            name="mbhRng040knForm"
+            path="/mobile/mh_rng040kn"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_rng040kn.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rng040kn.MbhRng040knAction">
+            <forward name="rng040" path="/mobile/mh_rng040.do" />
+            <forward name="rng010" path="/mobile/mh_rng010.do" />
+            <forward name="mb_gf_msg" path="/mobile/mh_cmn999.do?CMD=INFO" redirect="false" />
+       </action>
+
+       <!-- 稟議（経路選択） -->
+       <action
+            name="mbhRng050Form"
+            path="/mobile/mh_rng050"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_rng050.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rng050.MbhRng050Action">
+            <forward name="rng050Keiro" path="/mobile/mh_rng040.do?CMD=addAppr" />
+            <forward name="rng050Kakunin" path="/mobile/mh_rng040.do?CMD=addConfirm" />
+            <forward name="rng050Template" path="/mobile/mh_rng040.do?CMD=setChannel" />
+            <forward name="rng050Back" path="/mobile/mh_rng040.do" />
+       </action>
+
+       <!-- 稟議（経路選択） -->
+       <action
+            name="mbhRng060Form"
+            path="/mobile/mh_rng060"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_rng060.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rng060.MbhRng060Action">
+            <forward name="rng050" path="/mobile/mh_rng050.do" />
+       </action>
+
+       <!-- ユーザ情報（トップ） -->
+       <action
+            name="mbhUsr010Form"
+            path="/mobile/mh_usr010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_usr010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.usr010.MbhUsr010Action">
+       </action>
+
+       <!-- ユーザ情報（氏名情報） -->
+       <action
+            name="mbhUsr020Form"
+            path="/mobile/mh_usr020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_usr020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.usr020.MbhUsr020Action">
+            <forward name="usr010_name" path="/mobile/mh_usr010.do?CMD=searchKn" />
+            <forward name="usr010_group" path="/mobile/mh_usr010.do" />
+       </action>
+
+      <!-- ユーザ情報（電話orメール確認） -->
+       <action
+            name="mbhUsr030Form"
+            path="/mobile/mh_usr030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_usr030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.usr030.MbhUsr030Action">
+            <forward name="usr020" path="/mobile/mh_usr020.do" />
+            <forward name="wml040" path="/mobile/mh_wml040.do" />
+       </action>
+
+       <!-- WEBメール（トップ） -->
+       <action
+            name="mbhWml010Form"
+            path="/mobile/mh_wml010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_wml010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.wml010.MbhWml010Action">
+       </action>
+
+       <!-- WEBメール（一覧） -->
+       <action
+            name="mbhWml020Form"
+            path="/mobile/mh_wml020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_wml020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.wml020.MbhWml020Action">
+            <forward name="advancedsearch" path="/mobile/mh_wml070.do" redirect="false"/>
+            <forward name="wml020back" path="/mobile/mh_wml010.do" redirect="false"/>
+            <forward name="wml020mail" path="/mobile/mh_wml030.do" redirect="false"/>
+            <forward name="wml020edit" path="/mobile/mh_wml040.do" redirect="false"/>
+       </action>
+
+       <!-- WEBメール（内容確認） -->
+       <action
+            name="mbhWml030Form"
+            path="/mobile/mh_wml030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_wml030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.wml030.MbhWml030Action">
+            <forward name="webmail" path="/mobile/mh_wml010.do" redirect="false"/>
+            <forward name="reply" path="/mobile/mh_wml040.do?wmlSendMode=1" />
+            <forward name="replyAll" path="/mobile/mh_wml040.do?wmlSendMode=2" />
+            <forward name="forwarding" path="/mobile/mh_wml040.do?wmlSendMode=3" />
+            <forward name="webmailList" path="/mobile/mh_wml020.do" redirect="false"/>
+       </action>
+
+       <!-- WEBメール（新規作成） -->
+       <action
+            name="mbhWml040Form"
+            path="/mobile/mh_wml040"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_wml040.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.wml040.MbhWml040Action">
+            <forward name="wml040Send" path="/mobile/mh_wml040kn.do?wml040mode=0" />
+            <forward name="wml040Draft" path="/mobile/mh_wml040kn.do?wml040mode=1" />
+            <forward name="wml040SelectTo" path="/mobile/mh_wml050.do?wml040adrMode=0" />
+            <forward name="wml040SelectCc" path="/mobile/mh_wml050.do?wml040adrMode=1" />
+            <forward name="wml040SelectBcc" path="/mobile/mh_wml050.do?wml040adrMode=2" />
+            <forward name="wml040SelectAdTo" path="/mobile/mh_wml060.do?wml040adrMode=0" />
+            <forward name="wml040SelectAdCc" path="/mobile/mh_wml060.do?wml040adrMode=1" />
+            <forward name="wml040SelectAdBcc" path="/mobile/mh_wml060.do?wml040adrMode=2" />
+            <forward name="webmailDetail" path="/mobile/mh_wml030.do" redirect="false"/>
+            <forward name="webmail" path="/mobile/mh_wml010.do" redirect="false"/>
+       </action>
+
+       <!-- WEBメール（確認） -->
+       <action
+            name="mbhWml040knForm"
+            path="/mobile/mh_wml040kn"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_wml040kn.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.wml040kn.MbhWml040knAction">
+            <forward name="webmailInput" path="/mobile/mh_wml040.do" redirect="false"/>
+            <forward name="webmailDetail" path="/mobile/mh_wml030.do" redirect="false"/>
+            <forward name="webmail" path="/mobile/mh_wml010.do" redirect="false"/>
+            <forward name="mb_gf_msg" path="/mobile/mh_cmn999.do?CMD=INFO" redirect="false" />
+       </action>
+
+       <!-- WEBメール（ユーザ情報宛先選択） -->
+       <action
+            name="mbhWml050Form"
+            path="/mobile/mh_wml050"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_wml050.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.wml050.MbhWml050Action">
+            <forward name="webmailInput" path="/mobile/mh_wml040.do" redirect="false"/>
+       </action>
+
+       <!-- WEBメール（アドレス帳宛先選択） -->
+       <action
+            name="mbhWml060Form"
+            path="/mobile/mh_wml060"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_wml060.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.wml060.MbhWml060Action">
+            <forward name="webmailInput" path="/mobile/mh_wml040.do" redirect="false"/>
+       </action>
+
+       <!-- WEBメール（検索） -->
+       <action
+            name="mbhWml070Form"
+            path="/mobile/mh_wml070"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_wml070.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.wml070.MbhWml070Action">
+            <forward name="wml070Search" path="/mobile/mh_wml070.do?CMD=search" />
+            <forward name="wml070Cancel" path="/mobile/mh_wml010.do" />
+            <forward name="wml070Search" path="/mobile/mh_wml020.do?wml020DetaileSrhFlg=1" />
+       </action>
+
+       <!-- 施設予約週間 -->
+       <action
+            name="mbhRsv010Form"
+            path="/mobile/mh_rsv010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_rsv010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rsv010.MbhRsv010Action">
+       </action>
+
+       <!-- 施設予約日間 -->
+       <action
+            name="mbhRsv020Form"
+            path="/mobile/mh_rsv020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_rsv020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rsv020.MbhRsv020Action">
+       </action>
+
+       <!-- 施設予約登録 -->
+       <action
+            name="mbhRsv030Form"
+            path="/mobile/mh_rsv030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_rsv030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rsv030.MbhRsv030Action">
+            <forward name="rsv_030_usr_add" path="/mobile/mh_rsv050.do" />
+            <forward name="rsv010" path="/mobile/mh_rsv010.do" />
+            <forward name="rsv020" path="/mobile/mh_rsv020.do" />
+            <forward name="redraw" path="/mobile/mh_rsv030.do" />
+            <forward name="rsv030del_ok" path="/mobile/mh_rsv030.do?CMD=deleteOk" />
+            <forward name="rsv030del_ok_cancel" path="/mobile/mh_rsv030.do" />
+       </action>
+
+       <!-- 施設予約登録 -->
+       <action
+            name="mbhRsv040Form"
+            path="/mobile/mh_rsv040"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_rsv040.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rsv040.MbhRsv040Action">
+            <forward name="rsv010" path="/mobile/mh_rsv010.do" />
+            <forward name="rsv020" path="/mobile/mh_rsv020.do" />
+       </action>
+
+       <!-- 施設予約同時登録 -->
+       <action
+            name="mbhRsv050Form"
+            path="/mobile/mh_rsv050"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_rsv050.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rsv050.MbhRsv050Action">
+            <forward name="rsv030" path="/mobile/mh_rsv030.do" />
+            <forward name="rsv050usr_add" path="/mobile/mh_rsv030.do?CMD=030_rightarrow" />
+       </action>
+
+       <!-- 回覧板 -->
+       <action
+            name="mbhCir010Form"
+            path="/mobile/mh_cir010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_cir010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cir010.MbhCir010Action">
+       </action>
+
+       <!-- 回覧板 （一覧） -->
+       <action
+            name="mbhCir020Form"
+            path="/mobile/mh_cir020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_cir020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cir020.MbhCir020Action">
+            <forward name="cir010" path="/mobile/mh_cir010.do" />
+            <forward name="jusin" path="/mobile/mh_cir030.do" />
+            <forward name="sousin" path="/mobile/mh_cir040.do" />
+       </action>
+
+       <!-- 回覧板 （確認） -->
+       <action
+            name="mbhCir030Form"
+            path="/mobile/mh_cir030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_cir030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cir030.MbhCir030Action">
+            <forward name="init" path="/mobile/mh_cir030.do" />
+            <forward name="cir020" path="/mobile/mh_cir020.do" />
+            <forward name="back" path="/mobile/mh_cir020.do" />
+            <forward name="sousin" path="/mobile/mh_cir040.do" />
+       </action>
+
+       <!-- 回覧板 （確認） -->
+       <action
+            name="mbhCir040Form"
+            path="/mobile/mh_cir040"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_cir040.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cir040.MbhCir040Action">
+            <forward name="init" path="/mobile/mh_cir040.do" />
+            <forward name="cir020" path="/mobile/mh_cir020.do" />
+            <forward name="jusin" path="/mobile/mh_cir030.do" />
+            <forward name="back" path="/mobile/mh_cir020.do" />
+            <forward name="cir050" path="/mobile/mh_cir050.do" />
+       </action>
+
+       <!-- 回覧板 （新規登録） -->
+       <action
+            name="mbhCir050Form"
+            path="/mobile/mh_cir050"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_cir050.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cir050.MbhCir050Action">
+            <forward name="back" path="/mobile/mh_cir010.do" />
+            <forward name="backList" path="/mobile/mh_cir040.do" />
+            <forward name="ok" path="/mobile/mh_cir050kn.do" />
+            <forward name="cir060" path="/mobile/mh_cir060.do" />
+            <forward name="cir070" path="/mobile/mh_cir070.do" />
+            <forward name="cir070change" path="/mobile/mh_cir070.do?changeKbn=1" />
+       </action>
+
+       <!-- 回覧板 （新規登録確認） -->
+       <action
+            name="mbhCir050knForm"
+            path="/mobile/mh_cir050kn"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_cir050kn.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cir050kn.MbhCir050knAction">
+            <forward name="back" path="/mobile/mh_cir050.do" />
+            <forward name="cir010back" path="/mobile/mh_cir010.do" />
+       </action>
+
+       <!-- 回覧板 （ユーザ選択） -->
+       <action
+            name="mbhCir060Form"
+            path="/mobile/mh_cir060"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_cir060.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cir060.MbhCir060Action">
+            <forward name="back" path="/mobile/mh_cir050.do" />
+            <forward name="cir050" path="/mobile/mh_cir050.do" />
+       </action>
+
+       <!-- 回覧板 （期限設定） -->
+       <action
+            name="mbhCir070Form"
+            path="/mobile/mh_cir070"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_cir070.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cir070.MbhCir070Action">
+            <forward name="back" path="/mobile/mh_cir050.do" />
+            <forward name="cir050" path="/mobile/mh_cir050.do" />
+            <forward name="cir050period" path="/mobile/mh_cir050.do?CMD=setperiod" />
+       </action>
+
+       <!-- 日報 個人週間 -->
+       <action
+            name="mbhNtp010Form"
+            path="/mobile/mh_ntp010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_ntp010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.ntp010.MbhNtp010Action">
+       </action>
+
+       <!--日報 グループ日間 -->
+       <action
+            name="mbhNtp020Form"
+            path="/mobile/mh_ntp020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_ntp020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.ntp020.MbhNtp020Action">
+       </action>
+
+       <!-- 日報 個人日間 -->
+       <action
+            name="mbhNtp030Form"
+            path="/mobile/mh_ntp030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_ntp030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.ntp030.MbhNtp030Action">
+       </action>
+
+       <!-- 日報  登録･確認 -->
+       <action
+            name="mbhNtp040Form"
+            path="/mobile/mh_ntp040"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_ntp040.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.ntp040.MbhNtp040Action">
+            <forward name="ntp_040_week" path="/mobile/mh_ntp010.do" />
+            <forward name="ntp_040_group" path="/mobile/mh_ntp020.do" />
+            <forward name="ntp_040_day" path="/mobile/mh_ntp030.do" />
+            <forward name="ntp_040_dsp" path="/mobile/mh_ntp040kn.do" />
+            <forward name="ntp_040_del_ok" path="/mobile/mh_ntp040.do?CMD=ntp_040_del_ok" />
+            <forward name="ntp_040_del_cancel" path="/mobile/mh_ntp040.do" />
+            <forward name="ntp_040_main" path="/mobile/mh_ntp001.do" />
+            <forward name="ntp_040_warning_ok" path="/mobile/mh_ntp040.do?CMD=ntp_040_ok_dup_nocheck" />
+            <forward name="ntp_040_warning_cancel" path="/mobile/mh_ntp040.doCMD=ntp_040_back" />
+            <forward name="ntp_040_adr" path="/mobile/mh_ntp060.do" />
+            <forward name="ntp_040_adrbook" path="/mobile/mh_ntp070.do" />
+            <forward name="ntp_040_rireki" path="/mobile/mh_ntp080.do" />
+       </action>
+
+       <!-- 日報 ユーザ変更 -->
+       <action
+            name="mbhNtp050Form"
+            path="/mobile/mh_ntp050"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_ntp050.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.ntp050.MbhNtp050Action">
+            <forward name="mh_ntp040" path="/mobile/mh_ntp040.do" />
+            <forward name="ntp_050_week" path="/mobile/mh_ntp010.do" />
+            <forward name="ntp_050_gday" path="/mobile/mh_ntp020.do" />
+            <forward name="ntp_050_day" path="/mobile/mh_ntp030.do" />
+       </action>
+
+        <!-- 案件検索 -->
+        <action
+            name="mbhNtp060Form"
+            path="/mobile/mh_ntp060"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_ntp060.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.ntp060.MbhNtp060Action">
+            <forward name="ntp_060_back" path="/mobile/mh_ntp040.do" />
+            <forward name="ntp_060_anken_add" path="/mobile/mh_ntp040.do?CMD=ntp_040_anken_add" />
+        </action>
+
+       <!-- 会社情報（トップ） -->
+       <action
+            name="mbhNtp070Form"
+            path="/mobile/mh_ntp070"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_ntp070.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.ntp070.MbhNtp070Action">
+            <forward name="nippouInput" path="/mobile/mh_ntp040.do" redirect="false"/>
+            <forward name="ntp_070_back" path="/mobile/mh_ntp040.do" />
+       </action>
+
+        <!-- 履歴 -->
+        <action
+            name="mbhNtp080Form"
+            path="/mobile/mh_ntp080"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/mh_ntp080.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.ntp080.MbhNtp080Action">
+            <forward name="ntp_080_back" path="/mobile/mh_ntp040.do" />
+            <forward name="ntp_080_anken_add" path="/mobile/mh_ntp040.do?CMD=ntp_040_anken_add" />
+            <forward name="nippouInput" path="/mobile/mh_ntp040.do" redirect="false"/>
+        </action>
+
+<!-- SmartPhone版 =========================================================================================  -->
+
+       <!-- ログイン -->
+       <action
+            name="mbhCmn001Form"
+            path="/mobile/sp_cmn001"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_cmn001.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cmn001.MbhCmn001Action">
+            <forward name="frame" path="/mobile/sp_man001.do" />
+       </action>
+
+       <!-- テーマ変更 -->
+       <action
+            name="mbhCmn002Form"
+            path="/mobile/sp_cmn002"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_cmn002.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cmn002.MbhCmn002Action">
+            <forward name="frame" path="/mobile/sp_man001.do" />
+       </action>
+
+       <!-- メッセージ -->
+       <action
+            name="mbhCmn999Form"
+            path="/mobile/sp_cmn999"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_cmn999.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cmn999.MbhCmn999Action">
+            <forward name="frame" path="/mobile/sp_cmn999.do" />
+            <forward name="gf_logout" path="/mobile/sp_cmn001.do" redirect="false"/>
+            <forward name="gf_menu" path="/mobile/sp_man001.do" redirect="false"/>
+            <forward name="sml010" path="/mobile/sp_sml010.do" />
+            <forward name="sch_040_week" path="/mobile/sp_sch010.do" />
+            <forward name="sch_040_month" path="/mobile/sp_sch020.do" />
+            <forward name="sch_040_group" path="/mobile/sp_sch020.do" />
+            <forward name="sch_040_day" path="/mobile/sp_sch030.do" />
+            <forward name="sch_040_del_ok" path="/mobile/sp_sch040.do?CMD=sch_040_del_ok" />
+            <forward name="sch_040_del_cancel" path="/mobile/sp_sch040.do" />
+            <forward name="sch_040_warning_ok" path="/mobile/sp_sch040.do?CMD=sch_040_ok_dup_nocheck" />
+            <forward name="sch_040_warning_cancel" path="/mobile/sp_sch040.do?CMD=sch_040_back" />
+            <forward name="ntp_040_week" path="/mobile/sp_ntp010.do" />
+            <forward name="ntp_040_group" path="/mobile/sp_ntp020.do" />
+            <forward name="ntp_040_day" path="/mobile/sp_ntp030.do" />
+            <forward name="ntp_040_month" path="/mobile/sp_ntp020.do" />
+            <forward name="ntp_040_del_ok" path="/mobile/sp_ntp040.do?CMD=ntp_040_del_ok" />
+            <forward name="ntp_040_del_cancel" path="/mobile/sp_ntp040.do" />
+            <forward name="ntp_040_warning_ok" path="/mobile/sp_ntp040.do?CMD=ntp_040_ok_dup_nocheck" />
+            <forward name="ntp_040_warning_cancel" path="/mobile/sp_ntp040.do?CMD=ntp_040_back" />
+            <forward name="bbs020" path="/mobile/sp_bbs020.do" />
+            <forward name="bbs030" path="/mobile/sp_bbs030.do" />
+            <forward name="rng010" path="/mobile/sp_rng010.do" />
+            <forward name="rng020" path="/mobile/sp_rng020.do" />
+            <forward name="rng030" path="/mobile/sp_rng030.do" />
+            <forward name="rng030ok" path="/mobile/sp_rng030.do?CMD=rngConfirm" />
+            <forward name="webmailDetail" path="/mobile/sp_wml030.do" redirect="false"/>
+            <forward name="webmail" path="/mobile/sp_wml010.do" redirect="false"/>
+            <forward name="webmailList" path="/mobile/sp_wml020.do" redirect="false"/>
+            <forward name="rsv010" path="/mobile/sp_rsv010.do" />
+            <forward name="rsv020" path="/mobile/sp_rsv020.do" />
+            <forward name="rsv030del_ok" path="/mobile/sp_rsv030.do?CMD=deleteOk" />
+            <forward name="rsv030del_cancel" path="/mobile/sp_rsv030.do" />
+            <forward name="rsv030del_ok_cancel" path="/mobile/sp_rsv030.do" />
+            <forward name="cir020" path="/mobile/sp_cir020.do" />
+            <forward name="cir_030_del_ok" path="/mobile/sp_cir030.do?CMD=deleteExe" />
+            <forward name="cir_030_del_cancel" path="/mobile/sp_cir030.do" />
+            <forward name="cir_040_del_ok" path="/mobile/sp_cir040.do?CMD=deleteExe" />
+            <forward name="cir_040_del_cancel" path="/mobile/sp_cir040.do" />
+            <forward name="cir010back" path="/mobile/sp_cir010.do" />
+       </action>
+
+        <!-- 共通メッセージ画面(byCloud用) -->
+        <action
+            name="mbhCmn998Form"
+            path="/mobile/sp_cmn998"
+            input="/WEB-INF/plugin/mobile/jsp/sp_cmn998.jsp"
+            validate="false"
+            scope="request"
+            type="jp.groupsession.v3.mbh.cmn998.MbhCmn998Action">
+        </action>
+
+       <!-- メイン -->
+       <action
+            name="mbhMan001Form"
+            path="/mobile/sp_man001"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_man001.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.man001.MbhMan001Action">
+            <forward name="man002" path="/mobile/sp_man002.do" />
+            <forward name="sml020" path="/mobile/sp_sml020.do?mobileType=1&amp;sml010ProcMode=0" />
+            <forward name="bbs010" path="/mobile/sp_bbs010.do?mobileType=1" />
+            <forward name="rng020" path="/mobile/sp_rng020.do?mobileType=1&amp;rngProcMode=0" />
+            <forward name="cir010" path="/mobile/sp_cir010.do?mobileType=1" />
+            <forward name="cir020" path="/mobile/sp_cir020.do?mobileType=1" />
+            <forward name="webmailList" path="/mobile/sp_wml020.do?mobileType=1" redirect="false"/>
+       </action>
+
+       <!-- インフォメーション -->
+       <action
+            name="mbhMan002Form"
+            path="/mobile/sp_man002"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_man002.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.man002.MbhMan002Action">
+            <forward name="man001" path="/mobile/sp_man001.do" />
+       </action>
+
+       <!-- スケジュール 個人週間 -->
+       <action
+            name="mbhSch010Form"
+            path="/mobile/sp_sch010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_sch010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sch010.MbhSch010Action">
+       </action>
+
+       <!--スケジュール グループ日間 -->
+       <action
+            name="mbhSch020Form"
+            path="/mobile/sp_sch020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_sch020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sch020.MbhSch020Action">
+       </action>
+
+       <!-- スケジュール 個人日間 -->
+       <action
+            name="mbhSch030Form"
+            path="/mobile/sp_sch030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_sch030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sch030.MbhSch030Action">
+       </action>
+
+       <!-- スケジュール  登録･確認 -->
+       <action
+            name="mbhSch040Form"
+            path="/mobile/sp_sch040"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_sch040.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sch040.MbhSch040Action">
+            <forward name="sch_040_usr_add" path="/mobile/sp_sch050.do?sch050Cmd=usrAdd" />
+            <forward name="sch_040_rsv_add" path="/mobile/sp_sch060.do" />
+            <forward name="sch_040_week" path="/mobile/sp_sch010.do" />
+            <forward name="sch_040_group" path="/mobile/sp_sch020.do" />
+            <forward name="sch_040_day" path="/mobile/sp_sch030.do" />
+            <forward name="sch_040_dsp" path="/mobile/sp_sch040kn.do" />
+            <forward name="sch_040_del_ok" path="/mobile/sp_sch040.do?CMD=sch_040_del_ok" />
+            <forward name="sch_040_del_cancel" path="/mobile/sp_sch040.do" />
+            <forward name="sch_040_main" path="/mobile/sp_sch001.do" />
+            <forward name="mb_gf_msg" path="/mobile/sp_cmn999.do?CMD=INFO" redirect="false" />
+            <forward name="mb_gf_rslt" path="/mobile/sp_cmn999.do?CMD=RSLT" redirect="false"/>
+            <forward name="sch_040_warning_ok" path="/mobile/sp_sch040.do?CMD=sch_040_ok_dup_nocheck" />
+            <forward name="sch_040_warning_cancel" path="/mobile/sp_sch040.do?CMD=sch_040_back" />
+       </action>
+
+       <!-- スケジュール 同時登録 -->
+       <action
+            name="mbhSch050Form"
+            path="/mobile/sp_sch050"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_sch050.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sch050.MbhSch050Action">
+            <forward name="sch_050_week" path="/mobile/sp_sch010.do" />
+            <forward name="sch_050_gday" path="/mobile/sp_sch020.do" />
+            <forward name="sch_050_day" path="/mobile/sp_sch030.do" />
+            <forward name="sch_050_usr_add" path="/mobile/sp_sch040.do?CMD=sch_040_add_usr" />
+            <forward name="sch_050_back" path="/mobile/sp_sch040.do?CMD=sch_040_back" />
+       </action>
+
+       <!-- 掲示板（ｽﾚｯﾄﾞ一覧） -->
+       <action
+            name="mbhBbs010Form"
+            path="/mobile/sp_bbs010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_bbs010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.bbs010.MbhBbs010Action">
+       </action>
+
+       <!-- 掲示板（投稿一覧） -->
+       <action
+            name="mbhBbs020Form"
+            path="/mobile/sp_bbs020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_bbs020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.bbs020.MbhBbs020Action">
+            <forward name="bbs040" path="/mobile/sp_bbs040.do?CMD=addThre" />
+            <forward name="bbs010" path="/mobile/sp_bbs010.do" />
+       </action>
+
+       <!-- 掲示板（内容） -->
+       <action
+            name="mbhBbs030Form"
+            path="/mobile/sp_bbs030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_bbs030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.bbs030.MbhBbs030Action">
+            <forward name="bbs020" path="/mobile/sp_bbs020.do" />
+            <forward name="bbs070" path="/mobile/sp_bbs070.do?CMD=addWrite" />
+       </action>
+
+       <!-- 掲示板（新規ｽﾚｯﾄﾞ） -->
+       <action
+            name="mbhBbs040Form"
+            path="/mobile/sp_bbs040"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_bbs040.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.bbs040.MbhBbs040Action">
+            <forward name="bbs020" path="/mobile/sp_bbs020.do" />
+            <forward name="bbs050" path="/mobile/sp_bbs050.do" />
+            <forward name="bbs050_change" path="/mobile/sp_bbs050.do?CMD=change" />
+            <forward name="bbs060" path="/mobile/sp_bbs060.do" />
+       </action>
+
+       <!-- 掲示板（期限設定） -->
+       <action
+            name="mbhBbs050Form"
+            path="/mobile/sp_bbs050"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_bbs050.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.bbs050.MbhBbs050Action">
+            <forward name="bbs040" path="/mobile/sp_bbs040.do" />
+            <forward name="bbs040_limit" path="/mobile/sp_bbs040.do?CMD=limit" />
+       </action>
+
+       <!-- 掲示板（投稿確認） -->
+       <action
+            name="mbhBbs060Form"
+            path="/mobile/sp_bbs060"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_bbs060.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.bbs060.MbhBbs060Action">
+            <forward name="bbs040" path="/mobile/sp_bbs040.do" />
+            <forward name="mb_gf_msg" path="/mobile/sp_cmn999.do?CMD=INFO" redirect="false" />
+       </action>
+
+       <!-- 掲示板（返信） -->
+       <action
+            name="mbhBbs070Form"
+            path="/mobile/sp_bbs070"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_bbs070.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.bbs070.MbhBbs070Action">
+            <forward name="bbs030" path="/mobile/sp_bbs030.do" />
+            <forward name="bbs080" path="/mobile/sp_bbs080.do" />
+       </action>
+
+       <!-- 掲示板（返信確認） -->
+       <action
+            name="mbhBbs080Form"
+            path="/mobile/sp_bbs080"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_bbs080.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.bbs080.MbhBbs080Action">
+            <forward name="bbs030" path="/mobile/sp_bbs030.do" />
+            <forward name="bbs070" path="/mobile/sp_bbs070.do" />
+            <forward name="mb_gf_msg" path="/mobile/sp_cmn999.do?CMD=INFO" redirect="false" />
+       </action>
+
+       <!-- ショートメール（ﾄｯﾌﾟ） -->
+       <action
+            name="mbhSml010Form"
+            path="/mobile/sp_sml010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_sml010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sml010.MbhSml010Action">
+       </action>
+
+       <!-- ショートメール（一覧） -->
+       <action
+            name="mbhSml020Form"
+            path="/mobile/sp_sml020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_sml020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sml020.MbhSml020Action">
+            <forward name="sml010" path="/mobile/sp_sml010.do" />
+       </action>
+
+       <!-- ショートメール（内容確認） -->
+       <action
+            name="mbhSml030Form"
+            path="/mobile/sp_sml030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_sml030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sml030.MbhSml030Action">
+            <forward name="sml020" path="/mobile/sp_sml020.do" />
+            <forward name="sml040" path="/mobile/sp_sml040.do" />
+       </action>
+
+       <!-- ショートメール（新規作成） -->
+       <action
+            name="mbhSml040Form"
+            path="/mobile/sp_sml040"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_sml040.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sml040.MbhSml040Action">
+            <forward name="sml010" path="/mobile/sp_sml010.do" />
+            <forward name="sml020" path="/mobile/sp_sml020.do" />
+            <forward name="sml030" path="/mobile/sp_sml030.do" />
+            <forward name="sml040kn" path="/mobile/sp_sml040kn.do" />
+            <forward name="sml050" path="/mobile/sp_sml050.do" />
+            <forward name="sml050Cc" path="/mobile/sp_sml050.do?sml050cmdMode=1" />
+            <forward name="sml050Bcc" path="/mobile/sp_sml050.do?sml050cmdMode=2" />
+            <forward name="mb_gf_msg" path="/mobile/sp_cmn999.do?CMD=INFO" redirect="false" />
+       </action>
+
+       <!-- ショートメール（確認） -->
+       <action
+            name="mbhSml040knForm"
+            path="/mobile/sp_sml040kn"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_sml040kn.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sml040kn.MbhSml040knAction">
+            <forward name="sml010" path="/mobile/sp_sml010.do" />
+            <forward name="sml040" path="/mobile/sp_sml040.do" />
+            <forward name="mb_gf_msg" path="/mobile/sp_cmn999.do?CMD=INFO" redirect="false" />
+       </action>
+
+       <!-- ショートメール（宛先選択） -->
+       <action
+            name="mbhSml050Form"
+            path="/mobile/sp_sml050"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_sml050.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sml050.MbhSml050Action">
+            <forward name="sml040" path="/mobile/sp_sml040.do" />
+            <forward name="sml040Cc" path="/mobile/sp_sml040.do?sml040SelectMode=1" />
+            <forward name="sml040Bcc" path="/mobile/sp_sml040.do?sml040SelectMode=2" />
+       </action>
+
+       <!-- ショートメール（宛先選択） -->
+       <action
+            name="mbhSml060Form"
+            path="/mobile/sp_sml060"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_sml060.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sml060.MbhSml060Action">
+       </action>
+
+       <!-- 稟議（ﾄｯﾌﾟ） -->
+       <action
+            name="mbhRng010Form"
+            path="/mobile/sp_rng010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_rng010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rng010.MbhRng010Action">
+       </action>
+
+       <!-- 稟議（一覧） -->
+       <action
+            name="mbhRng020Form"
+            path="/mobile/sp_rng020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_rng020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rng020.MbhRng020Action">
+            <forward name="rng010" path="/mobile/sp_rng010.do" />
+       </action>
+
+       <!-- 稟議（内容確認） -->
+       <action
+            name="mbhRng030Form"
+            path="/mobile/sp_rng030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_rng030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rng030.MbhRng030Action">
+            <forward name="rng010" path="/mobile/sp_rng010.do" />
+            <forward name="rng020" path="/mobile/sp_rng020.do" />
+            <forward name="mine" path="/mobile/sp_rng030.do" />
+            <forward name="mb_gf_msg" path="/mobile/sp_cmn999.do?CMD=INFO" redirect="false" />
+            <forward name="mb_gf_rslt" path="/mobile/sp_cmn999.do?CMD=RSLT" redirect="false"/>
+       </action>
+
+       <!-- 稟議（新規作成） -->
+       <action
+            name="mbhRng040Form"
+            path="/mobile/sp_rng040"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_rng040.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rng040.MbhRng040Action">
+            <forward name="rng010" path="/mobile/sp_rng010.do" />
+            <forward name="rng020" path="/mobile/sp_rng020.do" />
+            <forward name="rng050" path="/mobile/sp_rng050.do" />
+            <forward name="rng050_kakunin" path="/mobile/sp_rng050.do?rng050mod=1" />
+            <forward name="rng040kn" path="/mobile/sp_rng040kn.do" />
+            <forward name="mb_gf_msg" path="/mobile/sp_cmn999.do?CMD=INFO" redirect="false" />
+       </action>
+
+       <!-- 稟議（確認） -->
+       <action
+            name="mbhRng040knForm"
+            path="/mobile/sp_rng040kn"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_rng040kn.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rng040kn.MbhRng040knAction">
+            <forward name="rng040" path="/mobile/sp_rng040.do" />
+            <forward name="rng010" path="/mobile/sp_rng010.do" />
+            <forward name="mb_gf_msg" path="/mobile/sp_cmn999.do?CMD=INFO" redirect="false" />
+       </action>
+
+       <!-- 稟議（経路選択） -->
+       <action
+            name="mbhRng050Form"
+            path="/mobile/sp_rng050"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_rng050.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rng050.MbhRng050Action">
+            <forward name="rng050Keiro" path="/mobile/sp_rng040.do?CMD=addAppr" />
+            <forward name="rng050Kakunin" path="/mobile/sp_rng040.do?CMD=addConfirm" />
+            <forward name="rng050Template" path="/mobile/sp_rng040.do?CMD=setChannel" />
+            <forward name="rng050Back" path="/mobile/sp_rng040.do" />
+       </action>
+
+       <!-- 稟議（経路選択） -->
+       <action
+            name="mbhRng060Form"
+            path="/mobile/sp_rng060"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_rng060.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rng060.MbhRng060Action">
+            <forward name="rng050" path="/mobile/sp_rng050.do" />
+       </action>
+
+       <!-- WEBメール（トップ） -->
+       <action
+            name="mbhWml010Form"
+            path="/mobile/sp_wml010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_wml010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.wml010.MbhWml010Action">
+       </action>
+
+       <!-- WEBメール（一覧） -->
+       <action
+            name="mbhWml020Form"
+            path="/mobile/sp_wml020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_wml020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.wml020.MbhWml020Action">
+            <forward name="wml020back" path="/mobile/sp_wml010.do" redirect="false"/>
+            <forward name="advancedsearch" path="/mobile/sp_wml070.do" redirect="false"/>
+            <forward name="wml020mail" path="/mobile/sp_wml030.do" redirect="false"/>
+            <forward name="wml020edit" path="/mobile/sp_wml040.do?wmlSendMode=4" redirect="false"/>
+       </action>
+
+       <!-- WEBメール（内容確認） -->
+       <action
+            name="mbhWml030Form"
+            path="/mobile/sp_wml030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_wml030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.wml030.MbhWml030Action">
+            <forward name="webmail" path="/mobile/sp_wml010.do" redirect="false"/>
+            <forward name="reply" path="/mobile/sp_wml040.do?wmlSendMode=1" />
+            <forward name="replyAll" path="/mobile/sp_wml040.do?wmlSendMode=2" />
+            <forward name="forwarding" path="/mobile/sp_wml040.do?wmlSendMode=3" />
+            <forward name="webmailList" path="/mobile/sp_wml020.do" redirect="false"/>
+       </action>
+
+       <!-- WEBメール（新規作成） -->
+       <action
+            name="mbhWml040Form"
+            path="/mobile/sp_wml040"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_wml040.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.wml040.MbhWml040Action">
+            <forward name="wml040Send" path="/mobile/sp_wml040kn.do?wml040mode=0" />
+            <forward name="wml040Draft" path="/mobile/sp_wml040kn.do?wml040mode=1" />
+            <forward name="wml040SelectTo" path="/mobile/sp_wml050.do?wml040adrMode=0" />
+            <forward name="wml040SelectCc" path="/mobile/sp_wml050.do?wml040adrMode=1" />
+            <forward name="wml040SelectBcc" path="/mobile/sp_wml050.do?wml040adrMode=2" />
+            <forward name="wml040SelectAdTo" path="/mobile/sp_wml060.do?wml040adrMode=0" />
+            <forward name="wml040SelectAdCc" path="/mobile/sp_wml060.do?wml040adrMode=1" />
+            <forward name="wml040SelectAdBcc" path="/mobile/sp_wml060.do?wml040adrMode=2" />
+            <forward name="webmailDetail" path="/mobile/sp_wml030.do" redirect="false"/>
+            <forward name="webmail" path="/mobile/sp_wml010.do" redirect="false"/>
+            <forward name="webmailList" path="/mobile/sp_wml020.do" redirect="false"/>
+
+       </action>
+
+       <!-- WEBメール（確認） -->
+       <action
+            name="mbhWml040knForm"
+            path="/mobile/sp_wml040kn"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_wml040kn.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.wml040kn.MbhWml040knAction">
+            <forward name="webmailInput" path="/mobile/sp_wml040.do" redirect="false"/>
+            <forward name="webmailDetail" path="/mobile/sp_wml030.do" redirect="false"/>
+            <forward name="webmail" path="/mobile/sp_wml010.do" redirect="false"/>
+            <forward name="mb_gf_msg" path="/mobile/sp_cmn999.do?CMD=INFO" redirect="false" />
+       </action>
+
+       <!-- WEBメール（宛先選択） -->
+       <action
+            name="mbhWml050Form"
+            path="/mobile/sp_wml050"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_wml050.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.wml050.MbhWml050Action">
+            <forward name="webmailInput" path="/mobile/sp_wml040.do" redirect="false"/>
+       </action>
+
+       <!-- WEBメール（アドレス帳宛先選択） -->
+       <action
+            name="mbhWml060Form"
+            path="/mobile/sp_wml060"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_wml060.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.wml060.MbhWml060Action">
+            <forward name="webmailInput" path="/mobile/sp_wml040.do" redirect="false"/>
+       </action>
+
+       <!-- WEBメール（検索） -->
+       <action
+            name="mbhWml070Form"
+            path="/mobile/sp_wml070"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_wml070.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.wml070.MbhWml070Action">
+            <forward name="wml070Search" path="/mobile/sp_wml070.do" />
+            <forward name="wml070Cancel" path="/mobile/sp_wml010.do" />
+            <forward name="wml070Search" path="/mobile/sp_wml020.do?wml020DetaileSrhFlg=1" />
+       </action>
+
+       <!-- ユーザ情報（トップ） -->
+       <action
+            name="mbhUsr010Form"
+            path="/mobile/sp_usr010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_usr010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.usr010.MbhUsr010Action">
+       </action>
+
+       <!-- ユーザ情報（氏名情報） -->
+       <action
+            name="mbhUsr020Form"
+            path="/mobile/sp_usr020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_usr020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.usr020.MbhUsr020Action">
+            <forward name="usr010_name" path="/mobile/sp_usr010.do?CMD=searchKn" />
+            <forward name="usr010_group" path="/mobile/sp_usr010.do" />
+       </action>
+
+      <!-- ユーザ情報（電話orメール確認） -->
+       <action
+            name="mbhUsr030Form"
+            path="/mobile/sp_usr030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_usr030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.usr030.MbhUsr030Action">
+            <forward name="usr020" path="/mobile/sp_usr020.do" />
+            <forward name="wml040" path="/mobile/sp_wml040.do" />
+       </action>
+
+       <!-- アドレス帳（トップ） -->
+       <action
+            name="mbhAdr010Form"
+            path="/mobile/sp_adr010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_adr010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.adr010.MbhAdr010Action">
+       </action>
+
+       <!-- アドレス帳（ユーザ情報） -->
+       <action
+            name="mbhAdr020Form"
+            path="/mobile/sp_adr020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_adr020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.adr020.MbhAdr020Action">
+            <forward name="adr010" path="/mobile/sp_adr010.do" />
+            <forward name="adr030" path="/mobile/sp_adr030.do" />
+       </action>
+
+      <!-- アドレス帳（会社情報） -->
+       <action
+            name="mbhAdr030Form"
+            path="/mobile/sp_adr030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_adr030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.adr030.MbhAdr030Action">
+            <forward name="adr010" path="/mobile/sp_adr010.do" />
+            <forward name="adr010_simei" path="/mobile/sp_adr010.do?adr010cmdMode=1" />
+            <forward name="adr020" path="/mobile/sp_adr020.do" />
+       </action>
+
+       <!-- アドレス帳（電話orメール確認 -->
+       <action
+            name="mbhAdr040Form"
+            path="/mobile/sp_adr040"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_adr040.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.adr040.MbhAdr040Action">
+            <forward name="adr020" path="/mobile/sp_adr020.do" />
+            <forward name="wml040" path="/mobile/sp_wml040.do" />
+       </action>
+
+       <!-- 施設予約週間 -->
+       <action
+            name="mbhRsv010Form"
+            path="/mobile/sp_rsv010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_rsv010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rsv010.MbhRsv010Action">
+            <forward name="yoyaku" path="/mobile/sp_rsv030.do" />
+       </action>
+
+       <!-- 施設予約日間 -->
+       <action
+            name="mbhRsv020Form"
+            path="/mobile/sp_rsv020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_rsv020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rsv020.MbhRsv020Action">
+            <forward name="yoyaku" path="/mobile/sp_rsv030.do" />
+       </action>
+
+       <!-- 施設予約登録 -->
+       <action
+            name="mbhRsv030Form"
+            path="/mobile/sp_rsv030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_rsv030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rsv030.MbhRsv030Action">
+            <forward name="rsv_030_usr_add" path="/mobile/sp_rsv050.do" />
+            <forward name="rsv010" path="/mobile/sp_rsv010.do" />
+            <forward name="rsv020" path="/mobile/sp_rsv020.do" />
+            <forward name="redraw" path="/mobile/sp_rsv030.do" />
+            <forward name="rsv030del_ok" path="/mobile/sp_rsv030.do?CMD=deleteOk" />
+            <forward name="rsv030del_ok_cancel" path="/mobile/sp_rsv030.do" />
+       </action>
+
+       <!-- 施設予約登録 -->
+       <action
+            name="mbhRsv040Form"
+            path="/mobile/sp_rsv040"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_rsv040.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rsv040.MbhRsv040Action">
+       </action>
+
+       <!-- 施設予約同時登録 -->
+       <action
+            name="mbhRsv050Form"
+            path="/mobile/sp_rsv050"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_rsv050.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.rsv050.MbhRsv050Action">
+            <forward name="rsv030" path="/mobile/sp_rsv030.do" />
+            <forward name="rsv050usr_add" path="/mobile/sp_rsv030.do?CMD=030_rightarrow" />
+       </action>
+
+       <!-- スケジュール 施設選択 -->
+       <action
+            name="mbhSch060Form"
+            path="/mobile/sp_sch060"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_sch060.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.sch060.MbhSch060Action">
+            <forward name="mh_sch040" path="/mobile/sp_sch040.do" />
+            <forward name="sch_060_week" path="/mobile/sp_sch010.do" />
+            <forward name="sch_060_gday" path="/mobile/sp_sch020.do" />
+            <forward name="sch_060_day" path="/mobile/sp_sch030.do" />
+            <forward name="sch_060_rsv_add" path="/mobile/sp_sch040.do?CMD=sch_040_add_rsv" />
+            <forward name="sch_060_back" path="/mobile/sp_sch040.do?CMD=sch_040_back" />
+       </action>
+
+       <!-- 回覧板 -->
+       <action
+            name="mbhCir010Form"
+            path="/mobile/sp_cir010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_cir010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cir010.MbhCir010Action">
+       </action>
+
+       <!-- 回覧板 （一覧） -->
+       <action
+            name="mbhCir020Form"
+            path="/mobile/sp_cir020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_cir020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cir020.MbhCir020Action">
+            <forward name="cir010" path="/mobile/sp_cir010.do" />
+            <forward name="jusin" path="/mobile/sp_cir030.do" />
+            <forward name="sousin" path="/mobile/sp_cir040.do" />
+       </action>
+
+       <!-- 回覧板 （確認） -->
+       <action
+            name="mbhCir030Form"
+            path="/mobile/sp_cir030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_cir030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cir030.MbhCir030Action">
+            <forward name="init" path="/mobile/sp_cir030.do" />
+            <forward name="cir020" path="/mobile/sp_cir020.do" />
+            <forward name="back" path="/mobile/sp_cir020.do" />
+            <forward name="sousin" path="/mobile/sp_cir040.do" />
+       </action>
+
+       <!-- 回覧板 （確認） -->
+       <action
+            name="mbhCir040Form"
+            path="/mobile/sp_cir040"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_cir040.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cir040.MbhCir040Action">
+            <forward name="init" path="/mobile/sp_cir040.do" />
+            <forward name="cir020" path="/mobile/sp_cir020.do" />
+            <forward name="jusin" path="/mobile/sp_cir030.do" />
+            <forward name="back" path="/mobile/sp_cir020.do" />
+            <forward name="cir050" path="/mobile/sp_cir050.do" />
+       </action>
+
+       <!-- 回覧板 （新規登録） -->
+       <action
+            name="mbhCir050Form"
+            path="/mobile/sp_cir050"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_cir050.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cir050.MbhCir050Action">
+            <forward name="back" path="/mobile/sp_cir010.do" />
+            <forward name="backList" path="/mobile/sp_cir040.do" />
+            <forward name="ok" path="/mobile/sp_cir050kn.do" />
+            <forward name="cir060" path="/mobile/sp_cir060.do" />
+       </action>
+
+       <!-- 回覧板 （新規登録確認） -->
+       <action
+            name="mbhCir050knForm"
+            path="/mobile/sp_cir050kn"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_cir050kn.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cir050kn.MbhCir050knAction">
+            <forward name="back" path="/mobile/sp_cir050.do" />
+            <forward name="cir010back" path="/mobile/sp_cir010.do" />
+       </action>
+
+       <!-- 回覧板 （ユーザ選択） -->
+       <action
+            name="mbhCir060Form"
+            path="/mobile/sp_cir060"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_cir060.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.cir060.MbhCir060Action">
+            <forward name="back" path="/mobile/sp_cir050.do" />
+            <forward name="cir050" path="/mobile/sp_cir050.do" />
+       </action>
+
+       <!-- 日報 個人週間 -->
+       <action
+            name="mbhNtp010Form"
+            path="/mobile/sp_ntp010"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_ntp010.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.ntp010.MbhNtp010Action">
+       </action>
+
+       <!--日報 グループ日間 -->
+       <action
+            name="mbhNtp020Form"
+            path="/mobile/sp_ntp020"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_ntp020.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.ntp020.MbhNtp020Action">
+       </action>
+
+       <!-- 日報 個人日間 -->
+       <action
+            name="mbhNtp030Form"
+            path="/mobile/sp_ntp030"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_ntp030.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.ntp030.MbhNtp030Action">
+       </action>
+
+       <!-- 日報  登録･確認 -->
+       <action
+            name="mbhNtp040Form"
+            path="/mobile/sp_ntp040"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_ntp040.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.ntp040.MbhNtp040Action">
+            <forward name="ntp_040_week" path="/mobile/sp_ntp010.do" />
+            <forward name="ntp_040_group" path="/mobile/sp_ntp020.do" />
+            <forward name="ntp_040_day" path="/mobile/sp_ntp030.do" />
+            <forward name="ntp_040_dsp" path="/mobile/sp_ntp040kn.do" />
+            <forward name="ntp_040_del_ok" path="/mobile/sp_ntp040.do?CMD=ntp_040_del_ok" />
+            <forward name="ntp_040_del_cancel" path="/mobile/sp_ntp040.do" />
+            <forward name="ntp_040_main" path="/mobile/sp_ntp001.do" />
+            <forward name="ntp_040_warning_ok" path="/mobile/sp_ntp040.do?CMD=ntp_040_ok_dup_nocheck" />
+            <forward name="ntp_040_warning_cancel" path="/mobile/sp_ntp040.doCMD=ntp_040_back" />
+            <forward name="ntp_040_adr" path="/mobile/sp_ntp060.do" />
+            <forward name="ntp_040_adrbook" path="/mobile/sp_ntp070.do" />
+            <forward name="ntp_040_rireki" path="/mobile/sp_ntp080.do" />
+       </action>
+
+       <!-- 日報 ユーザ変更 -->
+       <action
+            name="mbhNtp050Form"
+            path="/mobile/sp_ntp050"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_ntp050.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.ntp050.MbhNtp050Action">
+            <forward name="sp_ntp040" path="/mobile/sp_ntp040.do" />
+            <forward name="ntp_050_week" path="/mobile/sp_ntp010.do" />
+            <forward name="ntp_050_gday" path="/mobile/sp_ntp020.do" />
+            <forward name="ntp_050_day" path="/mobile/sp_ntp030.do" />
+       </action>
+
+        <!-- 案件検索 -->
+        <action
+            name="mbhNtp060Form"
+            path="/mobile/sp_ntp060"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_ntp060.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.ntp060.MbhNtp060Action">
+            <forward name="ntp_060_back" path="/mobile/sp_ntp040.do" />
+            <forward name="ntp_060_anken_add" path="/mobile/sp_ntp040.do?CMD=ntp_040_anken_add" />
+        </action>
+
+       <!-- 会社情報（トップ） -->
+       <action
+            name="mbhNtp070Form"
+            path="/mobile/sp_ntp070"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_ntp070.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.ntp070.MbhNtp070Action">
+            <forward name="nippouInput" path="/mobile/sp_ntp040.do" redirect="false"/>
+            <forward name="ntp_070_back" path="/mobile/sp_ntp040.do" />
+       </action>
+
+        <!-- 履歴 -->
+        <action
+            name="mbhNtp080Form"
+            path="/mobile/sp_ntp080"
+            scope="request"
+            input="/WEB-INF/plugin/mobile/jsp/sp_ntp080.jsp"
+            validate="false"
+            type="jp.groupsession.v3.mbh.ntp080.MbhNtp080Action">
+            <forward name="ntp_080_back" path="/mobile/sp_ntp040.do" />
+            <forward name="ntp_080_anken_add" path="/mobile/sp_ntp040.do?CMD=ntp_040_anken_add" />
+            <forward name="nippouInput" path="/mobile/sp_ntp040.do" redirect="false"/>
+        </action>
+
+        <!-- モバイルアシストログイン処理 -->
+       <action
+            name="mbhApiAppLoginForm"
+            path="/mobile/api/login"
+            scope="request"
+            validate="false"
+            type="jp.groupsession.v3.mbh.api.login.MbhApiAppLoginAction">
+       </action>
+
+    </action-mappings>
+
+    <form-bean name="mbhSadr010" type="jp.groupsession.v3.mbh.adr010.MbhSch020Form" />
+
+</struts-config>

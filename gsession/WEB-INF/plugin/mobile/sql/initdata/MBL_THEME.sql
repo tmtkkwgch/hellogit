@@ -1,0 +1,87 @@
+insert 
+ into 
+ MBL_THEME(
+   MBT_SID,
+   MBT_ID,
+   MBT_NAME,
+   MBT_AUID,
+   MBT_ADATE,
+   MBT_EUID,
+   MBT_EDATE
+ )
+ values
+ (
+   1,
+   'b',
+   'デフォルト',
+   0,
+   current_timestamp,
+   0,
+   current_timestamp
+ );
+
+insert 
+ into 
+ MBL_THEME(
+   MBT_SID,
+   MBT_ID,
+   MBT_NAME,
+   MBT_AUID,
+   MBT_ADATE,
+   MBT_EUID,
+   MBT_EDATE
+ )
+ values
+ (
+   2,
+   'a',
+   '黒',
+   0,
+   current_timestamp,
+   0,
+   current_timestamp
+ );
+ 
+insert 
+ into 
+ MBL_THEME(
+   MBT_SID,
+   MBT_ID,
+   MBT_NAME,
+   MBT_AUID,
+   MBT_ADATE,
+   MBT_EUID,
+   MBT_EDATE
+ )
+ values
+ (
+   3,
+   'c',
+   'グレー',
+   0,
+   current_timestamp,
+   0,
+   current_timestamp
+ );
+ 
+insert 
+ into 
+ MBL_THEME(
+   MBT_SID,
+   MBT_ID,
+   MBT_NAME,
+   MBT_AUID,
+   MBT_ADATE,
+   MBT_EUID,
+   MBT_EDATE
+ )
+ values
+ (
+   4,
+   'e',
+   'オレンジ',
+   0,
+   current_timestamp,
+   0,
+   current_timestamp
+ );
